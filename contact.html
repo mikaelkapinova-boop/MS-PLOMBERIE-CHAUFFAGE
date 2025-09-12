@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - MS Plomberie</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
+</head>
+<body>
+
+<header class="glass">
+  <div class="logo">
+    <a href="index.html"><img src="images/logo.png" alt="MS Plomberie"></a>
+  </div>
+  <div class="header-actions">
+    <button class="darkmode-toggle" onclick="toggleDarkMode()">🌙</button>
+    <div class="burger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+</header>
+
+<nav class="nav-links" id="nav-links">
+  <button class="close-menu" onclick="toggleMenu()">✕</button>
+  <ul>
+    <li><a href="index.html">Accueil</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="realisations.html">Réalisations</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<section class="contact-form fade-in">
+  <h2>Contactez-nous</h2>
+  <form id="contact-form">
+    <label for="name">Nom</label>
+    <input type="text" id="name" name="name" required placeholder="Votre nom">
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" required placeholder="Votre email">
+    <label for="message">Message</label>
+    <textarea id="message" name="message" required placeholder="Votre message"></textarea>
+    <button type="submit">Envoyer</button>
+  </form>
+  <div id="form-message"></div>
+</section>
+
+<footer>
+  <p>© 2025 MS Plomberie Chauffage</p>
+  <p>📞 <a href="tel:+33749248559">07 49 24 85 59</a> | ✉️ <a href="mailto:ms.plomberie.chauffage.nancy@gmail.com">ms.plomberie.chauffage.nancy@gmail.com</a></p>
+  <p>📍 285 rue Jeanne d’Arc, 54000 Nancy</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
