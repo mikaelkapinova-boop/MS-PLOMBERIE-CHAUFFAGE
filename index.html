@@ -9,17 +9,74 @@
 </head>
 <body>
   <header class="navbar">
-    <a href="index.html" class="logo"><img src="images/logo.png" alt="Logo"></a>
-    <div class="theme-toggle" id="theme-toggle"></div>
-    <button class="menu-btn" id="menu-btn" aria-label="Menu">
-      <span></span><span></span>
-    </button>
+    <a href="#" class="logo">
+      <img src="https://raw.githubusercontent.com/MS-PLOMBERIE-CHAUFFAGE/images/main/logo.png" alt="MS Plomberie & Chauffage">
+    </a>
+    <div class="nav-controls">
+      <div class="theme-toggle" id="theme-toggle">
+        <div class="toggle-circle"></div>
+      </div>
+      <button class="menu-btn" id="menu-btn" aria-label="Menu">
+        <span></span>
+        <span></span>
+      </button>
+    </div>
   </header>
 
-  <main class="hero" style="background-image:url('images/real1.jpg');">
-    <h1>L’EXPERTISE AU SERVICE DE VOTRE BIEN-ÊTRE</h1>
+  <!-- Menu overlay -->
+  <div class="menu-overlay" id="menu-overlay">
+    <a href="#home">Accueil</a>
+    <a href="#services">Services</a>
+    <a href="#realisations">Réalisations</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+  <!-- Page d'accueil -->
+  <main class="hero" id="home" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://raw.githubusercontent.com/MS-PLOMBERIE-CHAUFFAGE/images/main/real1.jpg');">
+    <h1>L'EXPERTISE AU SERVICE DE VOTRE BIEN-ÊTRE</h1>
     <p>Une solution fiable, durable et sur-mesure pour chaque projet de plomberie ou chauffage.</p>
-    <a href="contact.html" class="btn">Demander un devis</a>
+    <a href="#contact" class="btn">Demander un devis</a>
   </main>
+
+  <!-- Section Services -->
+  <section class="content" id="services">
+    <h1>SERVICES</h1>
+    <div class="service">
+      <h2>Plomberie</h2>
+      <p>Création de nouvelle installation de plomberie et rénovation, remplacement d'équipement de plomberie et création de salle de bain clés en mains (nous travaillons main dans la main avec des artisans de qualités qui valorisent leur métier).</p>
+    </div>
+    <div class="service">
+      <h2>Chauffage</h2>
+      <p>Création de nouvelles installations de chauffage complètes ou remplacement d'équipement thermique (chaudière, pompe à chaleur).</p>
+    </div>
+    <div class="service">
+      <h2>Ventilation</h2>
+      <p>Création de ventilation mécanique contrôlée (cuisine, salle de bain, WC).</p>
+    </div>
+  </section>
+
+  <!-- Section Réalisations -->
+  <section class="content" id="realisations">
+    <h1>RÉALISATIONS</h1>
+    <div class="grid">
+      <img src="https://raw.githubusercontent.com/MS-PLOMBERIE-CHAUFFAGE/images/main/real1.jpg" alt="Réalisation 1">
+      <img src="https://raw.githubusercontent.com/MS-PLOMBERIE-CHAUFFAGE/images/main/real2.jpg" alt="Réalisation 2">
+      <img src="https://raw.githubusercontent.com/MS-PLOMBERIE-CHAUFFAGE/images/main/real3.jpg" alt="Réalisation 3">
+    </div>
+  </section>
+
+  <!-- Section Contact -->
+  <section class="content contact" id="contact">
+    <h1>CONTACTEZ-NOUS</h1>
+    <form>
+      <label for="name">Nom</label>
+      <input type="text" id="name" name="name" required>
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+      <label for="message">Message</label>
+      <textarea id="message" name="message" required></textarea>
+      <button type="submit" class="btn">Envoyer</button>
+    </form>
+  </section>
 </body>
 </html>
