@@ -1,0 +1,211 @@
+/* style.css - Thème Apple avec corrections finales */
+
+/* Variables de thème */
+:root {
+  --bg: #fff;
+  --text: #111;
+  --header-bg: rgba(255, 255, 255, 0.8);
+  --footer-bg: #f5f5f7;
+  --btn-bg: linear-gradient(145deg, #e6e6e6, #cfcfcf);
+  --btn-text: #111;
+}
+
+[data-theme="dark"] {
+  --bg: #1a1a1a;
+  --text: #f5f5f5;
+  --header-bg: rgba(20, 20, 20, 0.85);
+  --footer-bg: #222;
+  --btn-bg: linear-gradient(145deg, #3a3a3a, #2a2a2a);
+  --btn-text: #f5f5f5;
+}
+
+/* Base */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Header Apple style */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: var(--header-bg);
+  backdrop-filter: blur(20px);
+  z-index: 1000;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0.5rem 1rem;
+}
+
+.logo {
+  height: 28px; /* même taille que la lune */
+  vertical-align: middle;
+}
+
+#dark-mode-toggle,
+.menu-toggle,
+.menu-close {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: 1rem;
+  color: var(--text);
+}
+
+/* Menu burger */
+.menu {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.9);
+  text-align: center;
+  animation: slideDown 0.3s ease forwards;
+}
+
+.menu.active {
+  display: flex;
+}
+
+.menu li {
+  list-style: none;
+  margin: 1.2rem 0;
+}
+
+.menu a {
+  color: white;
+  font-size: 1.8rem;
+  text-decoration: none;
+}
+
+.menu a:hover {
+  text-decoration: underline;
+}
+
+/* Animation */
+@keyframes slideDown {
+  from { transform: translateY(-100%); }
+  to { transform: translateY(0); }
+}
+
+/* Hero */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1 {
+  text-transform: uppercase;
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+
+.hero-subtext {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Boutons sobres métallisés */
+.btn,
+.btn-submit {
+  display: inline-block;
+  padding: 12px 28px;
+  background: var(--btn-bg);
+  color: var(--btn-text);
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn:hover,
+.btn-submit:hover {
+  transform: translateY(-2px);
+}
+
+/* Services / contenu avec header fixe */
+.with-header {
+  padding-top: 80px;
+}
+
+/* Galerie */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 12px;
+  display: block;
+}
+
+/* Contact */
+.contact-form {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea {
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: var(--footer-bg);
+  font-size: 0.9rem;
+}
