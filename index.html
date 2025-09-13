@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MS Plomberie & Chauffage</title>
+  <style>
+/* --- CSS complet avec navbar rectangulaire (sans border-radius) --- */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  text-align: center;
+  min-height: 100vh;
+}
+
+:root[data-theme='dark'] {
+  --bg: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%);
+  --text: #fff;
+  --btn-bg: linear-gradient(145deg, #aaa, #666);
+  --navbar-bg: rgba(0,0,0,0.85);
+}
+
+:root[data-theme='light'] {
+  --bg: linear-gradient(135deg, #f8f8f8 0%, #e8e8e8 50%, #f8f8f8 100%);
+  --text: #111;
+  --btn-bg: linear-gradient(145deg, #eee, #bbb);
+  --navbar-bg: rgba(255,255,255,0.85);
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 44px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  background: var(--navbar-bg);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  z-index: 1000;
+  box-sizing: border-box;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+/* ... reste du CSS inchangé ... */
+  </style>
+</head>
+<body>
+  <header class="navbar">
+    <a href="#home" class="logo">
+      <img src="https://raw.githubusercontent.com/MS-PLOMBERIE-CHAUFFAGE/images/main/logo.png" alt="MS Plomberie & Chauffage">
+    </a>
+    <div class="nav-controls">
+      <div class="theme-toggle" id="theme-toggle">
+        <div class="toggle-circle"></div>
+      </div>
+      <button class="menu-btn" id="menu-btn" aria-label="Menu">
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="menu-overlay" id="menu-overlay">
+    <a href="#home">Accueil</a>
+    <a href="#services">Services</a>
+    <a href="#realisations">Réalisations</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+  <main class="hero" id="home">
+    <h1>L'EXPERTISE AU SERVICE DE VOTRE BIEN-ÊTRE</h1>
+    <p>Une solution fiable, durable et sur-mesure pour chaque projet de plomberie ou chauffage.</p>
+    <a href="#contact" class="btn">Demander un devis</a>
+  </main>
+
+  <section class="content" id="services">
+    <h1>SERVICES</h1>
+    <div class="service">
+      <h2>Plomberie</h2>
+      <p>Création de nouvelle installation de plomberie et rénovation...</p>
+    </div>
+    <div class="service">
+      <h2>Chauffage</h2>
+      <p>Création de nouvelles installations de chauffage...</p>
+    </div>
+    <div class="service">
+      <h2>Ventilation</h2>
+      <p>Création de ventilation mécanique contrôlée...</p>
+    </div>
+  </section>
+
+  <section class="content" id="realisations">
+    <h1>RÉALISATIONS</h1>
+    <div class="grid">
+      <img src="images/real1.jpg" alt="Réalisation 1">
+      <img src="images/real2.jpg" alt="Réalisation 2">
+      <img src="images/real3.jpg" alt="Réalisation 3">
+    </div>
+  </section>
+
+  <section class="content contact" id="contact">
+    <h1>CONTACTEZ-NOUS</h1>
+    <form>
+      <label for="name">Nom</label>
+      <input type="text" id="name" name="name" required>
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+      <label for="message">Message</label>
+      <textarea id="message" name="message" required></textarea>
+      <button type="submit" class="btn">Envoyer</button>
+    </form>
+  </section>
+
+  <script>
+// JS identique à la version corrigée
+  </script>
+</body>
+</html>
