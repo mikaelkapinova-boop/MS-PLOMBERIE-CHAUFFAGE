@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - MS Plomberie & Chauffage</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+  <script defer src="script.js"></script>
+</head>
+<body data-theme="dark">
+  <header>
+    <div class="logo"><a href="index.html"><img src="images/logo.png" alt="Logo MS Plomberie"></a></div>
+    <div class="theme-toggle" id="theme-toggle"></div>
+    <button class="menu-btn" id="menu-btn"><span></span><span></span></button>
+  </header>
+
+  <div class="menu-overlay" id="menu-overlay">
+    <nav>
+      <a href="index.html">Accueil</a>
+      <a href="services.html">Services</a>
+      <a href="realisations.html">Réalisations</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+
+  <main>
+    <h1>Contactez-nous</h1>
+    <form>
+      <label for="name">Nom</label>
+      <input type="text" id="name" name="name" required>
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+      <label for="message">Message</label>
+      <textarea id="message" name="message" required></textarea>
+      <button type="submit" class="btn">Envoyer</button>
+    </form>
+  </main>
+</body>
+</html>
