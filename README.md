@@ -1,20 +1,18 @@
-# MS Plomberie Chauffage
+# MS PLOMBERIE & CHAUFFAGE
 
-Site vitrine moderne, épuré et responsive, style iOS/Apple.  
-Inclus : accueil, services, réalisations et contact.  
-Avec mode sombre/clair, parallaxe et navigation mobile.
+Site vitrine moderne style Apple (iOS).
 
-## Pages :
-- `index.html`
-- `services.html`
-- `realisations.html`
-- `contact.html`
+## Pages incluses
+- Accueil (index.html)
+- Services (services.html)
+- Réalisations (realisations.html)
+- Contact (contact.html)
 
-## Installation :
-Déposer sur un serveur ou GitHub Pages.  
-Images à placer dans `images/` :
-- `logo.png`
-- `background.jpg`
-- `real1.jpg`
-- `real2.jpg`
-- `real3.jpg`
+## Fonctionnalités
+- Thème sombre par défaut, clair activable via toggle iOS-like.
+- Header et menu coordonnés avec même opacité et blur.
+- Menu burger 2 barres → transformation fluide en croix ❌.
+- Menu plein écran opaque avec liens centrés.
+- Titres/sous-titres/paragraphes visibles et centrés.
+- Formulaire contact arrondi style iOS.
+- Grille responsive pour les images de réalisations.
