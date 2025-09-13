@@ -1,0 +1,75 @@
+
+/* --- Corrections spécifiques demandées --- */
+
+/* Centrage du titre Nos Réalisations */
+h1, h2, h3 {
+  text-align: center;
+}
+
+/* Menu plein écran */
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 999;
+  transition: opacity 0.3s ease;
+}
+
+/* Fond clair/sombre automatique */
+body.light-mode .menu-overlay {
+  background-color: rgba(255, 255, 255, 0.95);
+  color: #000;
+}
+
+body.dark-mode .menu-overlay {
+  background-color: rgba(0, 0, 0, 0.95);
+  color: #fff;
+}
+
+.menu-overlay.active {
+  display: flex;
+}
+
+/* Liens du menu */
+.menu-overlay a {
+  font-size: 2rem;
+  margin: 1rem 0;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Bouton burger */
+.burger {
+  width: 30px;
+  height: 22px;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 1000;
+}
+
+/* 2 barres parallèles */
+.burger span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: currentColor;
+  border-radius: 3px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Animation en croix */
+.burger.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.burger.open span:nth-child(2) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
