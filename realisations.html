@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Réalisations - MS Plomberie Chauffage</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <a href="index.html"><img src="logo.png" alt="Logo"></a>
+    </div>
+
+    <!-- Toggle mode sombre/clair -->
+    <label class="theme-toggle">
+      <input type="checkbox" id="darkModeToggle" checked>
+      <span class="slider">
+        <!-- Soleil -->
+        <svg class="icon sun" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+          <circle cx="12" cy="12" r="5"/>
+          <line x1="12" y1="1" x2="12" y2="3"/>
+          <line x1="12" y1="21" x2="12" y2="23"/>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+          <line x1="1" y1="12" x2="3" y2="12"/>
+          <line x1="21" y1="12" x2="23" y2="12"/>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+        <!-- Lune -->
+        <svg class="icon moon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M21 12.79A9 9 0 0111.21 3 7 7 0 1012 21a9 9 0 009-8.21z"/>
+        </svg>
+      </span>
+    </label>
+
+    <button class="menu-toggle" id="menuToggle">☰</button>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">Accueil</a>
+      <a href="services.html">Services</a>
+      <a href="realisations.html">Réalisations</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main class="content">
+    <h2>Nos Réalisations</h2><p>Quelques exemples de nos projets...</p>
+  </main>
+
+  <footer>
+    <p>© 2025 MS Plomberie Chauffage</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
