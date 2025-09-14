@@ -1,28 +1,38 @@
+Je vais ajouter toutes vos demandes au code. Voici le code HTML mis à jour :
+
+```html
 <!DOCTYPE html>
-
-<html data-theme="dark" lang="fr">
+<html lang="fr" data-theme="dark">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>MS Plomberie &amp; Chauffage - Plombier Chauffagiste Nancy | Devis Gratuit</title>
-<meta content="MS Plomberie &amp; Chauffage, expert plombier chauffagiste à Nancy. 15 ans d'expérience, intervention dans un rayon de 80km. Devis gratuit. Appelez le 07 49 24 85 59" name="description"/>
-<meta content="plombier nancy, chauffagiste nancy, plomberie chauffage, devis gratuit, rénovation salle de bain, pompe à chaleur" name="keywords"/>
-<meta content="MS Plomberie &amp; Chauffage - Expert Plombier Chauffagiste Nancy" property="og:title"/>
-<meta content="15 ans d'expérience, devis gratuit, intervention 80km autour de Nancy" property="og:description"/>
-<meta content="index, follow" name="robots"/>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MS Plomberie & Chauffage - Plombier Chauffagiste Nancy | Devis Gratuit</title>
+  <meta name="description" content="MS Plomberie & Chauffage, expert plombier chauffagiste à Nancy. 15 ans d'expérience, intervention dans un rayon de 80km. Devis gratuit. Appelez le 07 49 24 85 59">
+  <meta name="keywords" content="plombier nancy, chauffagiste nancy, plomberie chauffage, devis gratuit, rénovation salle de bain, pompe à chaleur">
+  <meta property="og:title" content="MS Plomberie & Chauffage - Expert Plombier Chauffagiste Nancy">
+  <meta property="og:description" content="15 ans d'expérience, devis gratuit, intervention 80km autour de Nancy">
+  <meta name="robots" content="index, follow">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-<!-- CSS Files -->
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
 
-
-
-
-
-
-<style>/* Variables CSS */
-:root {
-  /* Couleurs - Mode sombre */
+:root[data-theme='dark'] {
   --bg: #0a0a0a;
   --bg-gradient: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0a0a0a 100%);
   --text: #ffffff;
@@ -32,300 +42,73 @@
   --card-bg: rgba(255,255,255,0.05);
   --navbar-bg: rgba(0,0,0,0.9);
   --border: rgba(255,255,255,0.1);
-  --shadow: rgba(0,0,0,0.3);
-
-  /* Couleurs système */
-  --success: #4CAF50;
-  --error: #f44336;
-  --warning: #ff9800;
-  --info: #2196F3;
-
-  /* Espacements */
-  --spacing-xs: 0.25rem;
-  --spacing-sm: 0.5rem;
-  --spacing-md: 1rem;
-  --spacing-lg: 1.5rem;
-  --spacing-xl: 2rem;
-  --spacing-2xl: 3rem;
-  --spacing-3xl: 4rem;
-  --spacing-4xl: 5rem;
-
-  /* Tailles */
-  --navbar-height: 55px;
-  --border-radius-sm: 8px;
-  --border-radius-md: 12px;
-  --border-radius-lg: 20px;
-  --border-radius-xl: 24px;
-  --border-radius-full: 9999px;
-
-  /* Transitions */
-  --transition-fast: 0.15s ease;
-  --transition-medium: 0.3s ease;
-  --transition-slow: 0.6s ease;
-
-  /* Z-index */
-  --z-dropdown: 1000;
-  --z-sticky: 1020;
-  --z-fixed: 1030;
-  --z-modal-backdrop: 1040;
-  --z-modal: 1050;
-  --z-popover: 1060;
-  --z-tooltip: 1070;
-  --z-toast: 1080;
-
-  /* Breakpoints (pour référence) */
-  --breakpoint-sm: 576px;
-  --breakpoint-md: 768px;
-  --breakpoint-lg: 992px;
-  --breakpoint-xl: 1200px;
-  --breakpoint-2xl: 1400px;
 }
 
-/* Variables - Mode clair */
 :root[data-theme='light'] {
   --bg: #ffffff;
   --bg-gradient: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 50%, #f8f9fa 100%);
   --text: #212529;
   --text-secondary: #6c757d;
+  --accent: #4CAF50;
+  --accent-hover: #45a049;
   --card-bg: rgba(0,0,0,0.03);
   --navbar-bg: rgba(255,255,255,0.95);
   --border: rgba(0,0,0,0.1);
-  --shadow: rgba(0,0,0,0.1);
 }
 
-/* Media queries pour les variables responsive */
-@media (max-width: 768px) {
-  :root {
-    --navbar-height: 50px;
-    --spacing-xl: 1.5rem;
-    --spacing-2xl: 2rem;
-    --spacing-3xl: 2.5rem;
-    --spacing-4xl: 3rem;
-  }
-}
-
-@media (max-width: 480px) {
-  :root {
-    --navbar-height: 45px;
-    --spacing-lg: 1rem;
-    --spacing-xl: 1.25rem;
-    --spacing-2xl: 1.5rem;
-  }
-}
-
-
-/* Reset et styles de base */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-  font-size: 100%;
-}
-
-body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  line-height: 1.6;
-  overflow-x: hidden;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-/* Typographie */
-h1, h2, h3, h4, h5, h6 {
-  font-weight: 600;
-  line-height: 1.2;
-  margin-bottom: var(--spacing-sm);
-}
-
-h1 {
-  font-size: clamp(2rem, 5vw, 3.5rem);
-  font-weight: 700;
-}
-
-h2 {
-  font-size: clamp(1.75rem, 4vw, 2.5rem);
-  font-weight: 700;
-}
-
-h3 {
-  font-size: clamp(1.25rem, 3vw, 1.75rem);
-  font-weight: 600;
-}
-
-p {
-  margin-bottom: var(--spacing-md);
-}
-
-a {
-  color: var(--accent);
-  text-decoration: none;
-  transition: color var(--transition-medium);
-}
-
-a:hover {
-  color: var(--accent-hover);
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* Utilitaires */
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 var(--spacing-md);
-}
-
-@media (min-width: 768px) {
-  .container {
-    padding: 0 var(--spacing-xl);
-  }
-}
-
-/* Focus et accessibilité */
-:focus-visible {
-  outline: 2px solid var(--accent);
-  outline-offset: 2px;
-}
-
-.keyboard-navigation *:focus {
-  outline: 2px solid var(--accent) !important;
-  outline-offset: 2px !important;
-}
-
-/* Sélection de texte */
-::selection {
-  background: var(--accent);
-  color: white;
-}
-
-/* Scrollbar personnalisée */
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: var(--card-bg);
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--accent);
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: var(--accent-hover);
-}
-
-/* Préchargement des polices critiques */
-@font-face {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-}
-
-
-/* Navigation - Style Apple */
+/* Navigation - Header fin et responsive */
 .navbar {
   position: fixed;
   top: 0;
   width: 100%;
-  height: var(--navbar-height);
+  height: 60px; /* Header plus fin */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 var(--spacing-xl);
+  padding: 0 2rem;
   background: var(--navbar-bg);
   backdrop-filter: blur(20px) saturate(180%);
   -webkit-backdrop-filter: blur(20px) saturate(180%);
-  z-index: var(--z-fixed);
+  z-index: 1000;
   border-bottom: 1px solid var(--border);
-  transition: all var(--transition-medium);
+  transition: all 0.3s ease;
 }
 
 .logo {
   display: flex;
   align-items: center;
-  gap: var(--spacing-sm);
-  font-size: 1rem;
+  gap: 0.75rem;
+  font-size: 1.2rem;
   font-weight: 700;
   color: var(--text);
   text-decoration: none;
+  white-space: nowrap;
 }
 
 .logo img {
-  height: 32px;
+  height: 35px;
   width: auto;
 }
 
-.logo-text {
-  font-size: 0.9rem;
-  font-weight: 600;
-  letter-spacing: -0.02em;
-}
-
-/* Contrôles navigation */
 .nav-controls {
   display: flex;
   align-items: center;
-  gap: var(--spacing-lg);
+  gap: 1.5rem;
 }
 
-/* Toggle thème */
 .theme-toggle {
-  width: 50px;
-  height: 24px;
-  border-radius: var(--border-radius-full);
+  width: 60px;
+  height: 30px;
+  border-radius: 50px;
   background: #333;
   cursor: pointer;
   position: relative;
-  transition: all var(--transition-medium);
-  border: 1px solid #555;
+  transition: all 0.3s ease;
+  border: 2px solid #555;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 6px;
+  padding: 0 8px;
 }
 
 :root[data-theme='light'] .theme-toggle {
@@ -335,39 +118,39 @@ img {
 
 .theme-toggle::before {
   content: '🌙';
-  font-size: 10px;
+  font-size: 12px;
   position: absolute;
-  left: 6px;
+  left: 8px;
   z-index: 1;
   opacity: 1;
-  transition: opacity var(--transition-medium);
+  transition: opacity 0.3s ease;
 }
 
 .theme-toggle::after {
   content: '☀️';
-  font-size: 10px;
+  font-size: 12px;
   position: absolute;
-  right: 6px;
+  right: 8px;
   z-index: 1;
   opacity: 0.3;
-  transition: opacity var(--transition-medium);
+  transition: opacity 0.3s ease;
 }
 
-.toggle-circle {
+.theme-toggle .toggle-circle {
   position: absolute;
   top: 2px;
   left: 2px;
-  width: 18px;
-  height: 18px;
+  width: 22px;
+  height: 22px;
   background: #fff;
   border-radius: 50%;
-  transition: all var(--transition-medium);
-  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
   z-index: 2;
 }
 
-:root[data-theme='light'] .toggle-circle {
-  left: 28px;
+:root[data-theme='light'] .theme-toggle .toggle-circle {
+  left: 32px;
   background: #333;
 }
 
@@ -379,41 +162,45 @@ img {
   opacity: 1;
 }
 
-/* Menu hamburger - 2 barres */
+/* Menu hamburger en forme de croix */
 .menu-btn {
   background: none;
   border: none;
   cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  padding: var(--spacing-sm);
-  z-index: calc(var(--z-fixed) + 1);
-  width: 32px;
-  height: 32px;
-  justify-content: center;
-  align-items: center;
-  transition: all var(--transition-medium);
+  padding: 8px;
+  z-index: 1001;
+  width: 30px;
+  height: 30px;
+  position: relative;
 }
 
-.hamburger-line {
+.menu-btn span {
   width: 20px;
   height: 2px;
   background: var(--text);
-  transition: all var(--transition-medium);
-  border-radius: 1px;
-  transform-origin: center;
+  position: absolute;
+  transition: all 0.3s ease;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.menu-btn.open .hamburger-line:nth-child(1) {
-  transform: rotate(45deg) translate(2px, 2px);
+.menu-btn span:nth-child(1) {
+  transform: translate(-50%, -50%) rotate(45deg);
 }
 
-.menu-btn.open .hamburger-line:nth-child(2) {
-  transform: rotate(-45deg) translate(2px, -2px);
+.menu-btn span:nth-child(2) {
+  transform: translate(-50%, -50%) rotate(-45deg);
 }
 
-/* Menu overlay */
+.menu-btn.open span:nth-child(1) {
+  transform: translate(-50%, -50%) rotate(0deg) translateY(-6px);
+}
+
+.menu-btn.open span:nth-child(2) {
+  transform: translate(-50%, -50%) rotate(0deg) translateY(6px);
+}
+
 .menu-overlay {
   position: fixed;
   top: 0;
@@ -422,14 +209,14 @@ img {
   height: 100vh;
   background: rgba(0,0,0,0.95);
   backdrop-filter: blur(10px);
-  z-index: var(--z-fixed);
+  z-index: 999;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   opacity: 0;
   visibility: hidden;
-  transition: all var(--transition-medium);
+  transition: all 0.3s ease;
 }
 
 .menu-overlay.active {
@@ -437,82 +224,141 @@ img {
   visibility: visible;
 }
 
-.menu-close {
-  position: absolute;
-  top: var(--spacing-md);
-  right: var(--spacing-xl);
-  background: none;
-  border: none;
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-  padding: var(--spacing-sm);
-  width: 32px;
-  height: 32px;
-  justify-content: center;
-  align-items: center;
-}
-
-.close-line {
-  width: 20px;
-  height: 2px;
-  background: white;
-  position: absolute;
-}
-
-.close-line:nth-child(1) {
-  transform: rotate(45deg);
-}
-
-.close-line:nth-child(2) {
-  transform: rotate(-45deg);
-}
-
-.menu-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: var(--spacing-xl);
-}
-
 .menu-overlay a {
-  color: white;
+  color: #fff;
   text-decoration: none;
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 300;
-  transition: all var(--transition-medium);
+  margin: 1rem 0;
+  transition: all 0.3s ease;
   text-align: center;
 }
 
 .menu-overlay a:hover {
   color: var(--accent);
-  transform: translateY(-2px);
+  transform: translateY(-5px);
 }
 
-/* Boutons */
+/* Bouton d'appel flottant */
+.call-button {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 60px;
+  height: 60px;
+  background: var(--accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(76, 175, 80, 0.4);
+  z-index: 1000;
+  animation: pulse 2s infinite;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.call-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 25px rgba(76, 175, 80, 0.6);
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(76, 175, 80, 0.7); }
+  70% { box-shadow: 0 0 0 10px rgba(76, 175, 80, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(76, 175, 80, 0); }
+}
+
+/* Hero Section */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: var(--bg-gradient);
+  position: relative;
+  padding: 2rem;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://raw.githubusercontent.com/mikaelkapinova-boop/MS-PLOMBERIE-CHAUFFAGE/main/images/real1.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  z-index: -1;
+}
+
+.hero-content {
+  max-width: 800px;
+  z-index: 2;
+}
+
+.experience-badge {
+  background: var(--accent);
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 2rem;
+  display: inline-block;
+  animation: fadeInUp 0.8s ease;
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+  animation: fadeInUp 0.8s ease 0.2s both;
+}
+
+.hero p {
+  font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+  margin-bottom: 2rem;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+  animation: fadeInUp 0.8s ease 0.4s both;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  animation: fadeInUp 0.8s ease 0.6s both;
+}
+
 .btn {
   background: var(--accent);
   color: white;
-  padding: var(--spacing-md) var(--spacing-xl);
-  border-radius: var(--border-radius-full);
+  padding: 1rem 2rem;
+  border-radius: 50px;
   text-decoration: none;
   font-weight: 600;
-  transition: all var(--transition-medium);
+  transition: all 0.3s ease;
   border: none;
   cursor: pointer;
-  font-size: 0.95rem;
+  font-size: 1rem;
   display: inline-flex;
   align-items: center;
-  gap: var(--spacing-sm);
-  text-align: center;
-  justify-content: center;
+  gap: 0.5rem;
 }
 
 .btn:hover {
   background: var(--accent-hover);
-  transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(76, 175, 80, 0.3);
 }
 
 .btn-secondary {
@@ -526,88 +372,366 @@ img {
   color: var(--text);
 }
 
-.btn-full {
-  width: 100%;
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-/* Bouton d'appel flottant */
-.call-button {
-  position: fixed;
-  bottom: var(--spacing-xl);
-  right: var(--spacing-xl);
-  width: 56px;
-  height: 56px;
-  background: var(--accent);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 20px rgba(76, 175, 80, 0.4);
-  z-index: var(--z-sticky);
-  animation: pulse 2s infinite;
-  transition: all var(--transition-medium);
-  text-decoration: none;
-  color: white;
-  font-size: 1.25rem;
+/* Sections */
+.section {
+  padding: 5rem 2rem;
+  background: var(--bg);
 }
 
-.call-button:hover {
-  transform: scale(1.1);
-  box-shadow: 0 6px 25px rgba(76, 175, 80, 0.6);
+.section:nth-child(even) {
+  background: var(--bg-gradient);
 }
 
-@keyframes pulse {
-  0% { box-shadow: 0 0 0 0 rgba(76, 175, 80, 0.7); }
-  70% { box-shadow: 0 0 0 8px rgba(76, 175, 80, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(76, 175, 80, 0); }
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-/* Cards */
-.service-card,
-.testimonial-card {
+.section-title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: var(--text);
+}
+
+.section-subtitle {
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 1.2rem;
+  margin-bottom: 3rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Services */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.service-card {
   background: var(--card-bg);
-  padding: var(--spacing-xl);
-  border-radius: var(--border-radius-lg);
+  padding: 2.5rem;
+  border-radius: 20px;
   border: 1px solid var(--border);
   backdrop-filter: blur(10px);
-  transition: all var(--transition-medium);
+  transition: all 0.3s ease;
   text-align: center;
 }
 
 .service-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 30px var(--shadow);
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
   border-color: var(--accent);
 }
 
 .service-icon {
-  width: 64px;
-  height: 64px;
+  width: 80px;
+  height: 80px;
   background: var(--accent);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto var(--spacing-lg);
-  font-size: 1.75rem;
+  margin: 0 auto 1.5rem;
+  font-size: 2rem;
   color: white;
 }
 
 .service-card h3 {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-weight: 600;
-  margin-bottom: var(--spacing-md);
+  margin-bottom: 1rem;
   color: var(--accent);
 }
 
-/* Formulaires */
+.service-card p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* Zone d'intervention */
+.zone-intervention {
+  background: var(--card-bg);
+  border-radius: 20px;
+  padding: 2rem;
+  margin: 3rem 0;
+  border: 1px solid var(--border);
+}
+
+.zone-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.zone-info h3 {
+  color: var(--accent);
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.zone-details {
+  list-style: none;
+  margin: 1.5rem 0;
+}
+
+.zone-details li {
+  padding: 0.5rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.zone-details li::before {
+  content: '📍';
+  margin-right: 0.5rem;
+}
+
+.horaires {
+  background: rgba(76, 175, 80, 0.1);
+  padding: 1rem;
+  border-radius: 10px;
+  border-left: 4px solid var(--accent);
+  margin-top: 1rem;
+}
+
+.map-container {
+  height: 300px;
+  background: #f0f0f0;
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Catégories de réalisations */
+.realisations-categories {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.category-btn {
+  padding: 0.75rem 1.5rem;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 50px;
+  color: var(--text);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.category-btn.active,
+.category-btn:hover {
+  background: var(--accent);
+  color: white;
+  border-color: var(--accent);
+}
+
+/* Réalisations */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.gallery-item {
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  aspect-ratio: 4/3;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.gallery-item:hover {
+  transform: scale(1.03);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.1);
+}
+
+.gallery-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+  display: flex;
+  align-items: flex-end;
+  padding: 1.5rem;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.gallery-item:hover .gallery-overlay {
+  opacity: 1;
+}
+
+.gallery-overlay h4 {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+/* Témoignages */
+.testimonials {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.testimonial-card {
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: 15px;
+  border: 1px solid var(--border);
+  position: relative;
+}
+
+.testimonial-card::before {
+  content: '"';
+  position: absolute;
+  top: -10px;
+  left: 20px;
+  font-size: 4rem;
+  color: var(--accent);
+  font-family: Georgia, serif;
+}
+
+.testimonial-text {
+  font-style: italic;
+  margin-bottom: 1rem;
+  color: var(--text-secondary);
+}
+
+.testimonial-author {
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.testimonial-rating {
+  color: #ffd700;
+  margin-top: 0.5rem;
+}
+
+/* Formulaire de témoignage */
+.add-testimonial {
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  margin-top: 3rem;
+}
+
+.add-testimonial h3 {
+  color: var(--accent);
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+/* Contact */
+.contact-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  margin-top: 3rem;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: var(--card-bg);
+  border-radius: 10px;
+  border: 1px solid var(--border);
+}
+
+.contact-icon {
+  width: 50px;
+  height: 50px;
+  background: var(--accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: white;
+}
+
+.contact-details h4 {
+  margin-bottom: 0.5rem;
+  color: var(--accent);
+}
+
+.contact-details p {
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.contact-details a {
+  color: var(--text);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-details a:hover {
+  color: var(--accent);
+}
+
+.contact-form {
+  background: var(--card-bg);
+  padding: 2.5rem;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  backdrop-filter: blur(10px);
+}
+
 .form-group {
-  margin-bottom: var(--spacing-lg);
+  margin-bottom: 1.5rem;
 }
 
 .form-group label {
   display: block;
-  margin-bottom: var(--spacing-sm);
+  margin-bottom: 0.5rem;
   font-weight: 500;
   color: var(--text);
 }
@@ -616,13 +740,13 @@ img {
 .form-group textarea,
 .form-group select {
   width: 100%;
-  padding: var(--spacing-md);
+  padding: 1rem;
   border: 1px solid var(--border);
-  border-radius: var(--border-radius-md);
+  border-radius: 10px;
   background: var(--card-bg);
   color: var(--text);
   font-size: 1rem;
-  transition: all var(--transition-medium);
+  transition: all 0.3s ease;
 }
 
 .form-group input:focus,
@@ -638,905 +762,36 @@ img {
   min-height: 120px;
 }
 
-/* Rating input */
-.rating-input {
-  display: flex;
-  flex-direction: row-reverse;
-  gap: var(--spacing-xs);
-  justify-content: flex-end;
-}
-
-.rating-input input[type="radio"] {
-  display: none;
-}
-
-.rating-input label {
-  font-size: 1.5rem;
-  cursor: pointer;
-  color: #ddd;
-  transition: color var(--transition-fast);
-  margin: 0;
-}
-
-.rating-input input[type="radio"]:checked ~ label,
-.rating-input label:hover,
-.rating-input label:hover ~ label {
-  color: #ffd700;
-}
-
-/* Contact items */
-.contact-item {
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-md);
-  padding: var(--spacing-lg);
-  background: var(--card-bg);
-  border-radius: var(--border-radius-md);
-  border: 1px solid var(--border);
-  margin-bottom: var(--spacing-md);
-}
-
-.contact-icon {
-  width: 48px;
-  height: 48px;
-  background: var(--accent);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.1rem;
-  color: white;
-  flex-shrink: 0;
-}
-
-.contact-details h4 {
-  margin-bottom: var(--spacing-xs);
-  color: var(--accent);
-  font-size: 1rem;
-}
-
-.contact-link {
-  color: var(--text);
-  font-weight: 500;
-}
-
-.contact-subtitle {
-  font-size: 0.85rem;
-  color: var(--accent);
-  margin: 0;
-}
-
-/* Gallery */
-.gallery-item {
-  position: relative;
-  border-radius: var(--border-radius-md);
-  overflow: hidden;
-  aspect-ratio: 4/3;
-  cursor: pointer;
-  transition: all var(--transition-medium);
-}
-
-.gallery-item:hover {
-  transform: scale(1.02);
-  box-shadow: 0 8px 25px var(--shadow);
-}
-
-.gallery-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: all var(--transition-medium);
-}
-
-.gallery-item:hover img {
-  transform: scale(1.05);
-}
-
-.gallery-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
-  display: flex;
-  align-items: flex-end;
-  padding: var(--spacing-lg);
-  opacity: 0;
-  transition: all var(--transition-medium);
-}
-
-.gallery-item:hover .gallery-overlay {
-  opacity: 1;
-}
-
-.gallery-overlay h4 {
-  color: white;
-  font-size: 1.1rem;
-  font-weight: 600;
-  margin: 0;
-}
-
-/* Trust badges */
-.trust-badges {
-  display: flex;
-  justify-content: center;
-  gap: var(--spacing-xl);
-  margin-top: var(--spacing-2xl);
-  flex-wrap: wrap;
-}
-
-.trust-badge {
-  text-align: center;
-  padding: var(--spacing-md);
-}
-
-.trust-icon {
-  font-size: 2rem;
-  margin-bottom: var(--spacing-sm);
-}
-
-.trust-number {
-  font-weight: 600;
-  color: var(--accent);
-  font-size: 1.1rem;
-}
-
-.trust-text {
-  font-size: 0.9rem;
-  color: var(--text-secondary);
-  margin-top: var(--spacing-xs);
-}
-
-/* Notifications */
-.notification {
-  position: fixed;
-  top: calc(var(--navbar-height) + var(--spacing-md));
-  right: var(--spacing-md);
-  max-width: 350px;
-  padding: var(--spacing-md) var(--spacing-lg);
-  border-radius: var(--border-radius-md);
-  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-  z-index: var(--z-toast);
-  transform: translateX(100%);
-  opacity: 0;
-  transition: all var(--transition-medium);
-}
-
-.notification.show {
-  transform: translateX(0);
-  opacity: 1;
-}
-
-.notification-success {
-  background: var(--success);
-  color: white;
-}
-
-.notification-error {
-  background: var(--error);
-  color: white;
-}
-
-.notification-content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: var(--spacing-md);
-}
-
-.notification-close {
-  background: none;
-  border: none;
-  color: white;
-  font-size: 1.25rem;
-  cursor: pointer;
-  padding: 0;
-  opacity: 0.8;
-  transition: opacity var(--transition-fast);
-}
-
-.notification-close:hover {
-  opacity: 1;
-}
-
-
-/* Layout général */
-.section {
-  padding: var(--spacing-4xl) 0;
-  background: var(--bg);
-}
-
-.section:nth-child(even) {
-  background: var(--bg-gradient);
-}
-
-.section-title {
-  font-size: clamp(1.75rem, 4vw, 2.5rem);
-  font-weight: 700;
-  text-align: center;
-  margin-bottom: var(--spacing-md);
-  color: var(--text);
-}
-
-.section-subtitle {
-  text-align: center;
-  color: var(--text-secondary);
-  font-size: 1.1rem;
-  margin-bottom: var(--spacing-2xl);
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* Hero Section */
-.hero {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  position: relative;
-  padding: var(--spacing-xl);
-  overflow: hidden;
-}
-
-.hero-background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
-              url('https://raw.githubusercontent.com/mikaelkapinova-boop/MS-PLOMBERIE-CHAUFFAGE/main/images/real1.jpg');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  z-index: -1;
-}
-
-.hero-content {
-  max-width: 800px;
-  z-index: 2;
-}
-
-.experience-badge {
-  background: var(--accent);
-  color: white;
-  padding: var(--spacing-sm) var(--spacing-lg);
-  border-radius: var(--border-radius-full);
-  font-weight: 600;
-  font-size: 0.9rem;
-  margin-bottom: var(--spacing-xl);
-  display: inline-block;
-}
-
-.hero h1 {
-  font-size: clamp(2rem, 5vw, 3.5rem);
-  font-weight: 700;
-  margin-bottom: var(--spacing-lg);
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
-  line-height: 1.1;
-}
-
-.hero p {
-  font-size: clamp(1rem, 2.5vw, 1.2rem);
-  margin-bottom: var(--spacing-xl);
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
-}
-
-.cta-buttons {
-  display: flex;
-  gap: var(--spacing-md);
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-/* Services Grid */
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: var(--spacing-xl);
-  margin-top: var(--spacing-2xl);
-}
-
-/* Zone d'intervention */
-.zone-intervention {
-  background: var(--card-bg);
-  border-radius: var(--border-radius-lg);
-  padding: var(--spacing-xl);
-  margin: var(--spacing-2xl) 0;
-  border: 1px solid var(--border);
-}
-
-.zone-content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--spacing-2xl);
-  align-items: center;
-}
-
-.zone-info h3 {
-  color: var(--accent);
-  font-size: 1.5rem;
-  margin-bottom: var(--spacing-md);
-}
-
-.zone-details {
-  list-style: none;
-  margin: var(--spacing-lg) 0;
-}
-
-.zone-details li {
-  padding: var(--spacing-sm) 0;
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-sm);
-}
-
-.zone-details li::before {
-  content: '📍';
-  margin-right: var(--spacing-sm);
-}
-
-.horaires {
-  background: rgba(76, 175, 80, 0.1);
-  padding: var(--spacing-md);
-  border-radius: var(--border-radius-md);
-  border-left: 4px solid var(--accent);
-  margin-top: var(--spacing-md);
-}
-
-.horaires h4 {
-  color: var(--accent);
-  margin-bottom: var(--spacing-sm);
-}
-
-.map-container {
-  height: 300px;
-  background: #f0f0f0;
-  border-radius: var(--border-radius-md);
-  overflow: hidden;
-  position: relative;
-}
-
-#nancy-map {
-  width: 100%;
-  height: 100%;
-}
-
-/* Gallery Grid */
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: var(--spacing-lg);
-  margin-top: var(--spacing-2xl);
-}
-
-/* Testimonials */
-.testimonials {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: var(--spacing-xl);
-  margin-top: var(--spacing-2xl);
-}
-
-.testimonial-card {
-  position: relative;
-  text-align: left;
-}
-
-.testimonial-card::before {
-  content: '"';
-  position: absolute;
-  top: -10px;
-  left: 15px;
-  font-size: 3rem;
-  color: var(--accent);
-  font-family: Georgia, serif;
-  line-height: 1;
-}
-
-.testimonial-text {
-  font-style: italic;
-  margin-bottom: var(--spacing-md);
-  color: var(--text-secondary);
-  padding-left: var(--spacing-lg);
-}
-
-.testimonial-author {
-  font-weight: 600;
-  color: var(--accent);
-  font-size: 0.95rem;
-}
-
-.testimonial-rating {
-  color: #ffd700;
-  margin-top: var(--spacing-sm);
-  font-size: 0.9rem;
-}
-
-/* Formulaire témoignage */
-.testimonial-form-container {
-  max-width: 600px;
-  margin: 0 auto;
-  background: var(--card-bg);
-  padding: var(--spacing-xl);
-  border-radius: var(--border-radius-lg);
-  border: 1px solid var(--border);
-}
-
-/* Contact */
-.contact-content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--spacing-3xl);
-  margin-top: var(--spacing-2xl);
-}
-
-.contact-info {
-  display: flex;
-  flex-direction: column;
-}
-
-.contact-form {
-  background: var(--card-bg);
-  padding: var(--spacing-xl);
-  border-radius: var(--border-radius-lg);
-  border: 1px solid var(--border);
-  backdrop-filter: blur(10px);
-}
-
 .form-garanties {
   background: rgba(76, 175, 80, 0.1);
-  padding: var(--spacing-md);
-  border-radius: var(--border-radius-md);
-  margin: var(--spacing-md) 0;
+  padding: 1rem;
+  border-radius: 10px;
+  margin: 1rem 0;
   font-size: 0.9rem;
   color: var(--text-secondary);
-  border-left: 4px solid var(--accent);
 }
 
-.form-garanties p {
-  margin-bottom: var(--spacing-sm);
-}
-
-.form-garanties p:last-child {
-  margin-bottom: 0;
-}
-
-/* Footer */
-.footer {
-  background: var(--navbar-bg);
-  padding: var(--spacing-xl);
-  text-align: center;
-  border-top: 1px solid var(--border);
-}
-
-.footer-title {
-  margin-bottom: var(--spacing-md);
-  font-weight: 600;
-  font-size: 1.1rem;
-}
-
-.footer-info {
-  color: var(--text-secondary);
-  margin-bottom: var(--spacing-md);
-}
-
-.footer-link {
-  color: var(--accent);
-  text-decoration: none;
-}
-
-.footer-link:hover {
-  color: var(--accent-hover);
-}
-
-.footer-copyright {
-  color: var(--text-secondary);
-  font-size: 0.9rem;
-  margin: 0;
-}
-
-
-/* Animations et transitions */
-
-/* États initiaux pour les animations */
-.reveal,
-.slide-up,
-.slide-left,
-.slide-right,
-.zoom-in,
-.fade-in {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-
-.slide-left {
-  transform: translateX(-30px);
-}
-
-.slide-right {
-  transform: translateX(30px);
-}
-
-.zoom-in {
-  transform: scale(0.9);
-}
-
-.fade-in {
-  transform: none;
-}
-
-/* États visibles */
-.reveal.visible,
-.slide-up.visible,
-.slide-left.visible,
-.slide-right.visible,
-.zoom-in.visible,
-.fade-in.visible {
-  opacity: 1;
-  transform: translateY(0) translateX(0) scale(1);
-}
-
-/* Délais pour les animations en cascade */
-.delay-1 {
-  transition-delay: 0.1s;
-}
-
-.delay-2 {
-  transition-delay: 0.2s;
-}
-
-.delay-3 {
-  transition-delay: 0.3s;
-}
-
-.delay-4 {
-  transition-delay: 0.4s;
-}
-
-.delay-5 {
-  transition-delay: 0.5s;
-}
-
-/* Animation des éléments du hero */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.hero .experience-badge {
-  animation: fadeInUp 1s ease 0.2s both;
-}
-
-.hero h1 {
-  animation: fadeInUp 1s ease 0.4s both;
-}
-
-.hero p {
-  animation: fadeInUp 1s ease 0.6s both;
-}
-
-.hero .cta-buttons {
-  animation: fadeInUp 1s ease 0.8s both;
-}
-
-/* Hover effects */
-.service-card,
-.gallery-item,
-.testimonial-card {
-  transition: all var(--transition-medium);
-}
-
-.service-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-}
-
-.gallery-item:hover {
-  transform: translateY(-5px) scale(1.02);
-}
-
-.testimonial-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-}
-
-/* Loading animation */
-.loading {
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  border: 2px solid rgba(255,255,255,0.3);
-  border-radius: 50%;
-  border-top: 2px solid white;
-  animation: spin 1s linear infinite;
-  margin-right: var(--spacing-sm);
-}
-
-@keyframes spin {
-  0% { 
-    transform: rotate(0deg); 
-  }
-  100% { 
-    transform: rotate(360deg); 
-  }
-}
-
-/* Animations micro-interactions */
-.btn {
-  position: relative;
-  overflow: hidden;
-}
-
-.btn::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 0;
-  height: 0;
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 50%;
-  transition: all 0.4s ease;
-  transform: translate(-50%, -50%);
-}
-
-.btn:hover::before {
-  width: 300px;
-  height: 300px;
-}
-
-/* Animation du menu hamburger */
-.menu-btn {
-  transition: transform var(--transition-medium);
-}
-
-.menu-btn:hover {
-  transform: scale(1.1);
-}
-
-.hamburger-line {
-  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-
-/* Animation du toggle theme */
-.theme-toggle:hover {
-  transform: scale(1.05);
-}
-
-/* Animation de la navbar au scroll */
-.navbar.scrolled {
-  background: rgba(0, 0, 0, 0.95);
-  backdrop-filter: blur(20px);
-}
-
-.navbar.hidden {
-  transform: translateY(-100%);
-}
-
-/* Animations pour les formulaires */
-.form-group input:focus,
-.form-group textarea:focus,
-.form-group select:focus {
-  transform: scale(1.02);
-}
-
-/* Animation des cartes au survol */
-.contact-item {
-  transition: all var(--transition-medium);
-}
-
-.contact-item:hover {
-  transform: translateX(5px);
-  background: rgba(76, 175, 80, 0.05);
-  border-color: var(--accent);
-}
-
-/* Animation des éléments trust badges */
-.trust-badge {
-  transition: all var(--transition-medium);
-}
-
-.trust-badge:hover {
-  transform: translateY(-5px);
-}
-
-.trust-badge:hover .trust-icon {
-  animation: bounce 0.6s ease;
-}
-
-@keyframes bounce {
-  0%, 20%, 53%, 80%, 100% {
-    transform: translate3d(0,0,0);
-  }
-  40%, 43% {
-    transform: translate3d(0,-8px,0);
-  }
-  70% {
-    transform: translate3d(0,-4px,0);
-  }
-  90% {
-    transform: translate3d(0,-2px,0);
-  }
-}
-
-/* Animation du bouton d'appel */
-.call-button:hover {
-  animation: wiggle 0.5s ease-in-out;
-}
-
-@keyframes wiggle {
-  0%, 7% {
-    transform: rotateZ(0);
-  }
-  15% {
-    transform: rotateZ(-15deg);
-  }
-  20% {
-    transform: rotateZ(10deg);
-  }
-  25% {
-    transform: rotateZ(-10deg);
-  }
-  30% {
-    transform: rotateZ(6deg);
-  }
-  35% {
-    transform: rotateZ(-4deg);
-  }
-  40%, 100% {
-    transform: rotateZ(0);
-  }
-}
-
-/* Animation des étoiles dans le rating */
-.rating-input label {
-  transition: all var(--transition-fast);
-  transform: scale(1);
-}
-
-.rating-input label:hover {
-  transform: scale(1.2);
-  filter: drop-shadow(0 0 5px #ffd700);
-}
-
-/* Animation des images de la galerie */
-.gallery-item img {
-  transition: all 0.5s ease;
-  filter: brightness(1) saturate(1);
-}
-
-.gallery-item:hover img {
-  filter: brightness(1.1) saturate(1.2);
-}
-
-/* Animation des zones de texte au focus */
-.form-group textarea:focus {
-  box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.1), 0 0 20px rgba(76, 175, 80, 0.1);
-}
-
-/* Animation de typing pour les placeholders */
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
-}
-
-/* Animation pour les notifications */
-@keyframes slideInRight {
-  from {
-    transform: translateX(100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-@keyframes slideOutRight {
-  from {
-    transform: translateX(0);
-    opacity: 1;
-  }
-  to {
-    transform: translateX(100%);
-    opacity: 0;
-  }
-}
-
-.notification.show {
-  animation: slideInRight 0.3s ease;
-}
-
-.notification.hide {
-  animation: slideOutRight 0.3s ease;
-}
-
-/* Animation du menu overlay */
-.menu-overlay {
-  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-
-.menu-overlay.active {
-  animation: menuFadeIn 0.4s ease;
-}
-
-@keyframes menuFadeIn {
-  from {
-    opacity: 0;
-    backdrop-filter: blur(0px);
-  }
-  to {
-    opacity: 1;
-    backdrop-filter: blur(10px);
-  }
-}
-
-/* Animation des liens du menu */
-.menu-content a {
-  transform: translateY(20px);
-  opacity: 0;
-  transition: all 0.3s ease;
-}
-
-.menu-overlay.active .menu-content a {
-  transform: translateY(0);
-  opacity: 1;
-}
-
-.menu-overlay.active .menu-content a:nth-child(1) { transition-delay: 0.1s; }
-.menu-overlay.active .menu-content a:nth-child(2) { transition-delay: 0.2s; }
-.menu-overlay.active .menu-content a:nth-child(3) { transition-delay: 0.3s; }
-.menu-overlay.active .menu-content a:nth-child(4) { transition-delay: 0.4s; }
-.menu-overlay.active .menu-content a:nth-child(5) { transition-delay: 0.5s; }
-.menu-overlay.active .menu-content a:nth-child(6) { transition-delay: 0.6s; }
-.menu-overlay.active .menu-content a:nth-child(7) { transition-delay: 0.7s; }
-
-/* Préférences utilisateur pour les animations */
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-}
-
-
-/* Design responsive - Mobile First */
-
-/* Tablettes (768px et moins) */
-@media screen and (max-width: 768px) {
-  /* Navigation */
+/* Responsive Design */
+@media (max-width: 768px) {
   .navbar {
-    padding: 0 var(--spacing-md);
+    padding: 0 1rem;
+    height: 60px;
   }
   
-  .logo-text {
-    display: none;
+  .logo {
+    font-size: 1rem;
   }
   
-  /* Hero */
+  .logo img {
+    height: 30px;
+  }
+  
   .hero {
-    padding: var(--spacing-md);
-    min-height: 90vh;
+    padding: 1rem;
   }
   
-  .hero-background {
-    background-attachment: scroll;
+  .section {
+    padding: 3rem 1rem;
   }
   
   .cta-buttons {
@@ -1544,3238 +799,525 @@ img {
     align-items: center;
   }
   
-  /* Sections */
-  .section {
-    padding: var(--spacing-2xl) 0;
-  }
-  
-  /* Services */
-  .services-grid {
+  .zone-content,
+  .contact-content {
     grid-template-columns: 1fr;
-    gap: var(--spacing-lg);
+    gap: 2rem;
   }
   
-  /* Zone d'intervention */
-  .zone-content {
-    grid-template-columns: 1fr;
-    gap: var(--spacing-lg);
+  .menu-overlay a {
+    font-size: 1.5rem;
   }
   
-  .map-container {
-    height: 250px;
+  .call-button {
+    bottom: 1rem;
+    right: 1rem;
+    width: 50px;
+    height: 50px;
   }
   
-  /* Gallery */
-  .gallery-grid {
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  }
-  
-  /* Testimonials */
+  .services-grid,
+  .gallery-grid,
   .testimonials {
     grid-template-columns: 1fr;
   }
-  
-  /* Contact */
-  .contact-content {
-    grid-template-columns: 1fr;
-    gap: var(--spacing-xl);
-  }
-  
-  /* Menu overlay adjustments */
-  .menu-overlay a {
-    font-size: 1.25rem;
-  }
-  
-  /* Trust badges */
-  .trust-badges {
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--spacing-md);
-  }
 }
 
-/* Mobiles (480px et moins) */
-@media screen and (max-width: 480px) {
-  /* Navigation */
-  .navbar {
-    padding: 0 var(--spacing-sm);
-  }
-  
+@media (max-width: 480px) {
   .nav-controls {
-    gap: var(--spacing-md);
+    gap: 1rem;
   }
   
   .theme-toggle {
-    width: 40px;
-    height: 20px;
-  }
-  
-  .toggle-circle {
-    width: 14px;
-    height: 14px;
-  }
-  
-  :root[data-theme='light'] .toggle-circle {
-    left: 22px;
-  }
-  
-  .menu-btn {
-    width: 28px;
-    height: 28px;
-  }
-  
-  .hamburger-line {
-    width: 16px;
-  }
-  
-  /* Hero */
-  .hero {
-    padding: var(--spacing-sm);
-  }
-  
-  .experience-badge {
-    font-size: 0.8rem;
-    padding: var(--spacing-xs) var(--spacing-md);
-  }
-  
-  .hero h1 {
-    font-size: clamp(1.5rem, 8vw, 2.5rem);
-  }
-  
-  .hero p {
-    font-size: clamp(0.9rem, 4vw, 1.1rem);
-  }
-  
-  .btn {
-    padding: var(--spacing-sm) var(--spacing-md);
-    font-size: 0.9rem;
-  }
-  
-  /* Sections */
-  .section {
-    padding: var(--spacing-xl) 0;
+    width: 50px;
+    height: 25px;
   }
   
   .section-title {
-    font-size: clamp(1.5rem, 6vw, 2rem);
-  }
-  
-  .section-subtitle {
-    font-size: 1rem;
-  }
-  
-  /* Services */
-  .service-card {
-    padding: var(--spacing-lg);
-  }
-  
-  .service-icon {
-    width: 56px;
-    height: 56px;
-    font-size: 1.5rem;
-  }
-  
-  /* Zone d'intervention */
-  .zone-intervention {
-    padding: var(--spacing-lg);
-  }
-  
-  .zone-details li {
-    font-size: 0.9rem;
-  }
-  
-  .map-container {
-    height: 200px;
-  }
-  
-  /* Gallery */
-  .gallery-grid {
-    grid-template-columns: 1fr;
-    gap: var(--spacing-md);
-  }
-  
-  /* Contact */
-  .contact-item {
-    padding: var(--spacing-md);
-  }
-  
-  .contact-icon {
-    width: 40px;
-    height: 40px;
-    font-size: 1rem;
-  }
-  
-  .contact-form {
-    padding: var(--spacing-lg);
-  }
-  
-  .form-group {
-    margin-bottom: var(--spacing-md);
-  }
-  
-  .form-group input,
-  .form-group textarea,
-  .form-group select {
-    padding: var(--spacing-sm);
-    font-size: 0.9rem;
-  }
-  
-  /* Call button */
-  .call-button {
-    bottom: var(--spacing-md);
-    right: var(--spacing-md);
-    width: 48px;
-    height: 48px;
-    font-size: 1.1rem;
-  }
-  
-  /* Menu overlay */
-  .menu-close {
-    top: var(--spacing-sm);
-    right: var(--spacing-md);
-  }
-  
-  .menu-overlay a {
-    font-size: 1.1rem;
-    margin: var(--spacing-sm) 0;
-  }
-  
-  /* Notifications */
-  .notification {
-    right: var(--spacing-sm);
-    left: var(--spacing-sm);
-    max-width: none;
-  }
-  
-  /* Trust badges */
-  .trust-badges {
-    grid-template-columns: 1fr 1fr;
-    gap: var(--spacing-sm);
-  }
-  
-  .trust-badge {
-    padding: var(--spacing-sm);
-  }
-  
-  .trust-icon {
-    font-size: 1.5rem;
-  }
-  
-  /* Footer */
-  .footer {
-    padding: var(--spacing-lg) var(--spacing-sm);
-  }
-  
-  .footer-info {
-    font-size: 0.9rem;
-  }
-}
-
-/* Très petits écrans (320px et moins) */
-@media screen and (max-width: 320px) {
-  .navbar {
-    padding: 0 var(--spacing-xs);
-  }
-  
-  .hero {
-    padding: var(--spacing-xs);
-  }
-  
-  .section {
-    padding: var(--spacing-lg) 0;
-  }
-  
-  .container {
-    padding: 0 var(--spacing-sm);
-  }
-  
-  .service-card,
-  .zone-intervention,
-  .contact-form {
-    padding: var(--spacing-md);
-  }
-  
-  .cta-buttons {
-    gap: var(--spacing-sm);
+    font-size: 1.8rem;
   }
   
   .btn {
-    padding: var(--spacing-xs) var(--spacing-sm);
-    font-size: 0.85rem;
-  }
-  
-  .call-button {
-    width: 44px;
-    height: 44px;
-    font-size: 1rem;
-  }
-}
-
-/* Écrans larges (1200px et plus) */
-@media screen and (min-width: 1200px) {
-  .container {
-    padding: 0 var(--spacing-2xl);
-  }
-  
-  .services-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-  
-  .gallery-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-  
-  .testimonials {
-    grid-template-columns: repeat(3, 1fr);
-  }
-  
-  .trust-badges {
-    gap: var(--spacing-2xl);
-  }
-}
-
-/* Très grands écrans (1400px et plus) */
-@media screen and (min-width: 1400px) {
-  .hero-content {
-    max-width: 900px;
-  }
-  
-  .section-subtitle {
-    max-width: 700px;
-  }
-}
-
-/* Orientation paysage mobile */
-@media screen and (max-height: 500px) and (orientation: landscape) {
-  .hero {
-    min-height: 100vh;
-    padding: var(--spacing-sm);
-  }
-  
-  .hero h1 {
-    font-size: clamp(1.5rem, 4vh, 2rem);
-  }
-  
-  .hero p {
-    font-size: clamp(0.9rem, 3vh, 1rem);
-  }
-  
-  .navbar {
-    height: 40px;
-  }
-  
-  .call-button {
-    width: 40px;
-    height: 40px;
+    padding: 0.8rem 1.5rem;
     font-size: 0.9rem;
   }
 }
 
-/* Mode sombre spécifique mobile */
-@media screen and (max-width: 480px) {
-  :root[data-theme='dark'] {
-    --card-bg: rgba(255,255,255,0.08);
-  }
-  
-  :root[data-theme='light'] {
-    --card-bg: rgba(0,0,0,0.05);
-  }
+/* Animations et micro-interactions */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
 }
 
-/* Hover uniquement sur les appareils qui le supportent */
-@media (hover: hover) and (pointer: fine) {
-  .service-card:hover,
-  .gallery-item:hover,
-  .testimonial-card:hover,
-  .contact-item:hover {
-    transform: translateY(-5px);
-  }
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-/* Pas de hover sur mobile/tactile */
-@media (hover: none) and (pointer: coarse) {
-  .service-card:hover,
-  .gallery-item:hover,
-  .testimonial-card:hover,
-  .contact-item:hover {
-    transform: none;
-  }
-  
-  .btn:hover {
-    transform: none;
-  }
-  
-  .menu-btn:hover {
-    transform: none;
-  }
+.slide-in-left {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: all 0.6s ease;
 }
 
-/* Amélioration de la lisibilité sur petits écrans */
-@media screen and (max-width: 480px) {
-  body {
-    font-size: 0.9rem;
-  }
-  
-  .testimonial-text {
-    font-size: 0.9rem;
-  }
-  
-  .zone-details li,
-  .form-garanties {
-    font-size: 0.85rem;
-  }
+.slide-in-left.visible {
+  opacity: 1;
+  transform: translateX(0);
 }
 
-/* Support des notches (iPhone X+) */
-@supports (padding: max(0px)) {
-  .navbar {
-    padding-left: max(var(--spacing-xl), env(safe-area-inset-left));
-    padding-right: max(var(--spacing-xl), env(safe-area-inset-right));
-  }
-  
-  .call-button {
-    bottom: max(var(--spacing-xl), env(safe-area-inset-bottom));
-    right: max(var(--spacing-xl), env(safe-area-inset-right));
-  }
+.slide-in-right {
+  opacity: 0;
+  transform: translateX(30px);
+  transition: all 0.6s ease;
 }
-</style></head>
+
+.slide-in-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.scale-in {
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all 0.6s ease;
+}
+
+.scale-in.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Délais d'animation en cascade */
+.stagger-delay-1 { transition-delay: 0s; }
+.stagger-delay-2 { transition-delay: 0.1s; }
+.stagger-delay-3 { transition-delay: 0.2s; }
+.stagger-delay-4 { transition-delay: 0.3s; }
+.stagger-delay-5 { transition-delay: 0.4s; }
+.stagger-delay-6 { transition-delay: 0.5s; }
+
+/* Loading Animation */
+.loading {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-radius: 50%;
+  border-top: 2px solid white;
+  animation: spin 1s linear infinite;
+  margin-right: 0.5rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Star rating */
+.star-rating {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.star-rating input {
+  display: none;
+}
+
+.star-rating label {
+  font-size: 2rem;
+  color: #ddd;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.star-rating input:checked ~ label,
+.star-rating label:hover,
+.star-rating label:hover ~ label {
+  color: #ffd700;
+}
+  </style>
+</head>
+
 <body>
-<!-- Navigation -->
-<nav class="navbar">
-<a class="logo" href="#home">
-<img alt="MS Plomberie Logo" onerror="this.style.display='none';" src="https://raw.githubusercontent.com/mikaelkapinova-boop/MS-PLOMBERIE-CHAUFFAGE/main/images/logo.png"/>
-<span class="logo-text">MS PLOMBERIE &amp; CHAUFFAGE</span>
-</a>
-<div class="nav-controls">
-<div class="theme-toggle" id="theme-toggle">
-<div class="toggle-circle"></div>
-</div>
-<button aria-label="Menu" class="menu-btn" id="menu-btn">
-<span class="hamburger-line"></span>
-<span class="hamburger-line"></span>
-</button>
-</div>
-</nav>
-<!-- Menu Overlay -->
-<div class="menu-overlay" id="menu-overlay">
-<button aria-label="Fermer le menu" class="menu-close" id="menu-close">
-<span class="close-line"></span>
-<span class="close-line"></span>
-</button>
-<div class="menu-content">
-<a href="#home">🏠 Accueil</a>
-<a href="#services">🔧 Services</a>
-<a href="#zone">📍 Zone d'intervention</a>
-<a href="#realisations">📸 Réalisations</a>
-<a href="#temoignages">⭐ Témoignages</a>
-<a href="#contact">📞 Contact</a>
-<a href="#add-testimonial">💬 Laisser un avis</a>
-</div>
-</div>
-<!-- Bouton d'appel flottant -->
-<a aria-label="Appeler MS Plomberie" class="call-button" href="tel:0749248559">📞</a>
-<!-- Hero Section -->
-<section class="hero" id="home">
-<div class="hero-background"></div>
-<div class="hero-content">
-<div class="experience-badge slide-up">✨ 15 ans d'expérience</div>
-<h1 class="slide-up delay-1">L'EXPERTISE AU SERVICE DE VOTRE BIEN-ÊTRE</h1>
-<p class="slide-up delay-2">🔧 Solutions fiables et durables pour tous vos projets de plomberie et chauffage dans un rayon de 80km autour de Nancy</p>
-<div class="cta-buttons slide-up delay-3">
-<a class="btn" href="#contact">📋 Devis Gratuit</a>
-<a class="btn btn-secondary" href="tel:0749248559">📞 07 49 24 85 59</a>
-</div>
-</div>
-</section>
-<!-- Services Section -->
-<section class="section" id="services">
-<div class="container">
-<h2 class="section-title reveal">NOS SERVICES</h2>
-<p class="section-subtitle reveal">Une expertise complète pour tous vos besoins en plomberie, chauffage et ventilation</p>
-<div class="services-grid">
-<div class="service-card reveal slide-left">
-<div class="service-icon">🚿</div>
-<h3>Plomberie</h3>
-<p><strong>🆕 Nouvelles installations</strong><br/>
-          Création complète de réseaux de plomberie pour constructions neuves et rénovations.
-          <br/><br/><strong>🛁 Salles de bain clés en main</strong><br/>
-          Conception et réalisation complète avec nos artisans partenaires qualifiés.
-          <br/><br/><strong>🔧 Réparations et remplacements</strong><br/>
-          Intervention rapide sur tous équipements de plomberie.</p>
-</div>
-<div class="service-card reveal slide-up delay-1">
-<div class="service-icon">🌡️</div>
-<h3>Chauffage</h3>
-<p><strong>🏠 Installations complètes</strong><br/>
-          Création de systèmes de chauffage adaptés à vos besoins et à votre budget.
-          <br/><br/><strong>🔥 Chaudières &amp; Pompes à chaleur</strong><br/>
-          Installation, remplacement et maintenance d'équipements thermiques performants.
-          <br/><br/><strong>⚙️ Maintenance préventive</strong><br/>
-          Entretien régulier pour optimiser performance et durée de vie.</p>
-</div>
-<div class="service-card reveal slide-right delay-2">
-<div class="service-icon">💨</div>
-<h3>Ventilation</h3>
-<p><strong>🌪️ VMC (Ventilation Mécanique Contrôlée)</strong><br/>
-          Installation de systèmes de ventilation pour cuisine, salle de bain et WC.
-          <br/><br/><strong>🔄 Renouvellement d'air</strong><br/>
-          Solutions pour améliorer la qualité de l'air intérieur.
-          <br/><br/><strong>🛠️ Maintenance et dépannage</strong><br/>
-          Entretien et réparation de vos installations de ventilation.</p>
-</div>
-</div>
-</div>
-</section>
-<!-- Zone d'intervention -->
-<section class="section" id="zone">
-<div class="container">
-<h2 class="section-title reveal">ZONE D'INTERVENTION</h2>
-<p class="section-subtitle reveal">🚗 Nous intervenons dans un rayon de 80km autour de Nancy</p>
-<div class="zone-intervention reveal">
-<div class="zone-content">
-<div class="zone-info slide-left">
-<h3>📍 Secteurs desservis</h3>
-<ul class="zone-details">
-<li>Nancy et agglomération</li>
-<li>Metz et environs</li>
-<li>Épinal et sa région</li>
-<li>Toul, Pont-à-Mousson</li>
-<li>Lunéville, Saint-Dié</li>
-<li>Bar-le-Duc, Commercy</li>
-<li>Verdun et alentours</li>
-</ul>
-<div class="horaires">
-<h4>⏰ Horaires d'ouverture</h4>
-<p><strong>Lundi au Vendredi :</strong> 8h00 - 18h00</p>
-<p><strong>Urgences :</strong> Intervention 7j/7</p>
-<p><strong>Devis :</strong> Gratuit et sans engagement</p>
-</div>
-</div>
-<div class="map-container slide-right" id="map-container">
-<div id="nancy-map"></div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Réalisations Section -->
-<section class="section" id="realisations">
-<div class="container">
-<h2 class="section-title reveal">NOS RÉALISATIONS</h2>
-<p class="section-subtitle reveal">🏆 Découvrez quelques-uns de nos projets réalisés avec passion et expertise</p>
-<div class="gallery-grid">
-<div class="gallery-item reveal zoom-in">
-<img alt="Rénovation salle de bain moderne" loading="lazy" src="https://raw.githubusercontent.com/mikaelkapinova-boop/MS-PLOMBERIE-CHAUFFAGE/main/images/real1.jpg"/>
-<div class="gallery-overlay">
-<h4>Rénovation salle de bain</h4>
-</div>
-</div>
-<div class="gallery-item reveal zoom-in delay-1">
-<img alt="Installation chauffage" loading="lazy" src="https://raw.githubusercontent.com/mikaelkapinova-boop/MS-PLOMBERIE-CHAUFFAGE/main/images/real2.jpg"/>
-<div class="gallery-overlay">
-<h4>Installation système de chauffage</h4>
-</div>
-</div>
-<div class="gallery-item reveal zoom-in delay-2">
-<img alt="Rénovation salle de bain" loading="lazy" src="https://raw.githubusercontent.com/mikaelkapinova-boop/MS-PLOMBERIE-CHAUFFAGE/main/images/real3.jpg"/>
-<div class="gallery-overlay">
-<h4>Rénovation salle de bain</h4>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Témoignages Section -->
-<section class="section" id="temoignages">
-<div class="container">
-<h2 class="section-title reveal">TÉMOIGNAGES CLIENTS</h2>
-<p class="section-subtitle reveal">⭐ La satisfaction de nos clients est notre meilleure récompense</p>
-<div class="testimonials" id="testimonials-container">
-<!-- Témoignages dynamiques chargés par JavaScript -->
-</div>
-<div class="trust-badges reveal">
-<div class="trust-badge">
-<div class="trust-icon">🏆</div>
-<div class="trust-number">15 ans</div>
-<div class="trust-text">d'expérience</div>
-</div>
-<div class="trust-badge">
-<div class="trust-icon">✅</div>
-<div class="trust-number">100%</div>
-<div class="trust-text">clients satisfaits</div>
-</div>
-<div class="trust-badge">
-<div class="trust-icon">🚀</div>
-<div class="trust-number">Devis</div>
-<div class="trust-text">gratuit</div>
-</div>
-<div class="trust-badge">
-<div class="trust-icon">⚡</div>
-<div class="trust-number">24h</div>
-<div class="trust-text">de réponse</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Formulaire témoignage -->
-<section class="section" id="add-testimonial" style="display: none;">
-<div class="container">
-<h2 class="section-title">LAISSER UN TÉMOIGNAGE</h2>
-<div class="testimonial-form-container">
-<form class="testimonial-form" id="testimonial-form">
-<div class="form-group">
-<label for="testimonial-name">Nom *</label>
-<input id="testimonial-name" required="" type="text"/>
-</div>
-<div class="form-group">
-<label for="testimonial-city">Ville</label>
-<input id="testimonial-city" type="text"/>
-</div>
-<div class="form-group">
-<label for="testimonial-rating">Note *</label>
-<div class="rating-input">
-<input id="star5" name="rating" required="" type="radio" value="5"/>
-<label for="star5">⭐</label>
-<input id="star4" name="rating" type="radio" value="4"/>
-<label for="star4">⭐</label>
-<input id="star3" name="rating" type="radio" value="3"/>
-<label for="star3">⭐</label>
-<input id="star2" name="rating" type="radio" value="2"/>
-<label for="star2">⭐</label>
-<input id="star1" name="rating" type="radio" value="1"/>
-<label for="star1">⭐</label>
-</div>
-</div>
-<div class="form-group">
-<label for="testimonial-message">Votre témoignage *</label>
-<textarea id="testimonial-message" placeholder="Partagez votre expérience avec MS Plomberie..." required=""></textarea>
-</div>
-<button class="btn" type="submit">📤 Publier mon témoignage</button>
-</form>
-</div>
-</div>
-</section>
-<!-- Contact Section -->
-<section class="section" id="contact">
-<div class="container">
-<h2 class="section-title reveal">CONTACTEZ-NOUS</h2>
-<p class="section-subtitle reveal">📞 Une question ? Un projet ? Nous sommes là pour vous accompagner</p>
-<div class="contact-content">
-<div class="contact-info slide-left">
-<div class="contact-item">
-<div class="contact-icon">📞</div>
-<div class="contact-details">
-<h4>Téléphone</h4>
-<p><a class="contact-link" href="tel:0749248559">07 49 24 85 59</a></p>
-<p class="contact-subtitle">Devis gratuit par téléphone</p>
-</div>
-</div>
-<div class="contact-item">
-<div class="contact-icon">📧</div>
-<div class="contact-details">
-<h4>Email</h4>
-<p><a class="contact-link" href="mailto:ms.plomberie.chauffage.nancy@gmail.fr">ms.plomberie.chauffage.nancy@gmail.fr</a></p>
-<p class="contact-subtitle">Réponse sous 24h garantie</p>
-</div>
-</div>
-<div class="contact-item">
-<div class="contact-icon">📍</div>
-<div class="contact-details">
-<h4>Zone d'intervention</h4>
-<p>80km autour de Nancy</p>
-<p class="contact-subtitle">Déplacement gratuit pour devis</p>
-</div>
-</div>
-<div class="contact-item">
-<div class="contact-icon">⏰</div>
-<div class="contact-details">
-<h4>Horaires</h4>
-<p>Lun-Ven : 8h00 - 18h00</p>
-<p class="contact-subtitle">Urgences : 7j/7</p>
-</div>
-</div>
-</div>
-<form class="contact-form slide-right" id="contact-form">
-<div class="form-group">
-<label for="name">Nom complet *</label>
-<input id="name" name="name" required="" type="text"/>
-</div>
-<div class="form-group">
-<label for="email">Email *</label>
-<input id="email" name="email" required="" type="email"/>
-</div>
-<div class="form-group">
-<label for="phone">Téléphone</label>
-<input id="phone" name="phone" placeholder="06 12 34 56 78" type="tel"/>
-</div>
-<div class="form-group">
-<label for="service">Type de service</label>
-<select id="service" name="service">
-<option value="">Sélectionnez un service</option>
-<option value="plomberie">🚿 Plomberie</option>
-<option value="chauffage">🌡️ Chauffage</option>
-<option value="ventilation">💨 Ventilation</option>
-<option value="urgence">🚨 Dépannage urgent</option>
-<option value="devis">📋 Devis / Étude de projet</option>
-</select>
-</div>
-<div class="form-group">
-<label for="message">Décrivez votre projet *</label>
-<textarea id="message" name="message" placeholder="Décrivez votre besoin, nous vous répondrons avec un devis détaillé..." required=""></textarea>
-</div>
-<div class="form-garanties">
-<p>🔒 <strong>Vos garanties :</strong></p>
-<p>✅ Devis gratuit et sans engagement<br/>
-            ✅ Réponse sous 24h<br/>
-            ✅ Respect de votre vie privée<br/>
-            ✅ Pas de démarchage commercial</p>
-</div>
-<button class="btn btn-full" type="submit">
-            📤 Envoyer ma demande
-          </button>
-</form>
-</div>
-</div>
-</section>
-<!-- Footer -->
-<footer class="footer">
-<div class="container">
-<p class="footer-title">MS Plomberie &amp; Chauffage</p>
-<p class="footer-info">
-        🔧 15 ans d'expertise • 📞 <a class="footer-link" href="tel:0749248559">07 49 24 85 59</a> • 📍 Nancy et 80km alentour
-      </p>
-<p class="footer-copyright">
-        © 2024 MS Plomberie &amp; Chauffage - Tous droits réservés
-      </p>
-</div>
-</footer>
-<!-- Scripts -->
-
-
-
-
-
-
-
-
-
-<script>// === FONCTIONS UTILITAIRES ===
-
-// Débounce pour optimiser les performances
-function debounce(func, wait) {
-  let timeout;
-  return function executedFunction(...args) {
-    const later = () => {
-      clearTimeout(timeout);
-      func(...args);
-    };
-    clearTimeout(timeout);
-    timeout = setTimeout(later, wait);
-  };
-}
-
-// Throttle pour le scroll
-function throttle(func, limit) {
-  let inThrottle;
-  return function() {
-    const args = arguments;
-    const context = this;
-    if (!inThrottle) {
-      func.apply(context, args);
-      inThrottle = true;
-      setTimeout(() => inThrottle = false, limit);
-    }
-  }
-}
-
-// Gestion des erreurs d'images
-function handleImageErrors() {
-  document.querySelectorAll('img').forEach(img => {
-    img.addEventListener('error', function() {
-      console.warn('Image failed to load:', this.src);
-      
-      // Cacher l'image et son conteneur parent si c'est un gallery-item
-      this.style.display = 'none';
-      const parent = this.closest('.gallery-item');
-      if (parent) {
-        parent.style.display = 'none';
-      }
-    });
-    
-    // Lazy loading pour les images
-    img.addEventListener('load', function() {
-      this.style.opacity = '1';
-    });
-  });
-}
-
-// Lazy loading pour les images
-function setupLazyLoading() {
-  if ('IntersectionObserver' in window) {
-    const imageObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const img = entry.target;
-          if (img.dataset.src) {
-            img.src = img.dataset.src;
-            img.removeAttribute('data-src');
-          }
-          imageObserver.unobserve(img);
-        }
-      });
-    });
-
-    document.querySelectorAll('img[data-src]').forEach(img => {
-      imageObserver.observe(img);
-    });
-  }
-}
-
-// Préchargement des ressources critiques
-function preloadCriticalResources() {
-  const criticalImages = [
-    'https://raw.githubusercontent.com/mikaelkapinova-boop/images/main/logo.png',
-    'https://raw.githubusercontent.com/mikaelkapinova-boop/images/main/real1.jpg'
-  ];
-
-  criticalImages.forEach(src => {
-    const link = document.createElement('link');
-    link.rel = 'preload';
-    link.as = 'image';
-    link.href = src;
-    document.head.appendChild(link);
-  });
-}
-
-// Validation email
-function isValidEmail(email) {
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  return emailRegex.test(email);
-}
-
-// Formatage du numéro de téléphone français
-function formatPhoneNumber(phone) {
-  let cleaned = phone.replace(/\D/g, '');
-  if (cleaned.length === 10) {
-    return cleaned.replace(/(\d{2})(?=\d)/g, '$1 ');
-  }
-  return phone;
-}
-
-// Détection du type d'appareil
-function getDeviceType() {
-  const width = window.innerWidth;
-  if (width <= 480) return 'mobile';
-  if (width <= 768) return 'tablet';
-  return 'desktop';
-}
-
-// Smooth scroll vers un élément
-function smoothScrollTo(target, offset = 70) {
-  const element = typeof target === 'string' ? document.querySelector(target) : target;
-  if (!element) return;
-  
-  const offsetTop = element.offsetTop - offset;
-  window.scrollTo({
-    top: offsetTop,
-    behavior: 'smooth'
-  });
-}
-
-// Générer un ID unique
-function generateUniqueId(prefix = 'id') {
-  return `${prefix}-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
-}
-
-// Analytics et tracking
-function trackEvent(eventName, parameters = {}) {
-  // Google Analytics 4
-  if (typeof gtag !== 'undefined') {
-    gtag('event', eventName, parameters);
-  }
-  
-  // Facebook Pixel
-  if (typeof fbq !== 'undefined') {
-    fbq('track', eventName, parameters);
-  }
-  
-  console.log(`Event tracked: ${eventName}`, parameters);
-}
-
-// Gestion du localStorage avec fallback
-function safeLocalStorage() {
-  try {
-    return window.localStorage;
-  } catch (e) {
-    // Fallback pour les navigateurs en mode privé
-    return {
-      getItem: () => null,
-      setItem: () => {},
-      removeItem: () => {},
-      clear: () => {}
-    };
-  }
-}
-
-// Détection des capacités du navigateur
-function getBrowserCapabilities() {
-  return {
-    webp: (() => {
-      const canvas = document.createElement('canvas');
-      return canvas.toDataURL('image/webp').indexOf('image/webp') === 5;
-    })(),
-    avif: (() => {
-      const canvas = document.createElement('canvas');
-      return canvas.toDataURL('image/avif').indexOf('image/avif') === 5;
-    })(),
-    intersectionObserver: 'IntersectionObserver' in window,
-    serviceWorker: 'serviceWorker' in navigator,
-    webGL: (() => {
-      try {
-        const canvas = document.createElement('canvas');
-        return !!(canvas.getContext('webgl') || canvas.getContext('experimental-webgl'));
-      } catch (e) {
-        return false;
-      }
-    })()
-  };
-}
-
-// Optimisation des performances
-function optimizePerformance() {
-  // Précharger les ressources critiques
-  preloadCriticalResources();
-  
-  // Configurer le lazy loading
-  setupLazyLoading();
-  
-  // Optimiser les images en fonction des capacités du navigateur
-  const capabilities = getBrowserCapabilities();
-  if (capabilities.webp) {
-    document.documentElement.classList.add('webp-support');
-  }
-  
-  // Déférer les scripts non critiques
-  deferNonCriticalScripts();
-}
-
-// Déférer les scripts non critiques
-function deferNonCriticalScripts() {
-  const scripts = [
-    'https://www.googletagmanager.com/gtag/js',
-    'https://connect.facebook.net/en_US/fbevents.js'
-  ];
-  
-  window.addEventListener('load', () => {
-    scripts.forEach(src => {
-      const script = document.createElement('script');
-      script.src = src;
-      script.async = true;
-      document.head.appendChild(script);
-    });
-  });
-}
-
-// Gestion des erreurs globales
-function setupErrorHandling() {
-  window.addEventListener('error', (e) => {
-    console.error('JavaScript Error:', e.error);
-    
-    // En production, envoyer à un service de monitoring
-    if (window.location.hostname !== 'localhost') {
-      trackEvent('javascript_error', {
-        error_message: e.message,
-        error_filename: e.filename,
-        error_lineno: e.lineno
-      });
-    }
-  });
-  
-  window.addEventListener('unhandledrejection', (e) => {
-    console.error('Unhandled Promise Rejection:', e.reason);
-    
-    trackEvent('promise_rejection', {
-      error_message: e.reason?.message || 'Unknown promise rejection'
-    });
-  });
-}
-
-// Accessibilité améliorée
-function enhanceAccessibility() {
-  // Focus visible pour la navigation au clavier
-  let isKeyboardUser = false;
-  
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Tab') {
-      isKeyboardUser = true;
-      document.body.classList.add('keyboard-navigation');
-    }
-  });
-  
-  document.addEventListener('mousedown', () => {
-    isKeyboardUser = false;
-    document.body.classList.remove('keyboard-navigation');
-  });
-  
-  // Skip links
-  addSkipLinks();
-  
-  // ARIA labels dynamiques
-  updateAriaLabels();
-}
-
-// Ajouter des liens de navigation rapide
-function addSkipLinks() {
-  const skipLinks = document.createElement('div');
-  skipLinks.className = 'skip-links';
-  skipLinks.innerHTML = `
-    <a href="#main" class="skip-link">Aller au contenu principal</a>
-    <a href="#services" class="skip-link">Aller aux services</a>
-    <a href="#contact" class="skip-link">Aller au contact</a>
-  `;
-  
-  document.body.insertBefore(skipLinks, document.body.firstChild);
-}
-
-// Mettre à jour les labels ARIA
-function updateAriaLabels() {
-  // Ajouter des labels aux éléments interactifs
-  document.querySelectorAll('button:not([aria-label])').forEach(btn => {
-    const text = btn.textContent || btn.innerHTML;
-    if (!text.includes('<')) {
-      btn.setAttribute('aria-label', text);
-    }
-  });
-  
-  // Labels pour les liens externes
-  document.querySelectorAll('a[href^="http"]:not([aria-label])').forEach(link => {
-    link.setAttribute('aria-label', `${link.textContent} (lien externe)`);
-  });
-}
-
-// Gestion du mode hors ligne
-function setupOfflineSupport() {
-  if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-      navigator.serviceWorker.register('/sw.js')
-        .then(registration => {
-          console.log('SW registered:', registration);
-        })
-        .catch(error => {
-          console.log('SW registration failed:', error);
-        });
-    });
-  }
-  
-  // Indicateur de connexion
-  window.addEventListener('online', () => {
-    showConnectionStatus('Connexion rétablie', 'success');
-  });
-  
-  window.addEventListener('offline', () => {
-    showConnectionStatus('Mode hors ligne', 'warning');
-  });
-}
-
-// Afficher le statut de connexion
-function showConnectionStatus(message, type) {
-  const notification = document.createElement('div');
-  notification.className = `connection-status connection-${type}`;
-  notification.textContent = message;
-  notification.style.cssText = `
-    position: fixed;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 10px 20px;
-    border-radius: 5px;
-    color: white;
-    font-weight: 600;
-    z-index: 10000;
-    background: ${type === 'success' ? '#4CAF50' : '#ff9800'};
-  `;
-  
-  document.body.appendChild(notification);
-  
-  setTimeout(() => {
-    notification.remove();
-  }, 3000);
-}
-
-// Initialisation des utilitaires
-function initUtils() {
-  handleImageErrors();
-  optimizePerformance();
-  setupErrorHandling();
-  enhanceAccessibility();
-  setupOfflineSupport();
-}
-
-// Auto-initialisation
-document.addEventListener('DOMContentLoaded', initUtils);
-
-// Export des fonctions pour utilisation globale
-window.MSPlomberieUtils = {
-  debounce,
-  throttle,
-  isValidEmail,
-  formatPhoneNumber,
-  getDeviceType,
-  smoothScrollTo,
-  generateUniqueId,
-  trackEvent,
-  safeLocalStorage,
-  getBrowserCapabilities
-};
-
-
-// === ANIMATIONS AU DÉFILEMENT ===
-class ScrollAnimations {
-  constructor() {
-    this.observedElements = new Set();
-    this.init();
-  }
-
-  init() {
-    this.setupIntersectionObserver();
-    this.setupParallaxEffect();
-    this.setupScrollProgress();
-    this.observeElements();
-  }
-
-  setupIntersectionObserver() {
-    const options = {
-      threshold: [0.1, 0.3, 0.5],
-      rootMargin: '0px 0px -50px 0px'
-    };
-
-    this.observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          this.animateElement(entry.target, entry.intersectionRatio);
-        }
-      });
-    }, options);
-  }
-
-  observeElements() {
-    // Observer tous les éléments avec des classes d'animation
-    const animatedElements = document.querySelectorAll(`
-      .fade-in, 
-      .slide-in-left, 
-      .slide-in-right, 
-      .slide-up,
-      .slide-down,
-      .scale-in, 
-      .rotate-in,
-      .bounce-in,
-      .service-card,
-      .gallery-item,
-      .testimonial-card,
-      .contact-item,
-      .section-title,
-      .section-subtitle,
-      .stats-item
-    `);
-
-    animatedElements.forEach(el => {
-      if (!this.observedElements.has(el)) {
-        this.observer.observe(el);
-        this.observedElements.add(el);
-        
-        // Ajouter un délai basé sur la position dans la grille
-        const parent = el.parentElement;
-        const siblings = Array.from(parent.children);
-        const index = siblings.indexOf(el);
-        el.style.animationDelay = `${index * 0.1}s`;
-      }
-    });
-  }
-
-  animateElement(element, ratio) {
-    if (element.classList.contains('animated')) return;
-    
-    element.classList.add('visible', 'animated');
-    
-    // Animations spéciales pour certains éléments
-    if (element.classList.contains('stats-item')) {
-      this.animateCounter(element);
-    }
-    
-    if (element.classList.contains('service-card')) {
-      this.animateServiceCard(element);
-    }
-    
-    if (element.classList.contains('gallery-item')) {
-      this.animateGalleryItem(element);
-    }
-    
-    // Animation en cascade pour les éléments avec stagger
-    if (element.classList.contains('stagger-delay-1')) {
-      this.triggerStaggerAnimation(element);
-    }
-  }
-
-  animateCounter(element) {
-    const counter = element.querySelector('.stat-number');
-    if (!counter) return;
-    
-    const target = parseInt(counter.textContent);
-    const duration = 2000;
-    const increment = target / (duration / 16);
-    let current = 0;
-    
-    const updateCounter = () => {
-      current += increment;
-      if (current < target) {
-        counter.textContent = Math.floor(current);
-        requestAnimationFrame(updateCounter);
-      } else {
-        counter.textContent = target;
-      }
-    };
-    
-    updateCounter();
-  }
-
-  animateServiceCard(element) {
-    const icon = element.querySelector('.service-icon');
-    if (icon) {
-      setTimeout(() => {
-        icon.style.animation = 'bounce 0.6s ease';
-      }, 200);
-    }
-  }
-
-  animateGalleryItem(element) {
-    element.style.transform = 'scale(1.02)';
-    setTimeout(() => {
-      element.style.transform = 'scale(1)';
-    }, 300);
-  }
-
-  triggerStaggerAnimation(element) {
-    const parent = element.parentElement;
-    const staggerElements = parent.querySelectorAll('[class*="stagger-delay-"]');
-    
-    staggerElements.forEach((el, index) => {
-      if (index > 0) {
-        setTimeout(() => {
-          el.classList.add('visible');
-        }, index * 100);
-      }
-    });
-  }
-
-  setupParallaxEffect() {
-    const parallaxElements = document.querySelectorAll('[data-parallax]');
-    
-    if (parallaxElements.length === 0) return;
-    
-    let ticking = false;
-    
-    const updateParallax = () => {
-      const scrolled = window.pageYOffset;
-      
-      parallaxElements.forEach(element => {
-        const speed = parseFloat(element.dataset.parallax) || 0.5;
-        const yPos = -(scrolled * speed);
-        element.style.transform = `translateY(${yPos}px)`;
-      });
-      
-      ticking = false;
-    };
-    
-    window.addEventListener('scroll', () => {
-      if (!ticking) {
-        requestAnimationFrame(updateParallax);
-        ticking = true;
-      }
-    });
-  }
-
-  setupScrollProgress() {
-    // Créer la barre de progression du scroll
-    const progressBar = document.createElement('div');
-    progressBar.className = 'scroll-progress';
-    progressBar.style.cssText = `
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 0%;
-      height: 3px;
-      background: var(--accent);
-      z-index: 10001;
-      transition: width 0.1s ease;
-      box-shadow: 0 0 10px var(--accent);
-    `;
-    document.body.appendChild(progressBar);
-    
-    const updateProgress = () => {
-      const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-      const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-      const scrolled = (scrollTop / scrollHeight) * 100;
-      
-      progressBar.style.width = scrolled + '%';
-    };
-    
-    window.addEventListener('scroll', updateProgress);
-  }
-
-  // Méthodes publiques pour ajouter des animations dynamiques
-  addFadeIn(element, delay = 0) {
-    element.classList.add('fade-in');
-    element.style.animationDelay = `${delay}s`;
-    this.observer.observe(element);
-  }
-
-  addSlideIn(element, direction = 'left', delay = 0) {
-    element.classList.add(`slide-in-${direction}`);
-    element.style.animationDelay = `${delay}s`;
-    this.observer.observe(element);
-  }
-
-  addBounceIn(element, delay = 0) {
-    element.classList.add('bounce-in');
-    element.style.animationDelay = `${delay}s`;
-    this.observer.observe(element);
-  }
-
-  // Animation manuelle pour les éléments spéciaux
-  animateOnDemand(element, animationType) {
-    element.style.opacity = '0';
-    element.style.transform = this.getInitialTransform(animationType);
-    
-    requestAnimationFrame(() => {
-      element.style.transition = 'all 0.6s cubic-bezier(0.4, 0.0, 0.2, 1)';
-      element.style.opacity = '1';
-      element.style.transform = 'none';
-    });
-  }
-
-  getInitialTransform(type) {
-    const transforms = {
-      'slide-up': 'translateY(30px)',
-      'slide-down': 'translateY(-30px)',
-      'slide-left': 'translateX(-30px)',
-      'slide-right': 'translateX(30px)',
-      'scale': 'scale(0.8)',
-      'rotate': 'rotate(-5deg)',
-      'bounce': 'translateY(30px) scale(0.8)'
-    };
-    
-    return transforms[type] || 'translateY(20px)';
-  }
-
-  // Réinitialiser les animations pour les éléments dynamiques
-  resetAnimations() {
-    this.observedElements.clear();
-    this.observeElements();
-  }
-
-  // Nettoyer les observers
-  destroy() {
-    if (this.observer) {
-      this.observer.disconnect();
-    }
-    this.observedElements.clear();
-  }
-}
-
-// Initialiser les animations au scroll
-document.addEventListener('DOMContentLoaded', () => {
-  window.scrollAnimations = new ScrollAnimations();
-});
-
-
-// Configuration générale
-const CONFIG = {
-  // EmailJS
-  emailjs: {
-    publicKey: 'BswSOWv3nFcCn7lQG',
-    serviceId: 'service_j5g070o',
-    templateId: 'template_10dackj'
-  },
-  
-  // Coordonnées Nancy
-  nancy: {
-    lat: 48.6921,
-    lng: 6.1844,
-    radius: 80000 // 80km en mètres
-  },
-  
-  // URLs des images
-  images: {
-    base: 'https://raw.githubusercontent.com/mikaelkapinova-boop/MS-PLOMBERIE-CHAUFFAGE/main/images/',
-    logo: 'logo.png',
-    real1: 'real1.jpg',
-    real2: 'real2.jpg',
-    real3: 'real3.jpg'
-  },
-  
-  // Témoignages par défaut
-  defaultTestimonials: [
-    {
-      name: 'Marie L.',
-      city: 'Nancy',
-      rating: 5,
-      text: 'Travail impeccable pour la rénovation complète de notre salle de bain. Équipe professionnelle, respect des délais et excellent rapport qualité-prix. Je recommande vivement !',
-      date: '2024-03-15'
-    },
-    {
-      name: 'Jean-Claude M.',
-      city: 'Metz',
-      rating: 5,
-      text: 'Installation de notre nouvelle pompe à chaleur réalisée avec professionnalisme. Très bon conseil, équipe compétente et à l\'écoute. Parfait !',
-      date: '2024-02-28'
-    },
-    {
-      name: 'Sophie D.',
-      city: 'Épinal',
-      rating: 5,
-      text: 'Intervention rapide pour une fuite urgente. Technicien compétent, travail soigné et prix honnête. Une entreprise de confiance que je recommande.',
-      date: '2024-03-02'
-    },
-    {
-      name: 'Pierre R.',
-      city: 'Toul',
-      rating: 5,
-      text: 'Rénovation de ma cuisine avec installation de la plomberie. Travail de qualité, propre et dans les temps. Très satisfait du résultat !',
-      date: '2024-01-20'
-    }
-  ],
-  
-  // Options d'intersection observer
-  observerOptions: {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-  },
-  
-  // Délais d'animation
-  animationDelays: {
-    cascade: 100, // ms entre chaque élément
-    notification: 5000, // ms avant fermeture auto
-    scroll: 16 // ms pour le throttle scroll (~60fps)
-  },
-  
-  // Points de rupture responsive
-  breakpoints: {
-    mobile: 480,
-    tablet: 768,
-    desktop: 1024,
-    wide: 1200
-  },
-  
-  // Messages
-  messages: {
-    formSuccess: '✅ Message envoyé avec succès !',
-    formError: '❌ Erreur lors de l\'envoi. Appelez-nous au 07 49 24 85 59',
-    testimonialSuccess: '✅ Merci pour votre témoignage !',
-    testimonialError: '❌ Erreur lors de l\'envoi de votre témoignage',
-    loading: 'Envoi en cours...'
-  }
-};
-
-// Export pour utilisation dans d'autres modules
-if (typeof module !== 'undefined' && module.exports) {
-  module.exports = CONFIG;
-} else {
-  window.CONFIG = CONFIG;
-}
-
-
-// === GESTION DES FORMULAIRES ===
-class FormManager {
-  constructor() {
-    this.contactForm = document.getElementById('contact-form');
-    this.testimonialForm = document.getElementById('testimonial-form');
-    this.init();
-  }
-
-  init() {
-    // Initialiser EmailJS
-    emailjs.init(CONFIG.emailjs.publicKey);
-    
-    // Configurer les event listeners
-    this.setupEventListeners();
-  }
-
-  setupEventListeners() {
-    // Formulaire de contact
-    this.contactForm?.addEventListener('submit', (e) => this.handleContactForm(e));
-    
-    // Formulaire de témoignage
-    this.testimonialForm?.addEventListener('submit', (e) => this.handleTestimonialForm(e));
-    
-    // Validation en temps réel
-    this.setupRealTimeValidation();
-  }
-
-  async handleContactForm(e) {
-    e.preventDefault();
-    
-    const submitBtn = this.contactForm.querySelector('button[type="submit"]');
-    const originalText = submitBtn.innerHTML;
-    
-    // État de chargement
-    submitBtn.innerHTML = '<span class="loading"></span>Envoi en cours...';
-    submitBtn.disabled = true;
-    
-    try {
-      // Préparer les données
-      const formData = {
-        name: document.getElementById('name').value,
-        email: document.getElementById('email').value,
-        phone: document.getElementById('phone').value || 'Non renseigné',
-        service: document.getElementById('service').value || 'Non spécifié',
-        message: document.getElementById('message').value,
-        to_name: 'MS Plomberie & Chauffage',
-        to_email: 'ms.plomberie.chauffage.nancy@gmail.fr'
-      };
-      
-      // Validation côté client
-      if (!this.validateContactForm(formData)) {
-        throw new Error('Veuillez remplir tous les champs obligatoires');
-      }
-      
-      // Envoyer avec EmailJS
-      const response = await emailjs.send(
-        CONFIG.emailjs.serviceId,
-        CONFIG.emailjs.templateId,
-        formData
-      );
-      
-      if (response.status === 200) {
-        // Succès
-        this.showNotification('✅ Message envoyé avec succès ! Nous vous répondrons sous 24h.', 'success');
-        this.contactForm.reset();
-        
-        // Animation de succès
-        submitBtn.style.background = '#4CAF50';
-        setTimeout(() => {
-          submitBtn.style.background = '';
-        }, 2000);
-      }
-      
-    } catch (error) {
-      console.error('Erreur EmailJS:', error);
-      this.showNotification('❌ Erreur lors de l\'envoi. Appelez-nous au 07 49 24 85 59', 'error');
-    } finally {
-      // Restaurer le bouton
-      setTimeout(() => {
-        submitBtn.innerHTML = originalText;
-        submitBtn.disabled = false;
-      }, 1000);
-    }
-  }
-
-  async handleTestimonialForm(e) {
-    e.preventDefault();
-    
-    const submitBtn = this.testimonialForm.querySelector('button[type="submit"]');
-    const originalText = submitBtn.innerHTML;
-    
-    submitBtn.innerHTML = '<span class="loading"></span>Envoi en cours...';
-    submitBtn.disabled = true;
-    
-    try {
-      const formData = {
-        client_name: document.getElementById('testimonial-name').value,
-        client_email: document.getElementById('testimonial-email').value,
-        client_city: document.getElementById('testimonial-city').value,
-        client_rating: document.getElementById('testimonial-rating').value,
-        testimonial_text: document.getElementById('testimonial-text').value,
-        to_name: 'MS Plomberie & Chauffage',
-        to_email: 'ms.plomberie.chauffage.nancy@gmail.fr'
-      };
-      
-      // Validation
-      if (!this.validateTestimonialForm(formData)) {
-        throw new Error('Veuillez remplir tous les champs obligatoires');
-      }
-      
-      // Envoyer le témoignage
-      const response = await emailjs.send(
-        CONFIG.emailjs.serviceId,
-        CONFIG.emailjs.testimonialTemplateId,
-        formData
-      );
-      
-      if (response.status === 200) {
-        this.showNotification('⭐ Témoignage envoyé ! Merci pour votre retour.', 'success');
-        this.testimonialForm.reset();
-        this.closeTestimonialModal();
-      }
-      
-    } catch (error) {
-      console.error('Erreur témoignage:', error);
-      this.showNotification('❌ Erreur lors de l\'envoi du témoignage.', 'error');
-    } finally {
-      setTimeout(() => {
-        submitBtn.innerHTML = originalText;
-        submitBtn.disabled = false;
-      }, 1000);
-    }
-  }
-
-  validateContactForm(data) {
-    const { name, email, message } = data;
-    
-    if (!name || name.trim().length < 2) {
-      this.showFieldError('name', 'Nom requis (minimum 2 caractères)');
-      return false;
-    }
-    
-    if (!email || !this.isValidEmail(email)) {
-      this.showFieldError('email', 'Email valide requis');
-      return false;
-    }
-    
-    if (!message || message.trim().length < 10) {
-      this.showFieldError('message', 'Message requis (minimum 10 caractères)');
-      return false;
-    }
-    
-    return true;
-  }
-
-  validateTestimonialForm(data) {
-    const { client_name, client_city, testimonial_text, client_rating } = data;
-    
-    if (!client_name || client_name.trim().length < 2) {
-      this.showFieldError('testimonial-name', 'Nom requis');
-      return false;
-    }
-    
-    if (!client_city || client_city.trim().length < 2) {
-      this.showFieldError('testimonial-city', 'Ville requise');
-      return false;
-    }
-    
-    if (!testimonial_text || testimonial_text.trim().length < 20) {
-      this.showFieldError('testimonial-text', 'Témoignage trop court (minimum 20 caractères)');
-      return false;
-    }
-    
-    if (!client_rating) {
-      this.showFieldError('testimonial-rating', 'Note requise');
-      return false;
-    }
-    
-    return true;
-  }
-
-  setupRealTimeValidation() {
-    // Validation email en temps réel
-    const emailInputs = document.querySelectorAll('input[type="email"]');
-    emailInputs.forEach(input => {
-      input.addEventListener('blur', () => {
-        if (input.value && !this.isValidEmail(input.value)) {
-          this.showFieldError(input.id, 'Format email invalide');
-        } else {
-          this.clearFieldError(input.id);
-        }
-      });
-    });
-
-    // Validation téléphone
-    const phoneInput = document.getElementById('phone');
-    if (phoneInput) {
-      phoneInput.addEventListener('input', (e) => {
-        // Formatage automatique du numéro de téléphone
-        let value = e.target.value.replace(/\D/g, '');
-        if (value.length > 0) {
-          value = value.replace(/(\d{2})(?=\d)/g, '$1 ');
-        }
-        e.target.value = value;
-      });
-    }
-  }
-
-  isValidEmail(email) {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email);
-  }
-
-  showFieldError(fieldId, message) {
-    const field = document.getElementById(fieldId);
-    if (!field) return;
-    
-    // Supprimer l'erreur existante
-    this.clearFieldError(fieldId);
-    
-    // Ajouter la classe d'erreur
-    field.classList.add('error');
-    
-    // Créer le message d'erreur
-    const errorDiv = document.createElement('div');
-    errorDiv.className = 'field-error';
-    errorDiv.textContent = message;
-    errorDiv.style.color = '#f44336';
-    errorDiv.style.fontSize = '0.85rem';
-    errorDiv.style.marginTop = '0.5rem';
-    
-    field.parentNode.appendChild(errorDiv);
-  }
-
-  clearFieldError(fieldId) {
-    const field = document.getElementById(fieldId);
-    if (!field) return;
-    
-    field.classList.remove('error');
-    
-    const errorDiv = field.parentNode.querySelector('.field-error');
-    if (errorDiv) {
-      errorDiv.remove();
-    }
-  }
-
-  openTestimonialModal() {
-    const modal = document.getElementById('testimonial-modal');
-    if (modal) {
-      modal.style.display = 'flex';
-      document.body.style.overflow = 'hidden';
-      
-      // Focus sur le premier champ
-      const firstField = modal.querySelector('input, textarea');
-      if (firstField) {
-        setTimeout(() => firstField.focus(), 100);
-      }
-    }
-  }
-
-  closeTestimonialModal() {
-    const modal = document.getElementById('testimonial-modal');
-    if (modal) {
-      modal.style.display = 'none';
-      document.body.style.overflow = '';
-    }
-  }
-
-  showNotification(message, type = 'info') {
-    // Supprimer toute notification existante
-    const existingNotification = document.querySelector('.notification');
-    if (existingNotification) {
-      existingNotification.remove();
-    }
-
-    // Créer la notification
-    const notification = document.createElement('div');
-    notification.className = `notification notification-${type}`;
-    notification.innerHTML = `
-      <div class="notification-content">
-        <span>${message}</span>
-        <button class="notification-close">&times;</button>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <a href="#home" class="logo">
+      <img src="https://raw.githubusercontent.com/mikaelkapinova-boop/MS-PLOMBERIE-CHAUFFAGE/main/images/logo.png" alt="MS Plomberie Logo" onerror="this.style.display='none';">
+      MS PLOMBERIE & CHAUFFAGE
+    </a>
+    <div class="nav-controls">
+      <div class="theme-toggle" id="theme-toggle">
+        <div class="toggle-circle"></div>
       </div>
-    `;
+      <button class="menu-btn" id="menu-btn" aria-label="Menu">
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
 
-    // Styles pour la notification
-    notification.style.cssText = `
-      position: fixed;
-      top: 80px;
-      right: 20px;
-      background: ${type === 'success' ? '#4CAF50' : type === 'error' ? '#f44336' : '#2196F3'};
-      color: white;
-      padding: 1rem 1.5rem;
-      border-radius: 10px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-      z-index: 10000;
-      max-width: 400px;
-      animation: slideInRight 0.3s ease forwards;
-      transform: translateX(100%);
-      opacity: 0;
-    `;
+  <!-- Menu Overlay -->
+  <div class="menu-overlay" id="menu-overlay">
+    <a href="#home">🏠 Accueil</a>
+    <a href="#services">🔧 Services</a>
+    <a href="#zone">📍 Zone d'intervention</a>
+    <a href="#realisations">📸 Réalisations</a>
+    <a href="#temoignages">⭐ Témoignages</a>
+    <a href="#contact">📞 Contact</a>
+  </div>
 
-    document.body.appendChild(notification);
+  <!-- Bouton d'appel flottant -->
+  <a href="tel:0749248559" class="call-button" aria-label="Appeler MS Plomberie">📞</a>
 
-    // Fermeture automatique après 5 secondes
-    const autoClose = setTimeout(() => {
-      this.closeNotification(notification);
-    }, 5000);
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <div class="experience-badge">✨ 15 ans d'expérience</div>
+      <h1>L'EXPERTISE AU SERVICE DE VOTRE BIEN-ÊTRE</h1>
+      <p>🔧 Solutions fiables et durables pour tous vos projets de plomberie et chauffage dans un rayon de 80km autour de Nancy</p>
+      <div class="cta-buttons">
+        <a href="#contact" class="btn">📋 Devis Gratuit</a>
+        <a href="tel:0749248559" class="btn btn-secondary">📞 07 49 24 85 59</a>
+      </div>
+    </div>
+  </section>
 
-    // Fermeture manuelle
-    notification.querySelector('.notification-close').addEventListener('click', () => {
-      clearTimeout(autoClose);
-      this.closeNotification(notification);
-    });
-  }
-
-  closeNotification(notification) {
-    notification.style.animation = 'slideOutRight 0.3s ease forwards';
-    setTimeout(() => {
-      if (notification.parentNode) {
-        notification.parentNode.removeChild(notification);
-      }
-    }, 300);
-  }
-}
-
-// Initialiser le gestionnaire de formulaires
-document.addEventListener('DOMContentLoaded', () => {
-  window.formManager = new FormManager();
-});
-
-
-/**
- * MS PLOMBERIE CHAUFFAGE - Fichier principal
- * Initialise et coordonne tous les modules du site
- */
-
-// === ÉTAT GLOBAL DE L'APPLICATION ===
-const AppState = {
-  isInitialized: false,
-  currentSection: 'home',
-  menuOpen: false,
-  theme: 'dark',
-  isMobile: window.innerWidth <= 768,
-  scrollY: 0,
-  testimonials: []
-};
-
-// === CLASSE PRINCIPALE DE L'APPLICATION ===
-class MSPlomberieApp {
-  constructor() {
-    this.modules = {};
-    this.observers = [];
-    this.init();
-  }
-
-  async init() {
-    try {
-      // 1. Initialiser la configuration
-      await this.loadConfig();
+  <!-- Services Section -->
+  <section class="section" id="services">
+    <div class="container">
+      <h2 class="section-title fade-in">NOS SERVICES</h2>
+      <p class="section-subtitle fade-in">Une expertise complète pour tous vos besoins en plomberie, chauffage et ventilation</p>
       
-      // 2. Initialiser le thème
-      this.initTheme();
-      
-      // 3. Initialiser la navigation avec menu 2 barres
-      this.initNavigation();
-      
-      // 4. Configurer les animations au défilement
-      this.initScrollAnimations();
-      
-      // 5. Initialiser la carte et les témoignages
-      this.initMapsAndTestimonials();
-      
-      // 6. Configurer les formulaires
-      this.initForms();
-      
-      // 7. Initialiser les utilitaires
-      this.initUtils();
-      
-      // 8. Configurer les événements globaux
-      this.setupGlobalEvents();
-      
-      // 9. Gérer les images et erreurs
-      this.handleImages();
-      
-      // 10. Marquer comme initialisé
-      AppState.isInitialized = true;
-      this.trackEvent('app_initialized');
-      
-      console.log('✅ MS PLOMBERIE CHAUFFAGE - Application initialisée');
-      
-    } catch (error) {
-      console.error('❌ Erreur lors de l\'initialisation:', error);
-      this.handleInitError(error);
-    }
-  }
-
-  // === CHARGEMENT DE LA CONFIGURATION ===
-  async loadConfig() {
-    // Configuration EmailJS
-    if (typeof emailjs !== 'undefined') {
-      emailjs.init(CONFIG.emailjs.publicKey);
-    }
-    
-    // Configuration du thème sauvegardé
-    const savedTheme = localStorage.getItem('theme') || 'dark';
-    AppState.theme = savedTheme;
-    document.documentElement.setAttribute('data-theme', savedTheme);
-  }
-
-  // === INITIALISATION DU THÈME ===
-  initTheme() {
-    const themeToggle = document.getElementById('theme-toggle');
-    if (themeToggle) {
-      themeToggle.addEventListener('click', () => {
-        this.toggleTheme();
-      });
-    }
-  }
-
-  toggleTheme() {
-    const newTheme = AppState.theme === 'dark' ? 'light' : 'dark';
-    AppState.theme = newTheme;
-    document.documentElement.setAttribute('data-theme', newTheme);
-    localStorage.setItem('theme', newTheme);
-    this.trackEvent('theme_changed', { theme: newTheme });
-  }
-
-  // === INITIALISATION DE LA NAVIGATION (MENU 2 BARRES) ===
-  initNavigation() {
-    const menuBtn = document.getElementById('menu-btn');
-    const menuOverlay = document.getElementById('menu-overlay');
-    
-    if (menuBtn && menuOverlay) {
-      // Clic sur le bouton menu
-      menuBtn.addEventListener('click', () => {
-        this.toggleMenu();
-      });
-      
-      // Fermer le menu en cliquant sur un lien
-      menuOverlay.addEventListener('click', (e) => {
-        if (e.target.tagName === 'A') {
-          this.closeMenu();
-        }
-      });
-      
-      // Navigation fluide
-      this.setupSmoothScrolling();
-      
-      // Navbar au scroll (style Apple)
-      this.setupNavbarScroll();
-    }
-  }
-
-  toggleMenu() {
-    const menuBtn = document.getElementById('menu-btn');
-    const menuOverlay = document.getElementById('menu-overlay');
-    
-    AppState.menuOpen = !AppState.menuOpen;
-    
-    // Animation menu 2 barres vers croix
-    menuBtn.classList.toggle('open', AppState.menuOpen);
-    menuOverlay.classList.toggle('active', AppState.menuOpen);
-    
-    // Empêcher le scroll
-    document.body.style.overflow = AppState.menuOpen ? 'hidden' : '';
-    
-    this.trackEvent('menu_toggled', { open: AppState.menuOpen });
-  }
-
-  closeMenu() {
-    AppState.menuOpen = false;
-    document.getElementById('menu-btn')?.classList.remove('open');
-    document.getElementById('menu-overlay')?.classList.remove('active');
-    document.body.style.overflow = '';
-  }
-
-  setupSmoothScrolling() {
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', (e) => {
-        e.preventDefault();
-        const target = document.querySelector(anchor.getAttribute('href'));
-        
-        if (target) {
-          const offsetTop = target.offsetTop - 50; // Header fin comme Apple
-          
-          window.scrollTo({
-            top: offsetTop,
-            behavior: 'smooth'
-          });
-          
-          this.closeMenu();
-          this.trackEvent('section_navigated', { section: anchor.getAttribute('href') });
-        }
-      });
-    });
-  }
-
-  setupNavbarScroll() {
-    let lastScrollY = 0;
-    const navbar = document.querySelector('.navbar');
-    
-    window.addEventListener('scroll', this.throttle(() => {
-      const currentScrollY = window.scrollY;
-      AppState.scrollY = currentScrollY;
-      
-      if (navbar) {
-        // Style Apple - navbar qui disparaît/apparaît
-        if (currentScrollY > 100) {
-          navbar.classList.add('scrolled');
-          
-          if (currentScrollY > lastScrollY && currentScrollY > 200) {
-            navbar.classList.add('hidden');
-          } else {
-            navbar.classList.remove('hidden');
-          }
-        } else {
-          navbar.classList.remove('scrolled', 'hidden');
-        }
-      }
-      
-      lastScrollY = currentScrollY;
-    }, 16));
-  }
-
-  // === ANIMATIONS AU DÉFILEMENT ===
-  initScrollAnimations() {
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px'
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('animate-in');
-          
-          // Animations en cascade pour les grilles
-          this.triggerStaggeredAnimations(entry.target);
-        }
-      });
-    }, observerOptions);
-
-    // Observer tous les éléments animés
-    document.querySelectorAll('.animate-fade-up, .animate-slide-left, .animate-slide-right, .animate-scale').forEach(el => {
-      observer.observe(el);
-    });
-
-    this.observers.push(observer);
-  }
-
-  triggerStaggeredAnimations(element) {
-    const staggerElements = element.parentElement?.querySelectorAll('[class*="stagger-"]');
-    if (staggerElements) {
-      staggerElements.forEach((el, index) => {
-        setTimeout(() => {
-          el.classList.add('animate-in');
-        }, index * 100);
-      });
-    }
-  }
-
-  // === CARTE ET TÉMOIGNAGES ===
-  initMapsAndTestimonials() {
-    this.initMap();
-    this.initTestimonialForm();
-    this.loadTestimonials();
-  }
-
-  initMap() {
-    const mapContainer = document.getElementById('map');
-    if (mapContainer) {
-      // Coordonnées de Nancy
-      const nancyLat = 48.6921;
-      const nancyLng = 6.1844;
-      
-      const map = L.map('map').setView([nancyLat, nancyLng], 9);
-      
-      // Tuiles de la carte
-      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '© OpenStreetMap contributors'
-      }).addTo(map);
-      
-      // Marqueur Nancy
-      const nancyMarker = L.marker([nancyLat, nancyLng]).addTo(map)
-        .bindPopup('<b>MS PLOMBERIE CHAUFFAGE</b><br>Zone de Nancy');
-      
-      // Cercle de 80km
-      const serviceArea = L.circle([nancyLat, nancyLng], {
-        color: '#f44336',
-        fillColor: '#f44336',
-        fillOpacity: 0.1,
-        radius: 80000
-      }).addTo(map);
-      
-      serviceArea.bindPopup('Zone d\'intervention - 80km autour de Nancy');
-      
-      this.trackEvent('map_initialized');
-    }
-  }
-
-  initTestimonialForm() {
-    const testimonialBtn = document.getElementById('add-testimonial-btn');
-    if (testimonialBtn) {
-      testimonialBtn.addEventListener('click', () => {
-        this.showTestimonialModal();
-      });
-    }
-  }
-
-  showTestimonialModal() {
-    const modal = document.createElement('div');
-    modal.className = 'testimonial-modal';
-    modal.innerHTML = `
-      <div class="modal-content">
-        <div class="modal-header">
-          <h3>Ajouter un témoignage</h3>
-          <button class="modal-close">&times;</button>
+      <div class="services-grid">
+        <div class="service-card fade-in stagger-delay-1">
+          <div class="service-icon">🚿</div>
+          <h3>Plomberie</h3>
+          <p><strong>🆕 Nouvelles installations</strong><br>
+          Création complète de réseaux de plomberie pour constructions neuves et rénovations.
+          <br><br><strong>🛁 Salles de bain clés en main</strong><br>
+          Conception et réalisation complète avec nos artisans partenaires qualifiés.
+          <br><br><strong>🔧 Réparations et remplacements</strong><br>
+          Intervention rapide sur tous équipements de plomberie.</p>
         </div>
-        <form id="testimonial-form">
-          <div class="form-group">
-            <label for="testimonial-name">Nom *</label>
-            <input type="text" id="testimonial-name" required>
-          </div>
-          <div class="form-group">
-            <label for="testimonial-location">Ville</label>
-            <input type="text" id="testimonial-location" placeholder="Nancy">
-          </div>
-          <div class="form-group">
-            <label for="testimonial-rating">Note</label>
-            <div class="star-rating" id="star-rating">
-              <span data-rating="1">⭐</span>
-              <span data-rating="2">⭐</span>
-              <span data-rating="3">⭐</span>
-              <span data-rating="4">⭐</span>
-              <span data-rating="5">⭐</span>
+
+        <div class="service-card fade-in stagger-delay-2">
+          <div class="service-icon">🌡️</div>
+          <h3>Chauffage</h3>
+          <p><strong>🏠 Installations complètes</strong><br>
+          Création de systèmes de chauffage adaptés à vos besoins et à votre budget.
+          <br><br><strong>🔥 Chaudières & Pompes à chaleur</strong><br>
+          Installation, remplacement et maintenance d'équipements thermiques performants.
+          <br><br><strong>⚙️ Maintenance préventive</strong><br>
+          Entretien régulier pour optimiser performance et durée de vie.</p>
+        </div>
+
+        <div class="service-card fade-in stagger-delay-3">
+          <div class="service-icon">💨</div>
+          <h3>Ventilation</h3>
+          <p><strong>🌪️ VMC (Ventilation Mécanique Contrôlée)</strong><br>
+          Installation de systèmes de ventilation pour cuisine, salle de bain et WC.
+          <br><br><strong>🔄 Renouvellement d'air</strong><br>
+          Solutions pour améliorer la qualité de l'air intérieur.
+          <br><br><strong>🛠️ Maintenance et dépannage</strong><br>
+          Entretien et réparation de vos installations de ventilation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Zone d'intervention -->
+  <section class="section" id="zone">
+    <div class="container">
+      <h2 class="section-title fade-in">ZONE D'INTERVENTION</h2>
+      <p class="section-subtitle fade-in">🚗 Nous intervenons dans un rayon de 80km autour de Nancy</p>
+      
+      <div class="zone-intervention">
+        <div class="zone-content">
+          <div class="zone-info">
+            <h3>📍 Secteurs desservis</h3>
+            <ul class="zone-details">
+              <li>Nancy et agglomération</li>
+              <li>Metz et environs</li>
+              <li>Épinal et sa région</li>
+              <li>Toul, Pont-à-Mousson</li>
+              <li>Lunéville, Saint-Dié</li>
+              <li>Bar-le-Duc, Commercy</li>
+              <li>Verdun et alentours</li>
+            </ul>
+            
+            <div class="horaires">
+              <h4>⏰ Horaires d'ouverture</h4>
+              <p><strong>Lundi au Vendredi :</strong> 8h00 - 18h00</p>
+              <p><strong>Urgences :</strong> Intervention 7j/7</p>
+              <p><strong>Devis :</strong> Gratuit et sans engagement</p>
             </div>
           </div>
-          <div class="form-group">
-            <label for="testimonial-text">Votre témoignage *</label>
-            <textarea id="testimonial-text" rows="4" required></textarea>
+          
+          <div class="map-container">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d673638.1644346212!2d5.6244850000000005!3d48.692054!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4794984c1e192bef%3A0x409ce34b313ee70!2sNancy!5e0!3m2!1sfr!2sfr!4v1635789456123!5m2!1sfr!2sfr&markers=color:red%7C48.692054,6.184417&circle=color:0x4CAF50|fillcolor:0x4CAF5020|weight:2|radius:80000|48.692054,6.184417"
+              style="border:0; width: 100%; height: 100%; border-radius: 15px;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
           </div>
-          <button type="submit" class="btn">Publier le témoignage</button>
-        </form>
+        </div>
       </div>
-    `;
-    
-    document.body.appendChild(modal);
-    
-    // Gestion du formulaire
-    this.setupTestimonialFormHandlers(modal);
-  }
+    </div>
+  </section>
 
-  setupTestimonialFormHandlers(modal) {
-    const form = modal.querySelector('#testimonial-form');
-    const closeBtn = modal.querySelector('.modal-close');
-    const stars = modal.querySelectorAll('.star-rating span');
-    let selectedRating = 5;
-    
-    // Gestion des étoiles
-    stars.forEach(star => {
-      star.addEventListener('click', (e) => {
-        selectedRating = parseInt(e.target.dataset.rating);
-        this.updateStarDisplay(stars, selectedRating);
-      });
-    });
-    
-    // Fermeture
-    closeBtn.addEventListener('click', () => {
-      modal.remove();
-    });
-    
-    modal.addEventListener('click', (e) => {
-      if (e.target === modal) {
-        modal.remove();
-      }
-    });
-    
-    // Soumission
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      this.submitTestimonial(form, selectedRating, modal);
-    });
-  }
-
-  updateStarDisplay(stars, rating) {
-    stars.forEach((star, index) => {
-      star.style.opacity = index < rating ? '1' : '0.3';
-    });
-  }
-
-  async submitTestimonial(form, rating, modal) {
-    const formData = new FormData(form);
-    const testimonial = {
-      name: formData.get('testimonial-name') || form.querySelector('#testimonial-name').value,
-      location: formData.get('testimonial-location') || form.querySelector('#testimonial-location').value || 'Nancy',
-      rating: rating,
-      text: formData.get('testimonial-text') || form.querySelector('#testimonial-text').value,
-      date: new Date().toISOString()
-    };
-    
-    try {
-      // Sauvegarder localement (en production, envoyer à un serveur)
-      this.saveTestimonial(testimonial);
-      this.addTestimonialToDOM(testimonial);
+  <!-- Réalisations Section -->
+  <section class="section" id="realisations">
+    <div class="container">
+      <h2 class="section-title fade-in">NOS RÉALISATIONS</h2>
+      <p class="section-subtitle fade-in">🏆 Découvrez quelques-uns de nos projets réalisés avec passion et expertise</p>
       
-      this.showNotification('✅ Témoignage ajouté avec succès !', 'success');
-      modal.remove();
-      
-      this.trackEvent('testimonial_added', { rating: rating });
-      
-    } catch (error) {
-      console.error('Erreur lors de l\'ajout du témoignage:', error);
-      this.showNotification('❌ Erreur lors de l\'ajout du témoignage', 'error');
-    }
-  }
-
-  saveTestimonial(testimonial) {
-    const testimonials = JSON.parse(localStorage.getItem('testimonials') || '[]');
-    testimonials.push(testimonial);
-    localStorage.setItem('testimonials', JSON.stringify(testimonials));
-    AppState.testimonials = testimonials;
-  }
-
-  loadTestimonials() {
-    const savedTestimonials = JSON.parse(localStorage.getItem('testimonials') || '[]');
-    AppState.testimonials = savedTestimonials;
-    
-    savedTestimonials.forEach(testimonial => {
-      this.addTestimonialToDOM(testimonial);
-    });
-  }
-
-  addTestimonialToDOM(testimonial) {
-    const testimonialsContainer = document.querySelector('.testimonials');
-    if (!testimonialsContainer) return;
-    
-    const testimonialCard = document.createElement('div');
-    testimonialCard.className = 'testimonial-card animate-fade-up';
-    testimonialCard.innerHTML = `
-      <p class="testimonial-text">"${testimonial.text}"</p>
-      <p class="testimonial-author">— ${testimonial.name}, ${testimonial.location}</p>
-      <div class="testimonial-rating">${'⭐'.repeat(testimonial.rating)}</div>
-    `;
-    
-    testimonialsContainer.appendChild(testimonialCard);
-  }
-
-  // === GESTION DES FORMULAIRES ===
-  initForms() {
-    const contactForm = document.getElementById('contact-form');
-    if (contactForm) {
-      contactForm.addEventListener('submit', (e) => this.handleContactForm(e));
-    }
-  }
-
-  async handleContactForm(e) {
-    e.preventDefault();
-    
-    const form = e.target;
-    const submitBtn = form.querySelector('button[type="submit"]');
-    const originalText = submitBtn.innerHTML;
-    
-    // État de chargement
-    submitBtn.innerHTML = '<span class="loading"></span>Envoi en cours...';
-    submitBtn.disabled = true;
-    
-    try {
-      const formData = new FormData(form);
-      const emailData = {
-        name: formData.get('name'),
-        email: formData.get('email'),
-        phone: formData.get('phone') || 'Non renseigné',
-        service: formData.get('service') || 'Non spécifié',
-        message: formData.get('message'),
-        to_name: 'MS PLOMBERIE CHAUFFAGE',
-        to_email: 'ms.plomberie.chauffage.nancy@gmail.com'
-      };
-      
-      // Validation
-      if (!emailData.name || !emailData.email || !emailData.message) {
-        throw new Error('Veuillez remplir tous les champs obligatoires');
-      }
-      
-      // Envoyer avec EmailJS
-      if (typeof emailjs !== 'undefined') {
-        const response = await emailjs.send(
-          CONFIG.emailjs.serviceId,
-          CONFIG.emailjs.templateId,
-          emailData
-        );
-        
-        if (response.status === 200) {
-          this.showNotification('✅ Message envoyé avec succès !', 'success');
-          form.reset();
-          this.trackEvent('contact_form_submitted', { service: emailData.service });
-        }
-      } else {
-        throw new Error('EmailJS non disponible');
-      }
-      
-    } catch (error) {
-      console.error('Erreur envoi formulaire:', error);
-      this.showNotification('❌ Erreur lors de l\'envoi. Appelez-nous au 07 49 24 85 59', 'error');
-    } finally {
-      setTimeout(() => {
-        submitBtn.innerHTML = originalText;
-        submitBtn.disabled = false;
-      }, 1000);
-    }
-  }
-
-  // === GESTION DES IMAGES ===
-  handleImages() {
-    // Gestion des erreurs d'images
-    document.querySelectorAll('img').forEach(img => {
-      img.addEventListener('error', function() {
-        console.warn('Erreur de chargement image:', this.src);
-        
-        // Cacher l'image ou afficher un placeholder
-        if (this.classList.contains('logo-img')) {
-          this.style.display = 'none';
-          const logoText = this.parentElement.querySelector('.logo-text');
-          if (logoText) logoText.style.display = 'inline';
-        } else {
-          const parent = this.closest('.gallery-item');
-          if (parent) {
-            parent.style.display = 'none';
-          }
-        }
-      });
-    });
-    
-    // Lazy loading
-    this.setupLazyLoading();
-  }
-
-  setupLazyLoading() {
-    if ('IntersectionObserver' in window) {
-      const imageObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            const img = entry.target;
-            if (img.dataset.src) {
-              img.src = img.dataset.src;
-              img.removeAttribute('data-src');
-            }
-            imageObserver.unobserve(img);
-          }
-        });
-      });
-
-      document.querySelectorAll('img[data-src]').forEach(img => {
-        imageObserver.observe(img);
-      });
-      
-      this.observers.push(imageObserver);
-    }
-  }
-
-  // === UTILITAIRES ===
-  initUtils() {
-    // Gestion responsive
-    window.addEventListener('resize', this.debounce(() => {
-      AppState.isMobile = window.innerWidth <= 768;
-      this.handleResize();
-    }, 250));
-    
-    // Gestion des erreurs globales
-    window.addEventListener('error', (e) => {
-      console.error('Erreur JavaScript:', e.error);
-      this.trackEvent('javascript_error', { 
-        message: e.message,
-        filename: e.filename,
-        line: e.lineno 
-      });
-    });
-    
-    // Gestion des touches
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && AppState.menuOpen) {
-        this.closeMenu();
-      }
-    });
-  }
-
-  handleResize() {
-    // Fermer le menu sur mobile lors du redimensionnement
-    if (!AppState.isMobile && AppState.menuOpen) {
-      this.closeMenu();
-    }
-  }
-
-  // === ÉVÉNEMENTS GLOBAUX ===
-  setupGlobalEvents() {
-    // Gestion du clic sur l'email
-    document.querySelectorAll('a[href*="@"]').forEach(link => {
-      if (!link.href.startsWith('mailto:')) {
-        const email = link.textContent || link.href;
-        link.href = `mailto:${email}`;
-      }
-    });
-    
-    // Track des clics importants
-    document.addEventListener('click', (e) => {
-      if (e.target.matches('[href^="tel:"]')) {
-        this.trackEvent('phone_clicked');
-      } else if (e.target.matches('[href^="mailto:"]')) {
-        this.trackEvent('email_clicked');
-      }
-    });
-  }
-
-  // === NOTIFICATIONS ===
-  showNotification(message, type = 'info') {
-    // Supprimer les notifications existantes
-    document.querySelectorAll('.notification').forEach(n => n.remove());
-
-    const notification = document.createElement('div');
-    notification.className = `notification notification-${type}`;
-    notification.innerHTML = `
-      <div class="notification-content">
-        <span>${message}</span>
-        <button class="notification-close">&times;</button>
+      <div class="realisations-categories">
+        <button class="category-btn active" data-category="all">Tout voir</button>
+        <button class="category-btn" data-category="salle-de-bain">🛁 Salles de bain</button>
+        <button class="category-btn" data-category="chauffage">🌡️ Installation chauffage</button>
+        <button class="category-btn" data-category="plomberie">🚿 Plomberie</button>
       </div>
-    `;
-
-    document.body.appendChild(notification);
-
-    // Animation d'entrée
-    requestAnimationFrame(() => {
-      notification.classList.add('show');
-    });
-
-    // Fermeture automatique
-    const autoClose = setTimeout(() => {
-      this.closeNotification(notification);
-    }, 5000);
-
-    // Fermeture manuelle
-    notification.querySelector('.notification-close').addEventListener('click', () => {
-      clearTimeout(autoClose);
-      this.closeNotification(notification);
-    });
-  }
-
-  closeNotification(notification) {
-    notification.classList.add('hide');
-    setTimeout(() => {
-      if (notification.parentNode) {
-        notification.remove();
-      }
-    }, 300);
-  }
-
-  // === TRACKING ===
-  trackEvent(eventName, parameters = {}) {
-    if (typeof gtag !== 'undefined') {
-      gtag('event', eventName, parameters);
-    }
-    
-    console.log(`📊 Event: ${eventName}`, parameters);
-  }
-
-  // === GESTION D'ERREURS ===
-  handleInitError(error) {
-    console.error('Erreur d\'initialisation critique:', error);
-    
-    // Afficher un message d'erreur à l'utilisateur
-    document.body.insertAdjacentHTML('afterbegin', `
-      <div class="init-error">
-        <p>⚠️ Erreur de chargement. Veuillez rafraîchir la page.</p>
-        <button onclick="window.location.reload()">Rafraîchir</button>
-      </div>
-    `);
-  }
-
-  // === UTILITAIRES DE PERFORMANCE ===
-  debounce(func, wait) {
-    let timeout;
-    return function executedFunction(...args) {
-      const later = () => {
-        clearTimeout(timeout);
-        func(...args);
-      };
-      clearTimeout(timeout);
-      timeout = setTimeout(later, wait);
-    };
-  }
-
-  throttle(func, limit) {
-    let inThrottle;
-    return function() {
-      const args = arguments;
-      const context = this;
-      if (!inThrottle) {
-        func.apply(context, args);
-        inThrottle = true;
-        setTimeout(() => inThrottle = false, limit);
-      }
-    }
-  }
-
-  // === CLEANUP ===
-  destroy() {
-    // Nettoyer les observers
-    this.observers.forEach(observer => {
-      observer.disconnect();
-    });
-    
-    // Réinitialiser l'état
-    AppState.isInitialized = false;
-    
-    console.log('🧹 Application nettoyée');
-  }
-}
-
-// === INITIALISATION GLOBALE ===
-let msApp;
-
-// Initialiser l'application au chargement du DOM
-document.addEventListener('DOMContentLoaded', () => {
-  msApp = new MSPlomberieApp();
-  
-  // Exposer globalement pour le debug en développement
-  if (window.location.hostname === 'localhost' || window.location.hostname.includes('github.io')) {
-    window.MSApp = msApp;
-    window.AppState = AppState;
-  }
-});
-
-// Service Worker pour le cache (PWA)
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    // navigator.registerServiceWorker('/sw.js')
-    //   .then(registration => console.log('SW registered'))
-    //   .catch(error => console.log('SW registration failed'));
-  });
-}
-
-// Export pour les modules ES6 si nécessaire
-if (typeof module !== 'undefined' && module.exports) {
-  module.exports = { MSPlomberieApp, AppState };
-}
-
-
-// === GESTION CARTE ET TÉMOIGNAGES ===
-class MapsTestimonialsManager {
-  constructor() {
-    this.testimonials = [];
-    this.map = null;
-    this.interventionCircle = null;
-    this.init();
-  }
-
-  init() {
-    this.loadGoogleMaps();
-    this.setupTestimonialModal();
-    this.loadExistingTestimonials();
-  }
-
-  loadGoogleMaps() {
-    // Configuration de la carte avec point sur Nancy et cercle de 80km
-    const initMap = () => {
-      const nancy = { lat: 48.6921, lng: 6.1844 };
       
-      this.map = new google.maps.Map(document.getElementById('intervention-map'), {
-        zoom: 9,
-        center: nancy,
-        styles: this.getMapStyles(),
-        mapTypeControl: false,
-        streetViewControl: false,
-        fullscreenControl: false
-      });
-
-      // Marqueur Nancy
-      new google.maps.Marker({
-        position: nancy,
-        map: this.map,
-        title: 'MS Plomberie & Chauffage - Nancy',
-        icon: {
-          url: 'https://raw.githubusercontent.com/mikaelkapinova-boop/images/main/logo.png',
-          scaledSize: new google.maps.Size(40, 40)
-        }
-      });
-
-      // Cercle de 80km
-      this.interventionCircle = new google.maps.Circle({
-        strokeColor: '#FF0000',
-        strokeOpacity: 0.8,
-        strokeWeight: 2,
-        fillColor: '#FF0000',
-        fillOpacity: 0.15,
-        map: this.map,
-        center: nancy,
-        radius: 80000 // 80km en mètres
-      });
-
-      // InfoWindow pour Nancy
-      const infoWindow = new google.maps.InfoWindow({
-        content: `
-          <div style="padding: 10px; max-width: 250px;">
-            <h4 style="margin: 0 0 10px 0; color: #4CAF50;">MS Plomberie & Chauffage</h4>
-            <p style="margin: 0 0 5px 0; font-size: 14px;">15 ans d'expérience</p>
-            <p style="margin: 0 0 10px 0; font-size: 14px;">Zone d'intervention : 80km autour de Nancy</p>
-            <p style="margin: 0; font-size: 14px;">
-              <strong>📞 07 49 24 85 59</strong><br>
-              <a href="mailto:ms.plomberie.chauffage.nancy@gmail.fr" style="color: #4CAF50;">✉️ Contact</a>
-            </p>
+      <div class="gallery-grid">
+        <div class="gallery-item fade-in stagger-delay-1" data-category="salle-de-bain">
+          <img src="https://raw.githubusercontent.com/mikaelkapinova-boop/MS-PLOMBERIE-CHAUFFAGE/main/images/real1.jpg" alt="Rénovation salle de bain moderne" loading="lazy">
+          <div class="gallery-overlay">
+            <h4>Rénovation salle de bain complète</h4>
           </div>
-        `
-      });
-
-      // Ouvrir l'InfoWindow au clic sur le marqueur
-      const marker = new google.maps.Marker({
-        position: nancy,
-        map: this.map,
-        title: 'MS Plomberie & Chauffage'
-      });
-
-      marker.addListener('click', () => {
-        infoWindow.open(this.map, marker);
-      });
-    };
-
-    // Charger l'API Google Maps
-    if (!window.google) {
-      const script = document.createElement('script');
-      script.src = 'https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap';
-      script.async = true;
-      script.defer = true;
-      window.initMap = initMap;
-      document.head.appendChild(script);
-    } else {
-      initMap();
-    }
-  }
-
-  getMapStyles() {
-    const currentTheme = document.documentElement.getAttribute('data-theme');
-    
-    if (currentTheme === 'dark') {
-      return [
-        {
-          "elementType": "geometry",
-          "stylers": [{"color": "#212121"}]
-        },
-        {
-          "elementType": "labels.icon",
-          "stylers": [{"visibility": "off"}]
-        },
-        {
-          "elementType": "labels.text.fill",
-          "stylers": [{"color": "#757575"}]
-        },
-        {
-          "elementType": "labels.text.stroke",
-          "stylers": [{"color": "#212121"}]
-        },
-        {
-          "featureType": "administrative",
-          "elementType": "geometry",
-          "stylers": [{"color": "#757575"}]
-        },
-        {
-          "featureType": "road",
-          "elementType": "geometry",
-          "stylers": [{"color": "#484848"}]
-        },
-        {
-          "featureType": "water",
-          "elementType": "geometry",
-          "stylers": [{"color": "#000000"}]
-        }
-      ];
-    }
-    
-    return []; // Style par défaut pour le thème clair
-  }
-
-  setupTestimonialModal() {
-    // Créer le modal pour ajouter un témoignage
-    this.createTestimonialModal();
-    
-    // Event listeners
-    document.addEventListener('click', (e) => {
-      if (e.target.matches('.add-testimonial-btn')) {
-        this.openTestimonialModal();
-      }
-      
-      if (e.target.matches('.testimonial-modal-close')) {
-        this.closeTestimonialModal();
-      }
-      
-      if (e.target.matches('.testimonial-modal-overlay')) {
-        this.closeTestimonialModal();
-      }
-    });
-  }
-
-  createTestimonialModal() {
-    const modal = document.createElement('div');
-    modal.id = 'testimonial-modal';
-    modal.className = 'testimonial-modal-overlay';
-    modal.innerHTML = `
-      <div class="testimonial-modal">
-        <div class="testimonial-modal-header">
-          <h3>⭐ Laisser un témoignage</h3>
-          <button class="testimonial-modal-close" aria-label="Fermer">&times;</button>
         </div>
         
-        <form id="testimonial-form" class="testimonial-form">
+        <div class="gallery-item fade-in stagger-delay-2" data-category="chauffage">
+          <img src="https://raw.githubusercontent.com/mikaelkapinova-boop/MS-PLOMBERIE-CHAUFFAGE/main/images/real2.jpg" alt="Installation système de chauffage" loading="lazy">
+          <div class="gallery-overlay">
+            <h4>Installation système de chauffage</h4>
+          </div>
+        </div>
+        
+        <div class="gallery-item fade-in stagger-delay-3" data-category="plomberie">
+          <img src="https://raw.githubusercontent.com/mikaelkapinova-boop/MS-PLOMBERIE-CHAUFFAGE/main/images/real3.jpg" alt="Plomberie cuisine professionnelle" loading="lazy">
+          <div class="gallery-overlay">
+            <h4>Plomberie cuisine professionnelle</h4>
+          </div>
+        </div>
+
+        <div class="gallery-item fade-in stagger-delay-4" data-category="chauffage">
+          <img src="https://raw.githubusercontent.com/mikaelkapinova-boop/MS-PLOMBERIE-CHAUFFAGE/main/images/real1.jpg" alt="Installation pompe à chaleur" loading="lazy">
+          <div class="gallery-overlay">
+            <h4>Installation pompe à chaleur</h4>
+          </div>
+        </div>
+
+        <div class="gallery-item fade-in stagger-delay-5" data-category="plomberie">
+          <img src="https://raw.githubusercontent.com/mikaelkapinova-boop/MS-PLOMBERIE-CHAUFFAGE/main/images/real2.jpg" alt="Installation VMC" loading="lazy">
+          <div class="gallery-overlay">
+            <h4>Installation VMC double flux</h4>
+          </div>
+        </div>
+
+        <div class="gallery-item fade-in stagger-delay-6" data-category="chauffage">
+          <img src="https://raw.githubusercontent.com/mikaelkapinova-boop/MS-PLOMBERIE-CHAUFFAGE/main/images/real3.jpg" alt="Remplacement chaudière" loading="lazy">
+          <div class="gallery-overlay">
+            <h4>Remplacement chaudière à condensation</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Témoignages Section -->
+  <section class="section" id="temoignages">
+    <div class="container">
+      <h2 class="section-title fade-in">TÉMOIGNAGES CLIENTS</h2>
+      <p class="section-subtitle fade-in">⭐ La satisfaction de nos clients est notre meilleure récompense</p>
+      
+      <div class="testimonials">
+        <div class="testimonial-card slide-in-left stagger-delay-1">
+          <p class="testimonial-text">"Travail impeccable pour la rénovation complète de notre salle de bain. Équipe professionnelle, respect des délais et excellent rapport qualité-prix. Je recommande vivement !"</p>
+          <p class="testimonial-author">— Marie L., Nancy</p>
+          <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+        </div>
+        
+        <div class="testimonial-card fade-in stagger-delay-2">
+          <p class="testimonial-text">"Installation de notre nouvelle pompe à chaleur réalisée avec professionnalisme. Très bon conseil, équipe compétente et à l'écoute. Parfait !"</p>
+          <p class="testimonial-author">— Jean-Claude M., Metz</p>
+          <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+        </div>
+        
+        <div class="testimonial-card slide-in-right stagger-delay-3">
+          <p class="testimonial-text">"Intervention rapide pour une fuite urgente. Technicien compétent, travail soigné et prix honnête. Une entreprise de confiance que je recommande."</p>
+          <p class="testimonial-author">— Sophie D., Épinal</p>
+          <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+        </div>
+      </div>
+      
+      <!-- Formulaire pour ajouter un témoignage -->
+      <div class="add-testimonial fade-in">
+        <h3>📝 Laisser votre témoignage</h3>
+        <form id="testimonial-form">
           <div class="form-group">
-            <label for="testimonial-name">Nom complet *</label>
+            <label for="testimonial-name">Votre nom *</label>
             <input type="text" id="testimonial-name" name="name" required>
           </div>
           
           <div class="form-group">
-            <label for="testimonial-email">Email (optionnel)</label>
-            <input type="email" id="testimonial-email" name="email">
+            <label for="testimonial-city">Votre ville</label>
+            <input type="text" id="testimonial-city" name="city" placeholder="Ex: Nancy">
           </div>
           
           <div class="form-group">
-            <label for="testimonial-city">Ville *</label>
-            <input type="text" id="testimonial-city" name="city" placeholder="ex: Nancy, Metz..." required>
-          </div>
-          
-          <div class="form-group">
-            <label for="testimonial-rating">Note *</label>
-            <div class="rating-input">
-              <input type="radio" id="star5" name="rating" value="5">
-              <label for="star5" class="star">⭐</label>
-              <input type="radio" id="star4" name="rating" value="4">
-              <label for="star4" class="star">⭐</label>
-              <input type="radio" id="star3" name="rating" value="3">
-              <label for="star3" class="star">⭐</label>
-              <input type="radio" id="star2" name="rating" value="2">
-              <label for="star2" class="star">⭐</label>
-              <input type="radio" id="star1" name="rating" value="1">
-              <label for="star1" class="star">⭐</label>
+            <label>Votre note</label>
+            <div class="star-rating">
+              <input type="radio" name="rating" id="star5" value="5" required>
+              <label for="star5">⭐</label>
+              <input type="radio" name="rating" id="star4" value="4">
+              <label for="star4">⭐</label>
+              <input type="radio" name="rating" id="star3" value="3">
+              <label for="star3">⭐</label>
+              <input type="radio" name="rating" id="star2" value="2">
+              <label for="star2">⭐</label>
+              <input type="radio" name="rating" id="star1" value="1">
+              <label for="star1">⭐</label>
             </div>
           </div>
           
           <div class="form-group">
-            <label for="testimonial-text">Votre témoignage *</label>
-            <textarea id="testimonial-text" name="testimonial" rows="4" 
-              placeholder="Partagez votre expérience avec MS Plomberie & Chauffage..." required></textarea>
+            <label for="testimonial-message">Votre témoignage *</label>
+            <textarea id="testimonial-message" name="message" placeholder="Partagez votre expérience avec MS Plomberie & Chauffage..." required></textarea>
           </div>
           
-          <div class="form-group">
-            <label for="testimonial-service">Type de service (optionnel)</label>
-            <select id="testimonial-service" name="service">
-              <option value="">Sélectionnez un service</option>
-              <option value="plomberie">Plomberie</option>
-              <option value="chauffage">Chauffage</option>
-              <option value="ventilation">Ventilation</option>
-              <option value="salle-de-bain">Salle de bain</option>
-              <option value="depannage">Dépannage</option>
-            </select>
-          </div>
-          
-          <div class="testimonial-notice">
-            <p>📝 <strong>Information :</strong> Votre témoignage sera examiné avant publication. Nous nous réservons le droit de modérer les contenus.</p>
-          </div>
-          
-          <button type="submit" class="btn-testimonial">
-            📤 Envoyer mon témoignage
+          <button type="submit" class="btn" style="width: 100%;">
+            ✅ Envoyer mon témoignage
           </button>
         </form>
       </div>
-    `;
-    
-    // Styles du modal
-    modal.style.cssText = `
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100vh;
-      background: rgba(0, 0, 0, 0.8);
-      backdrop-filter: blur(5px);
-      z-index: 10000;
-      display: none;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-      overflow-y: auto;
-    `;
-    
-    document.body.appendChild(modal);
-    
-    // Ajouter les styles CSS
-    this.addTestimonialModalStyles();
-  }
+      
+      <div class="trust-badges fade-in" style="display: flex; justify-content: center; gap: 2rem; margin-top: 3rem; flex-wrap: wrap;">
+        <div style="text-align: center; padding: 1rem;">
+          <div style="font-size: 2rem; margin-bottom: 0.5rem;">🏆</div>
+          <div style="font-weight: 600; color: var(--accent);">15 ans</div>
+          <div style="font-size: 0.9rem; color: var(--text-secondary);">d'expérience</div>
+        </div>
+        <div style="text-align: center; padding: 1rem;">
+          <div style="font-size: 2rem; margin-bottom: 0.5rem;">✅</div>
+          <div style="font-weight: 600; color: var(--accent);">100%</div>
+          <div style="font-size: 0.9rem; color: var(--text-secondary);">clients satisfaits</div>
+        </div>
+        <div style="text-align: center; padding: 1rem;">
+          <div style="font-size: 2rem; margin-bottom: 0.5rem;">🚀</div>
+          <div style="font-weight: 600; color: var(--accent);">Devis</div>
+          <div style="font-size: 0.9rem; color: var(--text-secondary);">gratuit</div>
+        </div>
+        <div style="text-align: center; padding: 1rem;">
+          <div style="font-size: 2rem; margin-bottom: 0.5rem;">⚡</div>
+          <div style="font-weight: 600; color: var(--accent);">24h</div>
+          <div style="font-size: 0.9rem; color: var(--text-secondary);">de réponse</div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  addTestimonialModalStyles() {
-    const styles = `
-      <style>
-      .testimonial-modal {
-        background: var(--card-bg);
-        border-radius: 15px;
-        border: 1px solid var(--border);
-        backdrop-filter: blur(10px);
-        max-width: 500px;
-        width: 100%;
-        max-height: 90vh;
-        overflow-y: auto;
-      }
+  <!-- Contact Section -->
+  <section class="section" id="contact">
+    <div class="container">
+      <h2 class="section-title fade-in">CONTACTEZ-NOUS</h2>
+      <p class="section-subtitle fade-in">📞 Une question ? Un projet ? Nous sommes là pour vous accompagner</p>
       
-      .testimonial-modal-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 1.5rem;
-        border-bottom: 1px solid var(--border);
-      }
-      
-      .testimonial-modal-header h3 {
-        margin: 0;
-        color: var(--accent);
-        font-size: 1.3rem;
-      }
-      
-      .testimonial-modal-close {
-        background: none;
-        border: none;
-        font-size: 1.5rem;
-        cursor: pointer;
-        color: var(--text-secondary);
-        padding: 5px;
-        border-radius: 5px;
-        transition: all 0.3s ease;
-      }
-      
-      .testimonial-modal-close:hover {
-        background: var(--border);
-        color: var(--text);
-      }
-      
-      .testimonial-form {
-        padding: 1.5rem;
-      }
-      
-      .testimonial-form .form-group {
-        margin-bottom: 1rem;
-      }
-      
-      .testimonial-form label {
-        display: block;
-        margin-bottom: 0.5rem;
-        font-weight: 500;
-        color: var(--text);
-      }
-      
-      .testimonial-form input,
-      .testimonial-form textarea,
-      .testimonial-form select {
-        width: 100%;
-        padding: 0.8rem;
-        border: 1px solid var(--border);
-        border-radius: 8px;
-        background: var(--bg);
-        color: var(--text);
-        font-size: 0.9rem;
-        transition: all 0.3s ease;
-      }
-      
-      .testimonial-form input:focus,
-      .testimonial-form textarea:focus,
-      .testimonial-form select:focus {
-        outline: none;
-        border-color: var(--accent);
-        box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.1);
-      }
-      
-      .rating-input {
-        display: flex;
-        flex-direction: row-reverse;
-        justify-content: flex-end;
-        gap: 0.2rem;
-      }
-      
-      .rating-input input[type="radio"] {
-        display: none;
-      }
-      
-      .rating-input .star {
-        font-size: 1.8rem;
-        cursor: pointer;
-        color: #ddd;
-        transition: color 0.2s ease;
-        width: auto;
-        padding: 0;
-        border: none;
-        background: none;
-      }
-      
-      .rating-input input[type="radio"]:checked ~ .star,
-      .rating-input .star:hover,
-      .rating-input .star:hover ~ .star {
-        color: #ffd700;
-      }
-      
-      .testimonial-notice {
-        background: rgba(76, 175, 80, 0.1);
-        padding: 1rem;
-        border-radius: 8px;
-        border-left: 4px solid var(--accent);
-        margin: 1rem 0;
-      }
-      
-      .testimonial-notice p {
-        margin: 0;
-        font-size: 0.85rem;
-        color: var(--text-secondary);
-      }
-      
-      .btn-testimonial {
-        background: var(--accent);
-        color: white;
-        border: none;
-        padding: 1rem 1.5rem;
-        border-radius: 8px;
-        font-size: 1rem;
-        font-weight: 600;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        width: 100%;
-      }
-      
-      .btn-testimonial:hover {
-        background: var(--accent-hover);
-        transform: translateY(-2px);
-        box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
-      }
-      
-      .btn-testimonial:disabled {
-        background: #ccc;
-        cursor: not-allowed;
-        transform: none;
-      }
-      
-      .add-testimonial-btn {
-        background: var(--accent);
-        color: white;
-        border: none;
-        padding: 0.8rem 1.5rem;
-        border-radius: 25px;
-        font-weight: 600;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        font-size: 0.9rem;
-        margin-top: 1rem;
-        display: inline-flex;
-        align-items: center;
-        gap: 0.5rem;
-      }
-      
-      .add-testimonial-btn:hover {
-        background: var(--accent-hover);
-        transform: translateY(-2px);
-        box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
-      }
-      
-      @media (max-width: 768px) {
-        .testimonial-modal {
-          margin: 10px;
-          max-height: calc(100vh - 20px);
-        }
-        
-        .testimonial-form {
-          padding: 1rem;
-        }
-      }
-      </style>
-    `;
-    
-    document.head.insertAdjacentHTML('beforeend', styles);
-  }
-
-  openTestimonialModal() {
-    const modal = document.getElementById('testimonial-modal');
-    if (modal) {
-      modal.style.display = 'flex';
-      document.body.style.overflow = 'hidden';
-      
-      // Focus sur le premier champ
-      const firstField = modal.querySelector('input');
-      if (firstField) {
-        setTimeout(() => firstField.focus(), 100);
-      }
-    }
-  }
-
-  closeTestimonialModal() {
-    const modal = document.getElementById('testimonial-modal');
-    if (modal) {
-      modal.style.display = 'none';
-      document.body.style.overflow = '';
-      
-      // Réinitialiser le formulaire
-      const form = modal.querySelector('#testimonial-form');
-      if (form) {
-        form.reset();
-      }
-    }
-  }
-
-  loadExistingTestimonials() {
-    // Témoignages existants avec possibilité d'en ajouter d'autres
-    this.testimonials = [
-      {
-        name: "Marie L.",
-        city: "Nancy",
-        rating: 5,
-        text: "Travail impeccable pour la rénovation complète de notre salle de bain. Équipe professionnelle, respect des délais et excellent rapport qualité-prix. Je recommande vivement !",
-        service: "Salle de bain",
-        date: "2024-01-15"
-      },
-      {
-        name: "Jean-Claude M.",
-        city: "Metz",
-        rating: 5,
-        text: "Installation de notre nouvelle pompe à chaleur réalisée avec professionnalisme. Très bon conseil, équipe compétente et à l'écoute. Parfait !",
-        service: "Chauffage",
-        date: "2024-01-10"
-      },
-      {
-        name: "Sophie D.",
-        city: "Épinal",
-        rating: 5,
-        text: "Intervention rapide pour une fuite urgente. Technicien compétent, travail soigné et prix honnête. Une entreprise de confiance que je recommande.",
-        service: "Dépannage",
-        date: "2024-01-05"
-      }
-    ];
-    
-    this.displayTestimonials();
-  }
-
-  displayTestimonials() {
-    const container = document.querySelector('.testimonials');
-    if (!container) return;
-    
-    // Ajouter le bouton pour ajouter un témoignage
-    const addButton = document.createElement('div');
-    addButton.className = 'add-testimonial-container';
-    addButton.innerHTML = `
-      <button class="add-testimonial-btn">
-        ⭐ Laisser un témoignage
-      </button>
-    `;
-    
-    // Insérer le bouton avant le container des témoignages
-    container.parentNode.insertBefore(addButton, container);
-    
-    // Afficher les témoignages existants
-    container.innerHTML = '';
-    
-    this.testimonials.forEach(testimonial => {
-      const testimonialCard = document.createElement('div');
-      testimonialCard.className = 'testimonial-card slide-in-left';
-      
-      const stars = '⭐'.repeat(testimonial.rating);
-      
-      testimonialCard.innerHTML = `
-        <p class="testimonial-text">"${testimonial.text}"</p>
-        <p class="testimonial-author">— ${testimonial.name}, ${testimonial.city}</p>
-        <div class="testimonial-rating">${stars}</div>
-        ${testimonial.service ? `<div class="testimonial-service">Service: ${testimonial.service}</div>` : ''}
-      `;
-      
-      container.appendChild(testimonialCard);
-    });
-  }
-
-  addTestimonial(testimonialData) {
-    // Ajouter le nouveau témoignage à la liste
-    const newTestimonial = {
-      ...testimonialData,
-      date: new Date().toISOString().split('T')[0]
-    };
-    
-    this.testimonials.unshift(newTestimonial);
-    
-    // Rafraîchir l'affichage
-    this.displayTestimonials();
-    
-    // Réinitialiser les animations
-    if (window.scrollAnimations) {
-      window.scrollAnimations.resetAnimations();
-    }
-  }
-}
-
-// Initialiser le gestionnaire de carte et témoignages
-document.addEventListener('DOMContentLoaded', () => {
-  window.mapsTestimonialsManager = new MapsTestimonialsManager();
-});
-
-
-// === GESTION DE LA NAVIGATION ===
-class NavigationManager {
-  constructor() {
-    this.menuBtn = document.getElementById('menu-btn');
-    this.menuOverlay = document.getElementById('menu-overlay');
-    this.navbar = document.querySelector('.navbar');
-    this.isMenuOpen = false;
-    this.init();
-  }
-
-  init() {
-    this.setupEventListeners();
-    this.setupSmoothScrolling();
-    this.setupScrollEffects();
-  }
-
-  setupEventListeners() {
-    // Menu toggle
-    this.menuBtn?.addEventListener('click', () => this.toggleMenu());
-    
-    // Fermer le menu en cliquant sur un lien
-    this.menuOverlay?.addEventListener('click', (e) => {
-      if (e.target.tagName === 'A') {
-        this.closeMenu();
-      }
-    });
-    
-    // Fermer le menu avec Escape
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && this.isMenuOpen) {
-        this.closeMenu();
-      }
-    });
-
-    // Navigation au clavier dans le menu
-    document.addEventListener('keydown', (e) => {
-      if (this.isMenuOpen) {
-        this.handleKeyboardNavigation(e);
-      }
-    });
-  }
-
-  toggleMenu() {
-    if (this.isMenuOpen) {
-      this.closeMenu();
-    } else {
-      this.openMenu();
-    }
-  }
-
-  openMenu() {
-    this.isMenuOpen = true;
-    this.menuBtn.classList.add('open');
-    this.menuOverlay.classList.add('active');
-    document.body.style.overflow = 'hidden';
-    
-    // Focus sur le premier lien du menu
-    const firstLink = this.menuOverlay.querySelector('a');
-    if (firstLink) {
-      setTimeout(() => firstLink.focus(), 300);
-    }
-  }
-
-  closeMenu() {
-    this.isMenuOpen = false;
-    this.menuBtn.classList.remove('open');
-    this.menuOverlay.classList.remove('active');
-    document.body.style.overflow = '';
-  }
-
-  handleKeyboardNavigation(e) {
-    const menuLinks = this.menuOverlay.querySelectorAll('a');
-    const currentFocus = document.activeElement;
-    const currentIndex = Array.from(menuLinks).indexOf(currentFocus);
-    
-    switch(e.key) {
-      case 'ArrowDown':
-        e.preventDefault();
-        const nextIndex = (currentIndex + 1) % menuLinks.length;
-        menuLinks[nextIndex].focus();
-        break;
-      case 'ArrowUp':
-        e.preventDefault();
-        const prevIndex = currentIndex <= 0 ? menuLinks.length - 1 : currentIndex - 1;
-        menuLinks[prevIndex].focus();
-        break;
-      case 'Tab':
-        // Laisser la navigation Tab naturelle
-        break;
-    }
-  }
-
-  setupSmoothScrolling() {
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', (e) => {
-        e.preventDefault();
-        const target = document.querySelector(anchor.getAttribute('href'));
-        
-        if (target) {
-          const offsetTop = target.offsetTop - 60; // Header plus fin
+      <div class="contact-content">
+        <div class="contact-info slide-in-left">
+          <div class="contact-item">
+            <div class="contact-icon">📞</div>
+            <div class="contact-details">
+              <h4>Téléphone</h4>
+              <p><a href="tel:0749248559">07 49 24 85 59</a></p>
+              <p style="font-size: 0.9rem; color: var(--accent);">Devis gratuit par téléphone</p>
+            </div>
+          </div>
           
-          window.scrollTo({
-            top: offsetTop,
-            behavior: 'smooth'
-          });
+          <div class="contact-item">
+            <div class="contact-icon">📧</div>
+            <div class="contact-details">
+              <h4>Email</h4>
+              <p><a href="mailto:ms.plomberie.chauffage.nancy@gmail.fr">ms.plomberie.chauffage.nancy@gmail.fr</a></p>
+              <p style="font-size: 0.9rem; color: var(--accent);">Réponse sous 24h garantie</p>
+            </div>
+          </div>
           
-          this.closeMenu();
-        }
-      });
-    });
-  }
+          <div class="contact-item">
+            <div class="contact-icon">📍</div>
+            <div class="contact-details">
+              <h4>Zone d'intervention</h4>
+              <p>80km autour de Nancy</p>
+              <p style="font-size: 0.9rem; color: var(--accent);">Déplacement gratuit pour devis</p>
+            </div>
+          </div>
+          
+          <div class="contact-item">
+            <div class="contact-icon">⏰</div>
+            <div class="contact-details">
+              <h4>Horaires</h4>
+              <p>Lun-Ven : 8h00 - 18h00</p>
+              <p style="font-size: 0.9rem; color: var(--accent);">Urgences : 7j/7</p>
+            </div>
+          </div>
+        </div>
 
-  setupScrollEffects() {
-    let lastScrollY = window.scrollY;
-    
-    const handleScroll = () => {
-      const scrollY = window.scrollY;
-      
-      // Header qui se cache/apparait
-      if (scrollY > 100) {
-        if (scrollY > lastScrollY && !this.isMenuOpen) {
-          // Scroll vers le bas - cacher
-          this.navbar.style.transform = 'translateY(-100%)';
-        } else {
-          // Scroll vers le haut - montrer
-          this.navbar.style.transform = 'translateY(0)';
-        }
-        this.navbar.style.background = 'var(--navbar-bg)';
-        this.navbar.style.backdropFilter = 'blur(20px) saturate(180%)';
-      } else {
-        this.navbar.style.transform = 'translateY(0)';
-        this.navbar.style.background = 'var(--navbar-bg)';
-      }
-      
-      lastScrollY = scrollY;
-    };
+        <form class="contact-form slide-in-right" id="contact-form">
+          <div class="form-group">
+            <label for="name">Nom complet *</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="phone">Téléphone</label>
+            <input type="tel" id="phone" name="phone" placeholder="06 12 34 56 78">
+          </div>
+          
+          <div class="form-group">
+            <label for="service">Type de service</label>
+            <select id="service" name="service">
+              <option value="">Sélectionnez un service</option>
+              <option value="plomberie">🚿 Plomberie</option>
+              <option value="chauffage">🌡️ Chauffage</option>
+              <option value="ventilation">💨 Ventilation</option>
+              <option value="urgence">🚨 Dépannage urgent</option>
+              <option value="devis">📋 Devis / Étude de projet</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="message">Décrivez votre projet *</label>
+            <textarea id="message" name="message" placeholder="Décrivez votre besoin, nous vous répondrons avec un devis détaillé..." required></textarea>
+          </div>
+          
+          <div class="form-garanties">
+            <p>🔒 <strong>Vos garanties :</strong></p>
+            <p>✅ Devis gratuit et sans engagement<br>
+            ✅ Réponse sous 24h<br>
+            ✅ Respect de votre vie privée<br>
+            ✅ Pas de démarchage commercial</p>
+          </div>
+          
+          <button type="submit" class="btn" style="width: 100%;">
+            📤 Envoyer ma demande
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
 
-    // Throttle pour optimiser les performances
-    let ticking = false;
-    window.addEventListener('scroll', () => {
-      if (!ticking) {
-        requestAnimationFrame(() => {
-          handleScroll();
-          ticking = false;
-        });
-        ticking = true;
-      }
-    });
-  }
-}
-
-// Initialiser la navigation
-document.addEventListener('DOMContentLoaded', () => {
-  new NavigationManager();
-});
-
-
-// === GESTION DU THÈME ===
-class ThemeManager {
-  constructor() {
-    this.root = document.documentElement;
-    this.themeToggle = document.getElementById('theme-toggle');
-    this.init();
-  }
-
-  init() {
-    // Définir le thème initial
-    const savedTheme = localStorage.getItem('theme') || 'dark';
-    this.root.setAttribute('data-theme', savedTheme);
-    
-    // Configurer l'event listener
-    this.themeToggle?.addEventListener('click', () => this.toggleTheme());
-  }
-
-  toggleTheme() {
-    const currentTheme = this.root.getAttribute('data-theme');
-    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-    
-    this.root.setAttribute('data-theme', newTheme);
-    localStorage.setItem('theme', newTheme);
-    
-    // Animation de transition
-    this.root.style.transition = 'all 0.3s ease';
-    setTimeout(() => {
-      this.root.style.transition = '';
-    }, 300);
-  }
-}
-
-// Initialiser le gestionnaire de thème
-document.addEventListener('DOMContentLoaded', () => {
-  new ThemeManager();
-});
-</script></body>
-</html>
+  <!-- Footer -->
+  <footer style="background: var(--navbar-bg); padding: 2rem; text-align: center; border-top: 1px solid var(--border);">
+    <div class="container">
+      <p style="margin-bottom: 1rem; font-weight: 600; font-size: 1.1rem;">MS Plomberie & Chauffage</p>
+      <p style="color: var(--text-secondary); margin-bottom: 1rem;">
+        🔧 15 ans d'expertise • 📞 <a href="tel:0749248559" style="color: var(--accent); text-decoration: none;">07 49 24 85 59</a> • 📍 Nancy et 80km alentour
+      </p>
+      <p style="color: var(--text-secondary); font-size: 0.9
