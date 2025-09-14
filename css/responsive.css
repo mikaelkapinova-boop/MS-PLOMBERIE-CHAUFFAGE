@@ -1,0 +1,421 @@
+/* Design responsive - Mobile First */
+
+/* Tablettes (768px et moins) */
+@media screen and (max-width: 768px) {
+  /* Navigation */
+  .navbar {
+    padding: 0 var(--spacing-md);
+  }
+  
+  .logo-text {
+    display: none;
+  }
+  
+  /* Hero */
+  .hero {
+    padding: var(--spacing-md);
+    min-height: 90vh;
+  }
+  
+  .hero-background {
+    background-attachment: scroll;
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Sections */
+  .section {
+    padding: var(--spacing-2xl) 0;
+  }
+  
+  /* Services */
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+  
+  /* Zone d'intervention */
+  .zone-content {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+  
+  .map-container {
+    height: 250px;
+  }
+  
+  /* Gallery */
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+  
+  /* Testimonials */
+  .testimonials {
+    grid-template-columns: 1fr;
+  }
+  
+  /* Contact */
+  .contact-content {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-xl);
+  }
+  
+  /* Menu overlay adjustments */
+  .menu-overlay a {
+    font-size: 1.25rem;
+  }
+  
+  /* Trust badges */
+  .trust-badges {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-md);
+  }
+}
+
+/* Mobiles (480px et moins) */
+@media screen and (max-width: 480px) {
+  /* Navigation */
+  .navbar {
+    padding: 0 var(--spacing-sm);
+  }
+  
+  .nav-controls {
+    gap: var(--spacing-md);
+  }
+  
+  .theme-toggle {
+    width: 40px;
+    height: 20px;
+  }
+  
+  .toggle-circle {
+    width: 14px;
+    height: 14px;
+  }
+  
+  :root[data-theme='light'] .toggle-circle {
+    left: 22px;
+  }
+  
+  .menu-btn {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .hamburger-line {
+    width: 16px;
+  }
+  
+  /* Hero */
+  .hero {
+    padding: var(--spacing-sm);
+  }
+  
+  .experience-badge {
+    font-size: 0.8rem;
+    padding: var(--spacing-xs) var(--spacing-md);
+  }
+  
+  .hero h1 {
+    font-size: clamp(1.5rem, 8vw, 2.5rem);
+  }
+  
+  .hero p {
+    font-size: clamp(0.9rem, 4vw, 1.1rem);
+  }
+  
+  .btn {
+    padding: var(--spacing-sm) var(--spacing-md);
+    font-size: 0.9rem;
+  }
+  
+  /* Sections */
+  .section {
+    padding: var(--spacing-xl) 0;
+  }
+  
+  .section-title {
+    font-size: clamp(1.5rem, 6vw, 2rem);
+  }
+  
+  .section-subtitle {
+    font-size: 1rem;
+  }
+  
+  /* Services */
+  .service-card {
+    padding: var(--spacing-lg);
+  }
+  
+  .service-icon {
+    width: 56px;
+    height: 56px;
+    font-size: 1.5rem;
+  }
+  
+  /* Zone d'intervention */
+  .zone-intervention {
+    padding: var(--spacing-lg);
+  }
+  
+  .zone-details li {
+    font-size: 0.9rem;
+  }
+  
+  .map-container {
+    height: 200px;
+  }
+  
+  /* Gallery */
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+  
+  /* Contact */
+  .contact-item {
+    padding: var(--spacing-md);
+  }
+  
+  .contact-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+  
+  .contact-form {
+    padding: var(--spacing-lg);
+  }
+  
+  .form-group {
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    padding: var(--spacing-sm);
+    font-size: 0.9rem;
+  }
+  
+  /* Call button */
+  .call-button {
+    bottom: var(--spacing-md);
+    right: var(--spacing-md);
+    width: 48px;
+    height: 48px;
+    font-size: 1.1rem;
+  }
+  
+  /* Menu overlay */
+  .menu-close {
+    top: var(--spacing-sm);
+    right: var(--spacing-md);
+  }
+  
+  .menu-overlay a {
+    font-size: 1.1rem;
+    margin: var(--spacing-sm) 0;
+  }
+  
+  /* Notifications */
+  .notification {
+    right: var(--spacing-sm);
+    left: var(--spacing-sm);
+    max-width: none;
+  }
+  
+  /* Trust badges */
+  .trust-badges {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-sm);
+  }
+  
+  .trust-badge {
+    padding: var(--spacing-sm);
+  }
+  
+  .trust-icon {
+    font-size: 1.5rem;
+  }
+  
+  /* Footer */
+  .footer {
+    padding: var(--spacing-lg) var(--spacing-sm);
+  }
+  
+  .footer-info {
+    font-size: 0.9rem;
+  }
+}
+
+/* Très petits écrans (320px et moins) */
+@media screen and (max-width: 320px) {
+  .navbar {
+    padding: 0 var(--spacing-xs);
+  }
+  
+  .hero {
+    padding: var(--spacing-xs);
+  }
+  
+  .section {
+    padding: var(--spacing-lg) 0;
+  }
+  
+  .container {
+    padding: 0 var(--spacing-sm);
+  }
+  
+  .service-card,
+  .zone-intervention,
+  .contact-form {
+    padding: var(--spacing-md);
+  }
+  
+  .cta-buttons {
+    gap: var(--spacing-sm);
+  }
+  
+  .btn {
+    padding: var(--spacing-xs) var(--spacing-sm);
+    font-size: 0.85rem;
+  }
+  
+  .call-button {
+    width: 44px;
+    height: 44px;
+    font-size: 1rem;
+  }
+}
+
+/* Écrans larges (1200px et plus) */
+@media screen and (min-width: 1200px) {
+  .container {
+    padding: 0 var(--spacing-2xl);
+  }
+  
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .testimonials {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .trust-badges {
+    gap: var(--spacing-2xl);
+  }
+}
+
+/* Très grands écrans (1400px et plus) */
+@media screen and (min-width: 1400px) {
+  .hero-content {
+    max-width: 900px;
+  }
+  
+  .section-subtitle {
+    max-width: 700px;
+  }
+}
+
+/* Orientation paysage mobile */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+  .hero {
+    min-height: 100vh;
+    padding: var(--spacing-sm);
+  }
+  
+  .hero h1 {
+    font-size: clamp(1.5rem, 4vh, 2rem);
+  }
+  
+  .hero p {
+    font-size: clamp(0.9rem, 3vh, 1rem);
+  }
+  
+  .navbar {
+    height: 40px;
+  }
+  
+  .call-button {
+    width: 40px;
+    height: 40px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Mode sombre spécifique mobile */
+@media screen and (max-width: 480px) {
+  :root[data-theme='dark'] {
+    --card-bg: rgba(255,255,255,0.08);
+  }
+  
+  :root[data-theme='light'] {
+    --card-bg: rgba(0,0,0,0.05);
+  }
+}
+
+/* Hover uniquement sur les appareils qui le supportent */
+@media (hover: hover) and (pointer: fine) {
+  .service-card:hover,
+  .gallery-item:hover,
+  .testimonial-card:hover,
+  .contact-item:hover {
+    transform: translateY(-5px);
+  }
+}
+
+/* Pas de hover sur mobile/tactile */
+@media (hover: none) and (pointer: coarse) {
+  .service-card:hover,
+  .gallery-item:hover,
+  .testimonial-card:hover,
+  .contact-item:hover {
+    transform: none;
+  }
+  
+  .btn:hover {
+    transform: none;
+  }
+  
+  .menu-btn:hover {
+    transform: none;
+  }
+}
+
+/* Amélioration de la lisibilité sur petits écrans */
+@media screen and (max-width: 480px) {
+  body {
+    font-size: 0.9rem;
+  }
+  
+  .testimonial-text {
+    font-size: 0.9rem;
+  }
+  
+  .zone-details li,
+  .form-garanties {
+    font-size: 0.85rem;
+  }
+}
+
+/* Support des notches (iPhone X+) */
+@supports (padding: max(0px)) {
+  .navbar {
+    padding-left: max(var(--spacing-xl), env(safe-area-inset-left));
+    padding-right: max(var(--spacing-xl), env(safe-area-inset-right));
+  }
+  
+  .call-button {
+    bottom: max(var(--spacing-xl), env(safe-area-inset-bottom));
+    right: max(var(--spacing-xl), env(safe-area-inset-right));
+  }
+}
