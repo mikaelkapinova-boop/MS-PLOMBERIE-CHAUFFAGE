@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MS Plomberie & Chauffage - Plombier Chauffagiste Nancy | Devis Gratuit</title>
+  <meta name="description" content="MS Plomberie & Chauffage, expert plombier chauffagiste à Nancy. 15 ans d'expérience, intervention dans un rayon de 80km. Devis gratuit. Appelez le 07 49 24 85 59">
+  <meta name="keywords" content="plombier nancy, chauffagiste nancy, plomberie chauffage, devis gratuit, rénovation salle de bain, pompe à chaleur">
+  <meta property="og:title" content="MS Plomberie & Chauffage - Expert Plombier Chauffagiste Nancy">
+  <meta property="og:description" content="15 ans d'expérience, devis gratuit, intervention 80km autour de Nancy">
+  <meta name="robots" content="index, follow">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- CSS Files -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <a href="#home" class="logo">
+      <img src="https://raw.githubusercontent.com/mikaelkapinova-boop/MS-PLOMBERIE-CHAUFFAGE/main/images/logo.png" alt="MS Plomberie Logo" onerror="this.style.display='none';">
+      <span class="logo-text">MS PLOMBERIE & CHAUFFAGE</span>
+    </a>
+    <div class="nav-controls">
+      <div class="theme-toggle" id="theme-toggle">
+        <div class="toggle-circle"></div>
+      </div>
+      <button class="menu-btn" id="menu-btn" aria-label="Menu">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Menu Overlay -->
+  <div class="menu-overlay" id="menu-overlay">
+    <button class="menu-close" id="menu-close" aria-label="Fermer le menu">
+      <span class="close-line"></span>
+      <span class="close-line"></span>
+    </button>
+    <div class="menu-content">
+      <a href="#home">🏠 Accueil</a>
+      <a href="#services">🔧 Services</a>
+      <a href="#zone">📍 Zone d'intervention</a>
+      <a href="#realisations">📸 Réalisations</a>
+      <a href="#temoignages">⭐ Témoignages</a>
+      <a href="#contact">📞 Contact</a>
+      <a href="#add-testimonial">💬 Laisser un avis</a>
+    </div>
+  </div>
+
+  <!-- Bouton d'appel flottant -->
+  <a href="tel:0749248559" class="call-button" aria-label="Appeler MS Plomberie">📞</a>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-background"></div>
+    <div class="hero-content">
+      <div class="experience-badge slide-up">✨ 15 ans d'expérience</div>
+      <h1 class="slide-up delay-1">L'EXPERTISE AU SERVICE DE VOTRE BIEN-ÊTRE</h1>
+      <p class="slide-up delay-2">🔧 Solutions fiables et durables pour tous vos projets de plomberie et chauffage dans un rayon de 80km autour de Nancy</p>
+      <div class="cta-buttons slide-up delay-3">
+        <a href="#contact" class="btn">📋 Devis Gratuit</a>
+        <a href="tel:0749248559" class="btn btn-secondary">📞 07 49 24 85 59</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="section" id="services">
+    <div class="container">
+      <h2 class="section-title reveal">NOS SERVICES</h2>
+      <p class="section-subtitle reveal">Une expertise complète pour tous vos besoins en plomberie, chauffage et ventilation</p>
+      
+      <div class="services-grid">
+        <div class="service-card reveal slide-left">
+          <div class="service-icon">🚿</div>
+          <h3>Plomberie</h3>
+          <p><strong>🆕 Nouvelles installations</strong><br>
+          Création complète de réseaux de plomberie pour constructions neuves et rénovations.
+          <br><br><strong>🛁 Salles de bain clés en main</strong><br>
+          Conception et réalisation complète avec nos artisans partenaires qualifiés.
+          <br><br><strong>🔧 Réparations et remplacements</strong><br>
+          Intervention rapide sur tous équipements de plomberie.</p>
+        </div>
+
+        <div class="service-card reveal slide-up delay-1">
+          <div class="service-icon">🌡️</div>
+          <h3>Chauffage</h3>
+          <p><strong>🏠 Installations complètes</strong><br>
+          Création de systèmes de chauffage adaptés à vos besoins et à votre budget.
+          <br><br><strong>🔥 Chaudières & Pompes à chaleur</strong><br>
+          Installation, remplacement et maintenance d'équipements thermiques performants.
+          <br><br><strong>⚙️ Maintenance préventive</strong><br>
+          Entretien régulier pour optimiser performance et durée de vie.</p>
+        </div>
+
+        <div class="service-card reveal slide-right delay-2">
+          <div class="service-icon">💨</div>
+          <h3>Ventilation</h3>
+          <p><strong>🌪️ VMC (Ventilation Mécanique Contrôlée)</strong><br>
+          Installation de systèmes de ventilation pour cuisine, salle de bain et WC.
+          <br><br><strong>🔄 Renouvellement d'air</strong><br>
+          Solutions pour améliorer la qualité de l'air intérieur.
+          <br><br><strong>🛠️ Maintenance et dépannage</strong><br>
+          Entretien et réparation de vos installations de ventilation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Zone d'intervention -->
+  <section class="section" id="zone">
+    <div class="container">
+      <h2 class="section-title reveal">ZONE D'INTERVENTION</h2>
+      <p class="section-subtitle reveal">🚗 Nous intervenons dans un rayon de 80km autour de Nancy</p>
+      
+      <div class="zone-intervention reveal">
+        <div class="zone-content">
+          <div class="zone-info slide-left">
+            <h3>📍 Secteurs desservis</h3>
+            <ul class="zone-details">
+              <li>Nancy et agglomération</li>
+              <li>Metz et environs</li>
+              <li>Épinal et sa région</li>
+              <li>Toul, Pont-à-Mousson</li>
+              <li>Lunéville, Saint-Dié</li>
+              <li>Bar-le-Duc, Commercy</li>
+              <li>Verdun et alentours</li>
+            </ul>
+            
+            <div class="horaires">
+              <h4>⏰ Horaires d'ouverture</h4>
+              <p><strong>Lundi au Vendredi :</strong> 8h00 - 18h00</p>
+              <p><strong>Urgences :</strong> Intervention 7j/7</p>
+              <p><strong>Devis :</strong> Gratuit et sans engagement</p>
+            </div>
+          </div>
+          
+          <div class="map-container slide-right" id="map-container">
+            <div id="nancy-map"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Réalisations Section -->
+  <section class="section" id="realisations">
+    <div class="container">
+      <h2 class="section-title reveal">NOS RÉALISATIONS</h2>
+      <p class="section-subtitle reveal">🏆 Découvrez quelques-uns de nos projets réalisés avec passion et expertise</p>
+      
+      <div class="gallery-grid">
+        <div class="gallery-item reveal zoom-in">
+          <img src="https://raw.githubusercontent.com/mikaelkapinova-boop/MS-PLOMBERIE-CHAUFFAGE/main/images/real1.jpg" alt="Rénovation salle de bain moderne" loading="lazy">
+          <div class="gallery-overlay">
+            <h4>Rénovation salle de bain</h4>
+          </div>
+        </div>
+        
+        <div class="gallery-item reveal zoom-in delay-1">
+          <img src="https://raw.githubusercontent.com/mikaelkapinova-boop/MS-PLOMBERIE-CHAUFFAGE/main/images/real2.jpg" alt="Installation chauffage" loading="lazy">
+          <div class="gallery-overlay">
+            <h4>Installation système de chauffage</h4>
+          </div>
+        </div>
+        
+        <div class="gallery-item reveal zoom-in delay-2">
+          <img src="https://raw.githubusercontent.com/mikaelkapinova-boop/MS-PLOMBERIE-CHAUFFAGE/main/images/real3.jpg" alt="Rénovation salle de bain" loading="lazy">
+          <div class="gallery-overlay">
+            <h4>Rénovation salle de bain</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Témoignages Section -->
+  <section class="section" id="temoignages">
+    <div class="container">
+      <h2 class="section-title reveal">TÉMOIGNAGES CLIENTS</h2>
+      <p class="section-subtitle reveal">⭐ La satisfaction de nos clients est notre meilleure récompense</p>
+      
+      <div class="testimonials" id="testimonials-container">
+        <!-- Témoignages dynamiques chargés par JavaScript -->
+      </div>
+      
+      <div class="trust-badges reveal">
+        <div class="trust-badge">
+          <div class="trust-icon">🏆</div>
+          <div class="trust-number">15 ans</div>
+          <div class="trust-text">d'expérience</div>
+        </div>
+        <div class="trust-badge">
+          <div class="trust-icon">✅</div>
+          <div class="trust-number">100%</div>
+          <div class="trust-text">clients satisfaits</div>
+        </div>
+        <div class="trust-badge">
+          <div class="trust-icon">🚀</div>
+          <div class="trust-number">Devis</div>
+          <div class="trust-text">gratuit</div>
+        </div>
+        <div class="trust-badge">
+          <div class="trust-icon">⚡</div>
+          <div class="trust-number">24h</div>
+          <div class="trust-text">de réponse</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Formulaire témoignage -->
+  <section class="section" id="add-testimonial" style="display: none;">
+    <div class="container">
+      <h2 class="section-title">LAISSER UN TÉMOIGNAGE</h2>
+      <div class="testimonial-form-container">
+        <form id="testimonial-form" class="testimonial-form">
+          <div class="form-group">
+            <label for="testimonial-name">Nom *</label>
+            <input type="text" id="testimonial-name" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="testimonial-city">Ville</label>
+            <input type="text" id="testimonial-city">
+          </div>
+          
+          <div class="form-group">
+            <label for="testimonial-rating">Note *</label>
+            <div class="rating-input">
+              <input type="radio" name="rating" value="5" id="star5" required>
+              <label for="star5">⭐</label>
+              <input type="radio" name="rating" value="4" id="star4">
+              <label for="star4">⭐</label>
+              <input type="radio" name="rating" value="3" id="star3">
+              <label for="star3">⭐</label>
+              <input type="radio" name="rating" value="2" id="star2">
+              <label for="star2">⭐</label>
+              <input type="radio" name="rating" value="1" id="star1">
+              <label for="star1">⭐</label>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="testimonial-message">Votre témoignage *</label>
+            <textarea id="testimonial-message" required placeholder="Partagez votre expérience avec MS Plomberie..."></textarea>
+          </div>
+          
+          <button type="submit" class="btn">📤 Publier mon témoignage</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section" id="contact">
+    <div class="container">
+      <h2 class="section-title reveal">CONTACTEZ-NOUS</h2>
+      <p class="section-subtitle reveal">📞 Une question ? Un projet ? Nous sommes là pour vous accompagner</p>
+      
+      <div class="contact-content">
+        <div class="contact-info slide-left">
+          <div class="contact-item">
+            <div class="contact-icon">📞</div>
+            <div class="contact-details">
+              <h4>Téléphone</h4>
+              <p><a href="tel:0749248559" class="contact-link">07 49 24 85 59</a></p>
+              <p class="contact-subtitle">Devis gratuit par téléphone</p>
+            </div>
+          </div>
+          
+          <div class="contact-item">
+            <div class="contact-icon">📧</div>
+            <div class="contact-details">
+              <h4>Email</h4>
+              <p><a href="mailto:ms.plomberie.chauffage.nancy@gmail.fr" class="contact-link">ms.plomberie.chauffage.nancy@gmail.fr</a></p>
+              <p class="contact-subtitle">Réponse sous 24h garantie</p>
+            </div>
+          </div>
+          
+          <div class="contact-item">
+            <div class="contact-icon">📍</div>
+            <div class="contact-details">
+              <h4>Zone d'intervention</h4>
+              <p>80km autour de Nancy</p>
+              <p class="contact-subtitle">Déplacement gratuit pour devis</p>
+            </div>
+          </div>
+          
+          <div class="contact-item">
+            <div class="contact-icon">⏰</div>
+            <div class="contact-details">
+              <h4>Horaires</h4>
+              <p>Lun-Ven : 8h00 - 18h00</p>
+              <p class="contact-subtitle">Urgences : 7j/7</p>
+            </div>
+          </div>
+        </div>
+
+        <form class="contact-form slide-right" id="contact-form">
+          <div class="form-group">
+            <label for="name">Nom complet *</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="phone">Téléphone</label>
+            <input type="tel" id="phone" name="phone" placeholder="06 12 34 56 78">
+          </div>
+          
+          <div class="form-group">
+            <label for="service">Type de service</label>
+            <select id="service" name="service">
+              <option value="">Sélectionnez un service</option>
+              <option value="plomberie">🚿 Plomberie</option>
+              <option value="chauffage">🌡️ Chauffage</option>
+              <option value="ventilation">💨 Ventilation</option>
+              <option value="urgence">🚨 Dépannage urgent</option>
+              <option value="devis">📋 Devis / Étude de projet</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="message">Décrivez votre projet *</label>
+            <textarea id="message" name="message" placeholder="Décrivez votre besoin, nous vous répondrons avec un devis détaillé..." required></textarea>
+          </div>
+          
+          <div class="form-garanties">
+            <p>🔒 <strong>Vos garanties :</strong></p>
+            <p>✅ Devis gratuit et sans engagement<br>
+            ✅ Réponse sous 24h<br>
+            ✅ Respect de votre vie privée<br>
+            ✅ Pas de démarchage commercial</p>
+          </div>
+          
+          <button type="submit" class="btn btn-full">
+            📤 Envoyer ma demande
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p class="footer-title">MS Plomberie & Chauffage</p>
+      <p class="footer-info">
+        🔧 15 ans d'expertise • 📞 <a href="tel:0749248559" class="footer-link">07 49 24 85 59</a> • 📍 Nancy et 80km alentour
+      </p>
+      <p class="footer-copyright">
+        © 2024 MS Plomberie & Chauffage - Tous droits réservés
+      </p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/forms.js"></script>
+  <script src="js/testimonials.js"></script>
+  <script src="js/map.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
