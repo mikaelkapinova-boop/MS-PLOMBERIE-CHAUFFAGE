@@ -165,7 +165,7 @@ body {
   cursor: pointer;
   display: flex;
   flex-direction: column;
-  gap: 3px;
+  gap: 6px;
   padding: 6px;
   z-index: 1001;
   width: 30px;
@@ -188,11 +188,11 @@ body {
 }
 
 .menu-btn.open span:nth-child(1) {
-  transform: rotate(45deg) translate(0px, 2.5px);
+  transform: rotate(45deg) translate(0px, 4px);
 }
 
 .menu-btn.open span:nth-child(2) {
-  transform: rotate(-45deg) translate(0px, -2.5px);
+  transform: rotate(-45deg) translate(0px, -4px);
 }
 
 .menu-overlay {
@@ -287,11 +287,29 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://raw.githubusercontent.com/mikaelkapinova-boop/MS-PLOMBERIE-CHAUFFAGE/main/images/real1.jpg');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+  background: linear-gradient(135deg, 
+    rgba(76, 175, 80, 0.2) 0%, 
+    rgba(0, 0, 0, 0.7) 30%, 
+    rgba(33, 150, 243, 0.2) 70%, 
+    rgba(0, 0, 0, 0.8) 100%
+  ),
+  radial-gradient(circle at 30% 20%, rgba(76, 175, 80, 0.3) 0%, transparent 50%),
+  radial-gradient(circle at 70% 80%, rgba(33, 150, 243, 0.3) 0%, transparent 50%),
+  linear-gradient(45deg, #1a1a1a 25%, transparent 25%, transparent 75%, #1a1a1a 75%, #1a1a1a),
+  linear-gradient(-45deg, #1a1a1a 25%, transparent 25%, transparent 75%, #1a1a1a 75%, #1a1a1a);
+  background-size: 100% 100%, 200% 200%, 200% 200%, 20px 20px, 20px 20px;
+  background-position: 0 0, 0 0, 100% 100%, 0 0, 10px 10px;
+  animation: heroBackground 20s ease-in-out infinite;
   z-index: -1;
+}
+
+@keyframes heroBackground {
+  0%, 100% {
+    background-position: 0 0, 0 0, 100% 100%, 0 0, 10px 10px;
+  }
+  50% {
+    background-position: 0 0, 100% 100%, 0 0, 10px 10px, 0 0;
+  }
 }
 
 .hero-content {
@@ -568,10 +586,17 @@ body {
   overflow: hidden;
 }
 
-.map-container iframe {
+.custom-map {
   width: 100%;
   height: 100%;
-  border: none;
+  border-radius: 15px;
+  background: linear-gradient(135deg, #1a3009 0%, #2d5016 50%, #1a3009 100%);
+  position: relative;
+}
+
+.custom-map svg {
+  width: 100%;
+  height: 100%;
   border-radius: 15px;
 }
 
@@ -940,59 +965,6 @@ body {
     </a>
     <div class="nav-controls">
       <div class="theme-toggle" id="theme-toggle">
-        <div class="toggle-circle"></div>
-      </div>
-      <button class="menu-btn" id="menu-btn" aria-label="Menu">
-        <span></span>
-        <span></span>
-      </button>
-    </div>
-  </nav>
-
-  <!-- Menu Overlay -->
-  <div class="menu-overlay" id="menu-overlay">
-    <a href="#home">🏠 Accueil</a>
-    <a href="#services">🔧 Services</a>
-    <a href="#zone">📍 Zone d'intervention</a>
-    <a href="#realisations">📸 Réalisations</a>
-    <a href="#temoignages">⭐ Témoignages</a>
-    <a href="#contact">📞 Contact</a>
-  </div>
-
-  <!-- Bouton d'appel flottant -->
-  <a href="tel:0749248559" class="call-button" aria-label="Appeler MS Plomberie">📞</a>
-
-  <!-- Hero Section -->
-  <section class="hero" id="home">
-    <div class="hero-content">
-      <div class="experience-badge">✨ 15 ans d'expérience</div>
-      <h1>L'EXPERTISE AU SERVICE DE VOTRE BIEN-ÊTRE</h1>
-      <p>🔧 Solutions fiables et durables pour tous vos projets de plomberie et chauffage dans un rayon de 80km autour de Nancy</p>
-      <div class="cta-buttons">
-        <a href="#contact" class="btn">📋 Devis Gratuit</a>
-        <a href="tel:0749248559" class="btn btn-secondary">📞 07 49 24 85 59</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Services Section -->
-  <section class="section" id="services">
-    <div class="container">
-      <h2 class="section-title scroll-reveal">NOS SERVICES</h2>
-      <p class="section-subtitle scroll-reveal">Une expertise complète pour tous vos besoins en plomberie, chauffage et ventilation</p>
-      
-      <div class="services-grid">
-        <div class="service-card scroll-reveal-scale">
-          <div class="service-icon">🚿</div>
-          <h3>Plomberie</h3>
-          <p><strong>🆕 Nouvelles installations</strong><br>
-          Création complète de réseaux de plomberie pour constructions neuves et rénovations.
-          <br><br><strong>🛁 Salles de bain clés en main</strong><br>
-          Conception et réalisation complète avec nos artisans partenaires qualifiés.
-          <br><br><strong>🔧 Réparations et remplacements</strong><br>
-          Intervention rapide sur tous équipements de plomberie.</p>
-        </div>
-
         <div class="service-card scroll-reveal-scale">
           <div class="service-icon">🌡️</div>
           <h3>Chauffage</h3>
@@ -1047,13 +1019,83 @@ body {
           </div>
           
           <div class="map-container scroll-reveal-right">
-            <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2623.9!2d6.184!3d48.693!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4794984c1e192bef%3A0x409ce34b313ee70!2sNancy%2C%20France!5e0!3m2!1sfr!2sfr!4v1635789456123!5m2!1sfr!2sfr&zoom=9"
-              style="border:0; width: 100%; height: 100%; border-radius: 15px;"
-              allowfullscreen=""
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
+            <div class="custom-map">
+              <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+                <!-- Fond satellite stylisé -->
+                <defs>
+                  <radialGradient id="mapGradient" cx="50%" cy="50%" r="50%">
+                    <stop offset="0%" stop-color="#2d5016"/>
+                    <stop offset="30%" stop-color="#3d6b20"/>
+                    <stop offset="60%" stop-color="#2d5016"/>
+                    <stop offset="100%" stop-color="#1a3009"/>
+                  </radialGradient>
+                  <pattern id="forestPattern" patternUnits="userSpaceOnUse" width="4" height="4">
+                    <rect width="4" height="4" fill="#2d5016"/>
+                    <circle cx="2" cy="2" r="0.5" fill="#4a7c2a"/>
+                  </pattern>
+                </defs>
+                
+                <!-- Fond principal -->
+                <rect width="100%" height="100%" fill="url(#mapGradient)"/>
+                
+                <!-- Texture forêt -->
+                <rect width="100%" height="100%" fill="url(#forestPattern)" opacity="0.3"/>
+                
+                <!-- Rivières stylisées -->
+                <path d="M0,150 Q100,140 200,150 T400,160" stroke="#4a90c2" stroke-width="2" fill="none" opacity="0.8"/>
+                <path d="M150,0 Q160,75 170,150 Q180,225 190,300" stroke="#4a90c2" stroke-width="1.5" fill="none" opacity="0.6"/>
+                
+                <!-- Routes principales -->
+                <path d="M0,100 L400,120" stroke="#8b7355" stroke-width="1" opacity="0.5"/>
+                <path d="M0,200 L400,180" stroke="#8b7355" stroke-width="1" opacity="0.5"/>
+                <path d="M100,0 L120,300" stroke="#8b7355" stroke-width="1" opacity="0.5"/>
+                <path d="M300,0 L280,300" stroke="#8b7355" stroke-width="1" opacity="0.5"/>
+                
+                <!-- Cercle de 80km autour de Nancy -->
+                <circle cx="200" cy="150" r="80" fill="none" stroke="#ff4444" stroke-width="3" stroke-dasharray="5,3" opacity="0.9"/>
+                
+                <!-- Zone d'intervention (fond du cercle) -->
+                <circle cx="200" cy="150" r="80" fill="#ff4444" opacity="0.1"/>
+                
+                <!-- Villes principales -->
+                <!-- Nancy (centre) -->
+                <circle cx="200" cy="150" r="4" fill="#ffeb3b"/>
+                <text x="210" y="145" font-family="Arial" font-size="10" fill="white" font-weight="bold">📍 Nancy</text>
+                
+                <!-- Metz -->
+                <circle cx="160" cy="120" r="3" fill="#ffeb3b"/>
+                <text x="130" y="115" font-family="Arial" font-size="8" fill="white">Metz</text>
+                
+                <!-- Épinal -->
+                <circle cx="220" cy="200" r="2.5" fill="#ffeb3b"/>
+                <text x="225" y="205" font-family="Arial" font-size="8" fill="white">Épinal</text>
+                
+                <!-- Toul -->
+                <circle cx="180" cy="140" r="2" fill="#ffeb3b"/>
+                <text x="155" y="135" font-family="Arial" font-size="8" fill="white">Toul</text>
+                
+                <!-- Lunéville -->
+                <circle cx="230" cy="130" r="2" fill="#ffeb3b"/>
+                <text x="235" y="125" font-family="Arial" font-size="8" fill="white">Lunéville</text>
+                
+                <!-- Verdun -->
+                <circle cx="140" cy="100" r="2" fill="#ffeb3b"/>
+                <text x="145" y="95" font-family="Arial" font-size="8" fill="white">Verdun</text>
+                
+                <!-- Bar-le-Duc -->
+                <circle cx="250" cy="180" r="2" fill="#ffeb3b"/>
+                <text x="255" y="185" font-family="Arial" font-size="8" fill="white">Bar-le-Duc</text>
+                
+                <!-- Légende -->
+                <g transform="translate(10, 250)">
+                  <rect x="0" y="0" width="180" height="40" fill="rgba(0,0,0,0.7)" rx="5"/>
+                  <circle cx="15" cy="15" r="6" fill="none" stroke="#ff4444" stroke-width="2"/>
+                  <text x="30" y="19" font-family="Arial" font-size="10" fill="white">Rayon d'intervention: 80km</text>
+                  <circle cx="15" cy="30" r="2" fill="#ffeb3b"/>
+                  <text x="30" y="34" font-family="Arial" font-size="10" fill="white">Villes desservies</text>
+                </g>
+              </svg>
+            </div>
           </div>
         </div>
       </div>
@@ -1618,10 +1660,16 @@ function setupEventListeners() {
   window.addEventListener('scroll', () => {
     const navbar = document.querySelector('.navbar');
     const scrollY = window.scrollY;
+    const currentTheme = elements.root.getAttribute('data-theme');
     
     if (scrollY > 100) {
-      navbar.style.background = scrollY > lastScrollY ? 
-        'rgba(0,0,0,0.95)' : 'var(--navbar-bg)';
+      if (currentTheme === 'light') {
+        navbar.style.background = scrollY > lastScrollY ? 
+          'rgba(255,255,255,0.95)' : 'var(--navbar-bg)';
+      } else {
+        navbar.style.background = scrollY > lastScrollY ? 
+          'rgba(0,0,0,0.95)' : 'var(--navbar-bg)';
+      }
     } else {
       navbar.style.background = 'var(--navbar-bg)';
     }
@@ -1661,4 +1709,57 @@ if (window.location.hostname === 'localhost' || window.location.hostname === '12
 }
   </script>
 </body>
-</html>
+</html> class="toggle-circle"></div>
+      </div>
+      <button class="menu-btn" id="menu-btn" aria-label="Menu">
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Menu Overlay -->
+  <div class="menu-overlay" id="menu-overlay">
+    <a href="#home">🏠 Accueil</a>
+    <a href="#services">🔧 Services</a>
+    <a href="#zone">📍 Zone d'intervention</a>
+    <a href="#realisations">📸 Réalisations</a>
+    <a href="#temoignages">⭐ Témoignages</a>
+    <a href="#contact">📞 Contact</a>
+  </div>
+
+  <!-- Bouton d'appel flottant -->
+  <a href="tel:0749248559" class="call-button" aria-label="Appeler MS Plomberie">📞</a>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <div class="experience-badge">✨ 15 ans d'expérience</div>
+      <h1>L'EXPERTISE AU SERVICE DE VOTRE BIEN-ÊTRE</h1>
+      <p>🔧 Solutions fiables et durables pour tous vos projets de plomberie et chauffage dans un rayon de 80km autour de Nancy</p>
+      <div class="cta-buttons">
+        <a href="#contact" class="btn">📋 Devis Gratuit</a>
+        <a href="tel:0749248559" class="btn btn-secondary">📞 07 49 24 85 59</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="section" id="services">
+    <div class="container">
+      <h2 class="section-title scroll-reveal">NOS SERVICES</h2>
+      <p class="section-subtitle scroll-reveal">Une expertise complète pour tous vos besoins en plomberie, chauffage et ventilation</p>
+      
+      <div class="services-grid">
+        <div class="service-card scroll-reveal-scale">
+          <div class="service-icon">🚿</div>
+          <h3>Plomberie</h3>
+          <p><strong>🆕 Nouvelles installations</strong><br>
+          Création complète de réseaux de plomberie pour constructions neuves et rénovations.
+          <br><br><strong>🛁 Salles de bain clés en main</strong><br>
+          Conception et réalisation complète avec nos artisans partenaires qualifiés.
+          <br><br><strong>🔧 Réparations et remplacements</strong><br>
+          Intervention rapide sur tous équipements de plomberie.</p>
+        </div>
+
+        <div
