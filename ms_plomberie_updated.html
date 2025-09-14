@@ -1,0 +1,1740 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MS Plomberie & Chauffage - Plombier Chauffagiste Nancy | Devis Gratuit</title>
+  <meta name="description" content="MS Plomberie & Chauffage, expert plombier chauffagiste à Nancy. 15 ans d'expérience, intervention dans un rayon de 80km. Devis gratuit. Appelez le 07 49 24 85 59">
+  <meta name="keywords" content="plombier nancy, chauffagiste nancy, plomberie chauffage, devis gratuit, rénovation salle de bain, pompe à chaleur">
+  <meta property="og:title" content="MS Plomberie & Chauffage - Expert Plombier Chauffagiste Nancy">
+  <meta property="og:description" content="15 ans d'expérience, devis gratuit, intervention 80km autour de Nancy">
+  <meta name="robots" content="index, follow">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+:root[data-theme='dark'] {
+  --bg: #0a0a0a;
+  --bg-gradient: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0a0a0a 100%);
+  --text: #ffffff;
+  --text-secondary: #b3b3b3;
+  --accent: #4CAF50;
+  --accent-hover: #45a049;
+  --card-bg: rgba(255,255,255,0.05);
+  --navbar-bg: rgba(0,0,0,0.9);
+  --border: rgba(255,255,255,0.1);
+}
+
+:root[data-theme='light'] {
+  --bg: #ffffff;
+  --bg-gradient: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 50%, #f8f9fa 100%);
+  --text: #212529;
+  --text-secondary: #6c757d;
+  --accent: #4CAF50;
+  --accent-hover: #45a049;
+  --card-bg: rgba(0,0,0,0.03);
+  --navbar-bg: rgba(255,255,255,0.95);
+  --border: rgba(0,0,0,0.1);
+}
+
+/* Navigation */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  background: var(--navbar-bg);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  z-index: 1000;
+  border-bottom: 1px solid var(--border);
+  transition: all 0.3s ease;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.logo img {
+  height: 40px;
+  width: auto;
+}
+
+.nav-controls {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.theme-toggle {
+  width: 60px;
+  height: 30px;
+  border-radius: 50px;
+  background: #333;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease;
+  border: 2px solid #555;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 8px;
+}
+
+:root[data-theme='light'] .theme-toggle {
+  background: #e0e0e0;
+  border-color: #ccc;
+}
+
+.theme-toggle::before {
+  content: '🌙';
+  font-size: 12px;
+  position: absolute;
+  left: 8px;
+  z-index: 1;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.theme-toggle::after {
+  content: '☀️';
+  font-size: 12px;
+  position: absolute;
+  right: 8px;
+  z-index: 1;
+  opacity: 0.3;
+  transition: opacity 0.3s ease;
+}
+
+.theme-toggle .toggle-circle {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 22px;
+  height: 22px;
+  background: #fff;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  z-index: 2;
+}
+
+:root[data-theme='light'] .theme-toggle .toggle-circle {
+  left: 32px;
+  background: #333;
+}
+
+:root[data-theme='light'] .theme-toggle::before {
+  opacity: 0.3;
+}
+
+:root[data-theme='light'] .theme-toggle::after {
+  opacity: 1;
+}
+
+.menu-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 8px;
+  z-index: 1001;
+  width: 35px;
+  height: 35px;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-btn span {
+  width: 25px;
+  height: 3px;
+  background: var(--text);
+  transition: all 0.3s ease;
+  border-radius: 2px;
+  transform-origin: center;
+}
+
+.menu-btn.open span:nth-child(1) {
+  transform: rotate(45deg) translate(0px, 0px);
+  position: absolute;
+}
+
+.menu-btn.open span:nth-child(2) {
+  opacity: 0;
+  transform: scale(0);
+}
+
+.menu-btn.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(0px, 0px);
+  position: absolute;
+}
+
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0,0,0,0.95);
+  backdrop-filter: blur(10px);
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.menu-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.menu-overlay a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 300;
+  margin: 1rem 0;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.menu-overlay a:hover {
+  color: var(--accent);
+  transform: translateY(-5px);
+}
+
+/* Bouton d'appel flottant */
+.call-button {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 60px;
+  height: 60px;
+  background: var(--accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(76, 175, 80, 0.4);
+  z-index: 1000;
+  animation: pulse 2s infinite;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.call-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 25px rgba(76, 175, 80, 0.6);
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(76, 175, 80, 0.7); }
+  70% { box-shadow: 0 0 0 10px rgba(76, 175, 80, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(76, 175, 80, 0); }
+}
+
+/* Hero Section */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: var(--bg-gradient);
+  position: relative;
+  padding: 2rem;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://raw.githubusercontent.com/mikaelkapinova-boop/images/main/real1.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  z-index: -1;
+}
+
+.hero-content {
+  max-width: 800px;
+  z-index: 2;
+}
+
+.experience-badge {
+  background: var(--accent);
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 2rem;
+  display: inline-block;
+  animation: fadeInUp 0.8s ease;
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+  animation: fadeInUp 0.8s ease 0.2s both;
+}
+
+.hero p {
+  font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+  margin-bottom: 2rem;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+  animation: fadeInUp 0.8s ease 0.4s both;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  animation: fadeInUp 0.8s ease 0.6s both;
+}
+
+.btn {
+  background: var(--accent);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn:hover {
+  background: var(--accent-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(76, 175, 80, 0.3);
+}
+
+.btn-secondary {
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background: white;
+  color: var(--text);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Sections */
+.section {
+  padding: 5rem 2rem;
+  background: var(--bg);
+}
+
+.section:nth-child(even) {
+  background: var(--bg-gradient);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: var(--text);
+}
+
+.section-subtitle {
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 1.2rem;
+  margin-bottom: 3rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Services */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.service-card {
+  background: var(--card-bg);
+  padding: 2.5rem;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+  border-color: var(--accent);
+}
+
+.service-icon {
+  width: 80px;
+  height: 80px;
+  background: var(--accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  font-size: 2rem;
+  color: white;
+}
+
+.service-card h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--accent);
+}
+
+.service-card p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* Zone d'intervention */
+.zone-intervention {
+  background: var(--card-bg);
+  border-radius: 20px;
+  padding: 2rem;
+  margin: 3rem 0;
+  border: 1px solid var(--border);
+}
+
+.zone-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.zone-info h3 {
+  color: var(--accent);
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.zone-details {
+  list-style: none;
+  margin: 1.5rem 0;
+}
+
+.zone-details li {
+  padding: 0.5rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.zone-details li::before {
+  content: '📍';
+  margin-right: 0.5rem;
+}
+
+.horaires {
+  background: rgba(76, 175, 80, 0.1);
+  padding: 1rem;
+  border-radius: 10px;
+  border-left: 4px solid var(--accent);
+  margin-top: 1rem;
+}
+
+.map-container {
+  height: 300px;
+  background: #f0f0f0;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: #666;
+}
+
+/* Réalisations */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.gallery-item {
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  aspect-ratio: 4/3;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.gallery-item:hover {
+  transform: scale(1.03);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.1);
+}
+
+.gallery-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+  display: flex;
+  align-items: flex-end;
+  padding: 1.5rem;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.gallery-item:hover .gallery-overlay {
+  opacity: 1;
+}
+
+.gallery-overlay h4 {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+/* Témoignages */
+.testimonials {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.testimonial-card {
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: 15px;
+  border: 1px solid var(--border);
+  position: relative;
+}
+
+.testimonial-card::before {
+  content: '"';
+  position: absolute;
+  top: -10px;
+  left: 20px;
+  font-size: 4rem;
+  color: var(--accent);
+  font-family: Georgia, serif;
+}
+
+.testimonial-text {
+  font-style: italic;
+  margin-bottom: 1rem;
+  color: var(--text-secondary);
+}
+
+.testimonial-author {
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.testimonial-rating {
+  color: #ffd700;
+  margin-top: 0.5rem;
+}
+
+/* Contact */
+.contact-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  margin-top: 3rem;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: var(--card-bg);
+  border-radius: 10px;
+  border: 1px solid var(--border);
+}
+
+.contact-icon {
+  width: 50px;
+  height: 50px;
+  background: var(--accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: white;
+}
+
+.contact-details h4 {
+  margin-bottom: 0.5rem;
+  color: var(--accent);
+}
+
+.contact-details p {
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.contact-form {
+  background: var(--card-bg);
+  padding: 2.5rem;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  backdrop-filter: blur(10px);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--card-bg);
+  color: var(--text);
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.1);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.form-garanties {
+  background: rgba(76, 175, 80, 0.1);
+  padding: 1rem;
+  border-radius: 10px;
+  margin: 1rem 0;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0 1rem;
+    height: 60px;
+  }
+  
+  .hero {
+    padding: 1rem;
+  }
+  
+  .section {
+    padding: 3rem 1rem;
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .zone-content,
+  .contact-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .menu-overlay a {
+    font-size: 1.5rem;
+  }
+  
+  .call-button {
+    bottom: 1rem;
+    right: 1rem;
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .services-grid,
+  .gallery-grid,
+  .testimonials {
+    grid-template-columns: 1fr;
+  }
+  
+  .nav-controls {
+    gap: 1rem;
+  }
+  
+  .theme-toggle {
+    width: 50px;
+    height: 25px;
+  }
+}
+
+/* Animations et micro-interactions */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.slide-in-left {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: all 0.6s ease;
+}
+
+.slide-in-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.slide-in-right {
+  opacity: 0;
+  transform: translateX(30px);
+  transition: all 0.6s ease;
+}
+
+.slide-in-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.scale-in {
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all 0.6s ease;
+}
+
+.scale-in.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Délais d'animation en cascade */
+.stagger-delay-1 { transition-delay: 0s; }
+.stagger-delay-2 { transition-delay: 0.1s; }
+.stagger-delay-3 { transition-delay: 0.2s; }
+.stagger-delay-4 { transition-delay: 0.3s; }
+.stagger-delay-5 { transition-delay: 0.4s; }
+.stagger-delay-6 { transition-delay: 0.5s; }
+
+/* Loading Animation */
+.loading {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-radius: 50%;
+  border-top: 2px solid white;
+  animation: spin 1s linear infinite;
+  margin-right: 0.5rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+  </style>
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <a href="#home" class="logo">
+      <img src="https://raw.githubusercontent.com/mikaelkapinova-boop/images/main/logo.png" alt="MS Plomberie Logo" onerror="this.style.display='none'; this.parentElement.innerHTML='<span>MS PLOMBERIE</span>';">
+      MS PLOMBERIE
+    </a>
+    <div class="nav-controls">
+      <div class="theme-toggle" id="theme-toggle">
+        <div class="toggle-circle"></div>
+      </div>
+      <button class="menu-btn" id="menu-btn" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Menu Overlay -->
+  <div class="menu-overlay" id="menu-overlay">
+    <a href="#home">🏠 Accueil</a>
+    <a href="#services">🔧 Services</a>
+    <a href="#zone">📍 Zone d'intervention</a>
+    <a href="#realisations">📸 Réalisations</a>
+    <a href="#temoignages">⭐ Témoignages</a>
+    <a href="#contact">📞 Contact</a>
+  </div>
+
+  <!-- Bouton d'appel flottant -->
+  <a href="tel:0749248559" class="call-button" aria-label="Appeler MS Plomberie">📞</a>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <div class="experience-badge">✨ 15 ans d'expérience</div>
+      <h1>L'EXPERTISE AU SERVICE DE VOTRE BIEN-ÊTRE</h1>
+      <p>🔧 Solutions fiables et durables pour tous vos projets de plomberie et chauffage dans un rayon de 80km autour de Nancy</p>
+      <div class="cta-buttons">
+        <a href="#contact" class="btn">📋 Devis Gratuit</a>
+        <a href="tel:0749248559" class="btn btn-secondary">📞 07 49 24 85 59</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="section" id="services">
+    <div class="container">
+      <h2 class="section-title fade-in">NOS SERVICES</h2>
+      <p class="section-subtitle fade-in">Une expertise complète pour tous vos besoins en plomberie, chauffage et ventilation</p>
+      
+      <div class="services-grid">
+        <div class="service-card fade-in stagger-delay-1">
+          <div class="service-icon">🚿</div>
+          <h3>Plomberie</h3>
+          <p><strong>🆕 Nouvelles installations</strong><br>
+          Création complète de réseaux de plomberie pour constructions neuves et rénovations.
+          <br><br><strong>🛁 Salles de bain clés en main</strong><br>
+          Conception et réalisation complète avec nos artisans partenaires qualifiés.
+          <br><br><strong>🔧 Réparations et remplacements</strong><br>
+          Intervention rapide sur tous équipements de plomberie.</p>
+        </div>
+
+        <div class="service-card fade-in stagger-delay-2">
+          <div class="service-icon">🌡️</div>
+          <h3>Chauffage</h3>
+          <p><strong>🏠 Installations complètes</strong><br>
+          Création de systèmes de chauffage adaptés à vos besoins et à votre budget.
+          <br><br><strong>🔥 Chaudières & Pompes à chaleur</strong><br>
+          Installation, remplacement et maintenance d'équipements thermiques performants.
+          <br><br><strong>⚙️ Maintenance préventive</strong><br>
+          Entretien régulier pour optimiser performance et durée de vie.</p>
+        </div>
+
+        <div class="service-card fade-in stagger-delay-3">
+          <div class="service-icon">💨</div>
+          <h3>Ventilation</h3>
+          <p><strong>🌪️ VMC (Ventilation Mécanique Contrôlée)</strong><br>
+          Installation de systèmes de ventilation pour cuisine, salle de bain et WC.
+          <br><br><strong>🔄 Renouvellement d'air</strong><br>
+          Solutions pour améliorer la qualité de l'air intérieur.
+          <br><br><strong>🛠️ Maintenance et dépannage</strong><br>
+          Entretien et réparation de vos installations de ventilation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Zone d'intervention -->
+  <section class="section" id="zone">
+    <div class="container">
+      <h2 class="section-title fade-in">ZONE D'INTERVENTION</h2>
+      <p class="section-subtitle fade-in">🚗 Nous intervenons dans un rayon de 80km autour de Nancy</p>
+      
+      <div class="zone-intervention">
+        <div class="zone-content">
+          <div class="zone-info">
+            <h3>📍 Secteurs desservis</h3>
+            <ul class="zone-details">
+              <li>Nancy et agglomération</li>
+              <li>Metz et environs</li>
+              <li>Épinal et sa région</li>
+              <li>Toul, Pont-à-Mousson</li>
+              <li>Lunéville, Saint-Dié</li>
+              <li>Bar-le-Duc, Commercy</li>
+              <li>Verdun et alentours</li>
+            </ul>
+            
+            <div class="horaires">
+              <h4>⏰ Horaires d'ouverture</h4>
+              <p><strong>Lundi au Vendredi :</strong> 8h00 - 18h00</p>
+              <p><strong>Urgences :</strong> Intervention 7j/7</p>
+              <p><strong>Devis :</strong> Gratuit et sans engagement</p>
+            </div>
+          </div>
+          
+          <div class="map-container">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d168159.54108655296!2d6.124485!3d48.692054!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4794984c1e192bef%3A0x409ce34b313ee70!2sNancy!5e0!3m2!1sfr!2sfr!4v1635789456123!5m2!1sfr!2sfr"
+              style="border:0; width: 100%; height: 100%; border-radius: 15px;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Réalisations Section -->
+  <section class="section" id="realisations">
+    <div class="container">
+      <h2 class="section-title fade-in">NOS RÉALISATIONS</h2>
+      <p class="section-subtitle fade-in">🏆 Découvrez quelques-uns de nos projets réalisés avec passion et expertise</p>
+      
+      <div class="gallery-grid">
+        <div class="gallery-item fade-in stagger-delay-1">
+          <img src="https://raw.githubusercontent.com/mikaelkapinova-boop/images/main/real1.jpg" alt="Rénovation salle de bain moderne" loading="lazy">
+          <div class="gallery-overlay">
+            <h4>Rénovation salle de bain</h4>
+          </div>
+        </div>
+        
+        <div class="gallery-item fade-in stagger-delay-2">
+          <img src="https://raw.githubusercontent.com/mikaelkapinova-boop/images/main/real2.jpg" alt="Installation chauffage" loading="lazy">
+          <div class="gallery-overlay">
+            <h4>Installation système de chauffage</h4>
+          </div>
+        </div>
+        
+        <div class="gallery-item fade-in stagger-delay-3">
+          <img src="https://raw.githubusercontent.com/mikaelkapinova-boop/images/main/real3.jpg" alt="Plomberie cuisine" loading="lazy">
+          <div class="gallery-overlay">
+            <h4>Plomberie cuisine professionnelle</h4>
+          </div>
+        </div>
+
+        <div class="gallery-item fade-in stagger-delay-4">
+          <img src="https://raw.githubusercontent.com/mikaelkapinova-boop/images/main/real4.jpg" alt="Pompe à chaleur" loading="lazy" onerror="this.parentElement.style.display='none'">
+          <div class="gallery-overlay">
+            <h4>Installation pompe à chaleur</h4>
+          </div>
+        </div>
+
+        <div class="gallery-item fade-in stagger-delay-5">
+          <img src="https://raw.githubusercontent.com/mikaelkapinova-boop/images/main/real5.jpg" alt="VMC installation" loading="lazy" onerror="this.parentElement.style.display='none'">
+          <div class="gallery-overlay">
+            <h4>Installation VMC</h4>
+          </div>
+        </div>
+
+        <div class="gallery-item fade-in stagger-delay-6">
+          <img src="https://raw.githubusercontent.com/mikaelkapinova-boop/images/main/real6.jpg" alt="Chaudière moderne" loading="lazy" onerror="this.parentElement.style.display='none'">
+          <div class="gallery-overlay">
+            <h4>Remplacement chaudière</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Témoignages Section -->
+  <section class="section" id="temoignages">
+    <div class="container">
+      <h2 class="section-title fade-in">TÉMOIGNAGES CLIENTS</h2>
+      <p class="section-subtitle fade-in">⭐ La satisfaction de nos clients est notre meilleure récompense</p>
+      
+      <div class="testimonials">
+        <div class="testimonial-card slide-in-left stagger-delay-1">
+          <p class="testimonial-text">"Travail impeccable pour la rénovation complète de notre salle de bain. Équipe professionnelle, respect des délais et excellent rapport qualité-prix. Je recommande vivement !"</p>
+          <p class="testimonial-author">— Marie L., Nancy</p>
+          <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+        </div>
+        
+        <div class="testimonial-card fade-in stagger-delay-2">
+          <p class="testimonial-text">"Installation de notre nouvelle pompe à chaleur réalisée avec professionnalisme. Très bon conseil, équipe compétente et à l'écoute. Parfait !"</p>
+          <p class="testimonial-author">— Jean-Claude M., Metz</p>
+          <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+        </div>
+        
+        <div class="testimonial-card slide-in-right stagger-delay-3">
+          <p class="testimonial-text">"Intervention rapide pour une fuite urgente. Technicien compétent, travail soigné et prix honnête. Une entreprise de confiance que je recommande."</p>
+          <p class="testimonial-author">— Sophie D., Épinal</p>
+          <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+        </div>
+      </div>
+      
+      <div class="trust-badges fade-in" style="display: flex; justify-content: center; gap: 2rem; margin-top: 3rem; flex-wrap: wrap;">
+        <div style="text-align: center; padding: 1rem;">
+          <div style="font-size: 2rem; margin-bottom: 0.5rem;">🏆</div>
+          <div style="font-weight: 600; color: var(--accent);">15 ans</div>
+          <div style="font-size: 0.9rem; color: var(--text-secondary);">d'expérience</div>
+        </div>
+        <div style="text-align: center; padding: 1rem;">
+          <div style="font-size: 2rem; margin-bottom: 0.5rem;">✅</div>
+          <div style="font-weight: 600; color: var(--accent);">100%</div>
+          <div style="font-size: 0.9rem; color: var(--text-secondary);">clients satisfaits</div>
+        </div>
+        <div style="text-align: center; padding: 1rem;">
+          <div style="font-size: 2rem; margin-bottom: 0.5rem;">🚀</div>
+          <div style="font-weight: 600; color: var(--accent);">Devis</div>
+          <div style="font-size: 0.9rem; color: var(--text-secondary);">gratuit</div>
+        </div>
+        <div style="text-align: center; padding: 1rem;">
+          <div style="font-size: 2rem; margin-bottom: 0.5rem;">⚡</div>
+          <div style="font-weight: 600; color: var(--accent);">24h</div>
+          <div style="font-size: 0.9rem; color: var(--text-secondary);">de réponse</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section" id="contact">
+    <div class="container">
+      <h2 class="section-title fade-in">CONTACTEZ-NOUS</h2>
+      <p class="section-subtitle fade-in">📞 Une question ? Un projet ? Nous sommes là pour vous accompagner</p>
+      
+      <div class="contact-content">
+        <div class="contact-info slide-in-left">
+          <div class="contact-item">
+            <div class="contact-icon">📞</div>
+            <div class="contact-details">
+              <h4>Téléphone</h4>
+              <p><a href="tel:0749248559" style="color: var(--text); text-decoration: none;">07 49 24 85 59</a></p>
+              <p style="font-size: 0.9rem; color: var(--accent);">Devis gratuit par téléphone</p>
+            </div>
+          </div>
+          
+          <div class="contact-item">
+            <div class="contact-icon">📧</div>
+            <div class="contact-details">
+              <h4>Email</h4>
+              <p>ms.plomberie.chauffage.nancy@gmail.fr</p>
+              <p style="font-size: 0.9rem; color: var(--accent);">Réponse sous 24h garantie</p>
+            </div>
+          </div>
+          
+          <div class="contact-item">
+            <div class="contact-icon">📍</div>
+            <div class="contact-details">
+              <h4>Zone d'intervention</h4>
+              <p>80km autour de Nancy</p>
+              <p style="font-size: 0.9rem; color: var(--accent);">Déplacement gratuit pour devis</p>
+            </div>
+          </div>
+          
+          <div class="contact-item">
+            <div class="contact-icon">⏰</div>
+            <div class="contact-details">
+              <h4>Horaires</h4>
+              <p>Lun-Ven : 8h00 - 18h00</p>
+              <p style="font-size: 0.9rem; color: var(--accent);">Urgences : 7j/7</p>
+            </div>
+          </div>
+        </div>
+
+        <form class="contact-form slide-in-right" id="contact-form">
+          <div class="form-group">
+            <label for="name">Nom complet *</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="phone">Téléphone</label>
+            <input type="tel" id="phone" name="phone" placeholder="06 12 34 56 78">
+          </div>
+          
+          <div class="form-group">
+            <label for="service">Type de service</label>
+            <select id="service" name="service">
+              <option value="">Sélectionnez un service</option>
+              <option value="plomberie">🚿 Plomberie</option>
+              <option value="chauffage">🌡️ Chauffage</option>
+              <option value="ventilation">💨 Ventilation</option>
+              <option value="urgence">🚨 Dépannage urgent</option>
+              <option value="devis">📋 Devis / Étude de projet</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="message">Décrivez votre projet *</label>
+            <textarea id="message" name="message" placeholder="Décrivez votre besoin, nous vous répondrons avec un devis détaillé..." required></textarea>
+          </div>
+          
+          <div class="form-garanties">
+            <p>🔒 <strong>Vos garanties :</strong></p>
+            <p>✅ Devis gratuit et sans engagement<br>
+            ✅ Réponse sous 24h<br>
+            ✅ Respect de votre vie privée<br>
+            ✅ Pas de démarquage commercial</p>
+          </div>
+          
+          <button type="submit" class="btn" style="width: 100%;">
+            📤 Envoyer ma demande
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer style="background: var(--navbar-bg); padding: 2rem; text-align: center; border-top: 1px solid var(--border);">
+    <div class="container">
+      <p style="margin-bottom: 1rem; font-weight: 600; font-size: 1.1rem;">MS Plomberie & Chauffage</p>
+      <p style="color: var(--text-secondary); margin-bottom: 1rem;">
+        🔧 15 ans d'expertise • 📞 <a href="tel:0749248559" style="color: var(--accent); text-decoration: none;">07 49 24 85 59</a> • 📍 Nancy et 80km alentour
+      </p>
+      <p style="color: var(--text-secondary); font-size: 0.9rem;">
+        © 2024 MS Plomberie & Chauffage - Tous droits réservés
+      </p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script>
+// === CONFIGURATION ===
+const CONFIG = {
+  emailjs: {
+    publicKey: 'BswSOWv3nFcCn7lQG',
+    serviceId: 'service_j5g070o',
+    templateId: 'template_10dackj'
+  }
+};
+
+// === ÉLÉMENTS DOM ===
+const elements = {
+  themeToggle: document.getElementById('theme-toggle'),
+  menuBtn: document.getElementById('menu-btn'),
+  menuOverlay: document.getElementById('menu-overlay'),
+  contactForm: document.getElementById('contact-form'),
+  root: document.documentElement
+};
+
+// === INITIALISATION ===
+function init() {
+  // Initialiser EmailJS
+  emailjs.init(CONFIG.emailjs.publicKey);
+  
+  // Définir le thème initial
+  const savedTheme = localStorage.getItem('theme') || 'dark';
+  elements.root.setAttribute('data-theme', savedTheme);
+  
+  // Configurer les event listeners
+  setupEventListeners();
+  
+  // Initialiser les animations au scroll
+  initScrollAnimations();
+  
+  // Navigation fluide
+  setupSmoothScrolling();
+}
+
+// === GESTION DU THÈME ===
+function toggleTheme() {
+  const currentTheme = elements.root.getAttribute('data-theme');
+  const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+  
+  elements.root.setAttribute('data-theme', newTheme);
+  localStorage.setItem('theme', newTheme);
+}
+
+// === GESTION DU MENU ===
+function toggleMenu() {
+  elements.menuBtn.classList.toggle('open');
+  elements.menuOverlay.classList.toggle('active');
+  
+  // Empêcher le scroll quand le menu est ouvert
+  document.body.style.overflow = elements.menuOverlay.classList.contains('active') ? 'hidden' : '';
+}
+
+function closeMenu() {
+  elements.menuBtn.classList.remove('open');
+  elements.menuOverlay.classList.remove('active');
+  document.body.style.overflow = '';
+}
+
+// === ANIMATIONS AU SCROLL ===
+function initScrollAnimations() {
+  // Configuration de l'Intersection Observer
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        
+        // Pour les éléments avec animation différée, les déclencher en cascade
+        if (entry.target.classList.contains('stagger-delay-1')) {
+          setTimeout(() => {
+            const stagger2 = entry.target.parentElement?.querySelector('.stagger-delay-2');
+            if (stagger2) stagger2.classList.add('visible');
+          }, 100);
+          
+          setTimeout(() => {
+            const stagger3 = entry.target.parentElement?.querySelector('.stagger-delay-3');
+            if (stagger3) stagger3.classList.add('visible');
+          }, 200);
+          
+          setTimeout(() => {
+            const stagger4 = entry.target.parentElement?.querySelector('.stagger-delay-4');
+            if (stagger4) stagger4.classList.add('visible');
+          }, 300);
+          
+          setTimeout(() => {
+            const stagger5 = entry.target.parentElement?.querySelector('.stagger-delay-5');
+            if (stagger5) stagger5.classList.add('visible');
+          }, 400);
+          
+          setTimeout(() => {
+            const stagger6 = entry.target.parentElement?.querySelector('.stagger-delay-6');
+            if (stagger6) stagger6.classList.add('visible');
+          }, 500);
+        }
+      }
+    });
+  }, observerOptions);
+
+  // Observer tous les éléments avec des classes d'animation
+  const animatedElements = document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right, .scale-in');
+  animatedElements.forEach(el => observer.observe(el));
+}
+
+// === NAVIGATION FLUIDE ===
+function setupSmoothScrolling() {
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      
+      if (target) {
+        const offsetTop = target.offsetTop - 70; // Compenser la hauteur de la navbar
+        
+        window.scrollTo({
+          top: offsetTop,
+          behavior: 'smooth'
+        });
+        
+        // Fermer le menu si ouvert
+        closeMenu();
+      }
+    });
+  });
+}
+
+// === GESTION DU FORMULAIRE ===
+async function handleFormSubmit(e) {
+  e.preventDefault();
+  
+  const submitBtn = elements.contactForm.querySelector('button[type="submit"]');
+  const originalText = submitBtn.innerHTML;
+  
+  // État de chargement
+  submitBtn.innerHTML = '<span class="loading"></span>Envoi en cours...';
+  submitBtn.disabled = true;
+  
+  try {
+    // Préparer les données
+    const formData = {
+      name: document.getElementById('name').value,
+      email: document.getElementById('email').value,
+      phone: document.getElementById('phone').value || 'Non renseigné',
+      service: document.getElementById('service').value || 'Non spécifié',
+      message: document.getElementById('message').value,
+      to_name: 'MS Plomberie & Chauffage',
+      to_email: 'ms.plomberie.chauffage.nancy@gmail.fr'
+    };
+    
+    // Validation côté client
+    if (!formData.name || !formData.email || !formData.message) {
+      throw new Error('Veuillez remplir tous les champs obligatoires');
+    }
+    
+    // Envoyer avec EmailJS
+    const response = await emailjs.send(
+      CONFIG.emailjs.serviceId,
+      CONFIG.emailjs.templateId,
+      formData
+    );
+    
+    if (response.status === 200) {
+      // Succès
+      showNotification('✅ Message envoyé avec succès !', 'success');
+      elements.contactForm.reset();
+      
+      // Animation de succès
+      submitBtn.style.background = '#4CAF50';
+      setTimeout(() => {
+        submitBtn.style.background = '';
+      }, 2000);
+    }
+    
+  } catch (error) {
+    console.error('Erreur EmailJS:', error);
+    showNotification('❌ Erreur lors de l\'envoi. Appelez-nous au 07 49 24 85 59', 'error');
+  } finally {
+    // Restaurer le bouton
+    setTimeout(() => {
+      submitBtn.innerHTML = originalText;
+      submitBtn.disabled = false;
+    }, 1000);
+  }
+}
+
+// === NOTIFICATIONS ===
+function showNotification(message, type = 'info') {
+  // Supprimer toute notification existante
+  const existingNotification = document.querySelector('.notification');
+  if (existingNotification) {
+    existingNotification.remove();
+  }
+
+  // Créer la notification
+  const notification = document.createElement('div');
+  notification.className = `notification notification-${type}`;
+  notification.innerHTML = `
+    <div class="notification-content">
+      <span>${message}</span>
+      <button class="notification-close">&times;</button>
+    </div>
+  `;
+
+  // Styles pour la notification
+  notification.style.cssText = `
+    position: fixed;
+    top: 90px;
+    right: 20px;
+    background: ${type === 'success' ? '#4CAF50' : type === 'error' ? '#f44336' : '#2196F3'};
+    color: white;
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    z-index: 10000;
+    max-width: 400px;
+    animation: slideInRight 0.3s ease;
+    transform: translateX(100%);
+    opacity: 0;
+  `;
+
+  // Ajouter les styles d'animation
+  if (!document.querySelector('#notification-styles')) {
+    const style = document.createElement('style');
+    style.id = 'notification-styles';
+    style.textContent = `
+      @keyframes slideInRight {
+        to {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+      @keyframes slideOutRight {
+        to {
+          transform: translateX(100%);
+          opacity: 0;
+        }
+      }
+      .notification-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+      }
+      .notification-close {
+        background: none;
+        border: none;
+        color: white;
+        font-size: 1.5rem;
+        cursor: pointer;
+        padding: 0;
+        margin-left: 1rem;
+      }
+    `;
+    document.head.appendChild(style);
+  }
+
+  document.body.appendChild(notification);
+
+  // Animation d'entrée
+  requestAnimationFrame(() => {
+    notification.style.transform = 'translateX(0)';
+    notification.style.opacity = '1';
+  });
+
+  // Fermeture automatique après 5 secondes
+  const autoClose = setTimeout(() => {
+    closeNotification(notification);
+  }, 5000);
+
+  // Fermeture manuelle
+  notification.querySelector('.notification-close').addEventListener('click', () => {
+    clearTimeout(autoClose);
+    closeNotification(notification);
+  });
+}
+
+function closeNotification(notification) {
+  notification.style.animation = 'slideOutRight 0.3s ease';
+  setTimeout(() => {
+    if (notification.parentNode) {
+      notification.parentNode.removeChild(notification);
+    }
+  }, 300);
+}
+
+// === EVENT LISTENERS ===
+function setupEventListeners() {
+  // Thème
+  elements.themeToggle?.addEventListener('click', toggleTheme);
+  
+  // Menu
+  elements.menuBtn?.addEventListener('click', toggleMenu);
+  
+  // Fermer le menu en cliquant sur un lien
+  elements.menuOverlay?.addEventListener('click', (e) => {
+    if (e.target.tagName === 'A') {
+      closeMenu();
+    }
+  });
+  
+  // Fermer le menu avec Escape
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && elements.menuOverlay?.classList.contains('active')) {
+      closeMenu();
+    }
+  });
+  
+  // Formulaire
+  elements.contactForm?.addEventListener('submit', handleFormSubmit);
+  
+  // Navbar transparente au scroll
+  let lastScrollY = window.scrollY;
+  window.addEventListener('scroll', () => {
+    const navbar = document.querySelector('.navbar');
+    const scrollY = window.scrollY;
+    
+    if (scrollY > 100) {
+      navbar.style.background = scrollY > lastScrollY ? 
+        'rgba(0,0,0,0.95)' : 'var(--navbar-bg)';
+    } else {
+      navbar.style.background = 'var(--navbar-bg)';
+    }
+    
+    lastScrollY = scrollY;
+  });
+
+  // Améliorer l'accessibilité
+  document.addEventListener('keydown', (e) => {
+    // Navigation au clavier dans le menu
+    if (elements.menuOverlay?.classList.contains('active')) {
+      const menuLinks = elements.menuOverlay.querySelectorAll('a');
+      const currentFocus = document.activeElement;
+      const currentIndex = Array.from(menuLinks).indexOf(currentFocus);
+      
+      switch(e.key) {
+        case 'ArrowDown':
+          e.preventDefault();
+          const nextIndex = (currentIndex + 1) % menuLinks.length;
+          menuLinks[nextIndex].focus();
+          break;
+        case 'ArrowUp':
+          e.preventDefault();
+          const prevIndex = currentIndex <= 0 ? menuLinks.length - 1 : currentIndex - 1;
+          menuLinks[prevIndex].focus();
+          break;
+      }
+    }
+  });
+}
+
+// === FONCTIONS UTILITAIRES ===
+
+// Débounce pour optimiser les performances
+function debounce(func, wait) {
+  let timeout;
+  return function executedFunction(...args) {
+    const later = () => {
+      clearTimeout(timeout);
+      func(...args);
+    };
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+  };
+}
+
+// Throttle pour le scroll
+function throttle(func, limit) {
+  let inThrottle;
+  return function() {
+    const args = arguments;
+    const context = this;
+    if (!inThrottle) {
+      func.apply(context, args);
+      inThrottle = true;
+      setTimeout(() => inThrottle = false, limit);
+    }
+  }
+}
+
+// Gestion des erreurs d'images
+function handleImageErrors() {
+  document.querySelectorAll('img').forEach(img => {
+    img.addEventListener('error', function() {
+      this.style.display = 'none';
+      const parent = this.closest('.gallery-item');
+      if (parent) {
+        parent.style.display = 'none';
+      }
+    });
+  });
+}
+
+// === PERFORMANCE ET SEO ===
+
+// Lazy loading pour les images
+function setupLazyLoading() {
+  if ('IntersectionObserver' in window) {
+    const imageObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const img = entry.target;
+          if (img.dataset.src) {
+            img.src = img.dataset.src;
+            img.removeAttribute('data-src');
+          }
+          imageObserver.unobserve(img);
+        }
+      });
+    });
+
+    document.querySelectorAll('img[data-src]').forEach(img => {
+      imageObserver.observe(img);
+    });
+  }
+}
+
+// Préchargement des ressources critiques
+function preloadCriticalResources() {
+  const criticalImages = [
+    'https://raw.githubusercontent.com/mikaelkapinova-boop/images/main/logo.png',
+    'https://raw.githubusercontent.com/mikaelkapinova-boop/images/main/real1.jpg'
+  ];
+
+  criticalImages.forEach(src => {
+    const link = document.createElement('link');
+    link.rel = 'preload';
+    link.as = 'image';
+    link.href = src;
+    document.head.appendChild(link);
+  });
+}
+
+// === ANALYTICS ET TRACKING ===
+function trackEvent(eventName, parameters = {}) {
+  // Placeholder pour Google Analytics ou autre
+  if (typeof gtag !== 'undefined') {
+    gtag('event', eventName, parameters);
+  }
+  
+  console.log(`Event tracked: ${eventName}`, parameters);
+}
+
+// === INITIALISATION AU CHARGEMENT ===
+document.addEventListener('DOMContentLoaded', () => {
+  init();
+  handleImageErrors();
+  setupLazyLoading();
+  preloadCriticalResources();
+  
+  // Tracking de la page vue
+  trackEvent('page_view', {
+    page_title: document.title,
+    page_location: window.location.href
+  });
+});
+
+// === GESTION DES ERREURS GLOBALES ===
+window.addEventListener('error', (e) => {
+  console.error('Erreur JavaScript:', e.error);
+  
+  // En production, envoyer l'erreur à un service de monitoring
+  if (window.location.hostname !== 'localhost') {
+    // Exemple: Sentry, LogRocket, etc.
+  }
+});
+
+// === SERVICE WORKER POUR LE CACHE (PWA) ===
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    // navigator.registerServiceWorker('/sw.js')
+    //   .then(registration => console.log('SW registered'))
+    //   .catch(error => console.log('SW registration failed'));
+  });
+}
+
+// === ANIMATIONS AVANCÉES ===
+function createParallaxEffect() {
+  const parallaxElements = document.querySelectorAll('[data-parallax]');
+  
+  const handleScroll = throttle(() => {
+    const scrolled = window.pageYOffset;
+    
+    parallaxElements.forEach(element => {
+      const rate = scrolled * -0.5;
+      element.style.transform = `translateY(${rate}px)`;
+    });
+  }, 16); // ~60fps
+  
+  window.addEventListener('scroll', handleScroll);
+}
+
+// === ACCESSIBILITÉ AMÉLIORÉE ===
+function enhanceAccessibility() {
+  // Focus visible pour la navigation au clavier
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Tab') {
+      document.body.classList.add('keyboard-navigation');
+    }
+  });
+  
+  document.addEventListener('mousedown', () => {
+    document.body.classList.remove('keyboard-navigation');
+  });
+  
+  // Styles pour la navigation au clavier
+  const style = document.createElement('style');
+  style.textContent = `
+    .keyboard-navigation *:focus {
+      outline: 2px solid var(--accent) !important;
+      outline-offset: 2px !important;
+    }
+  `;
+  document.head.appendChild(style);
+}
+
+// === OPTIMISATIONS FINALES ===
+// Optimiser les reflows et repaints
+function optimizeRendering() {
+  // Utiliser transform au lieu de left/top pour les animations
+  // Utiliser will-change pour les éléments animés
+  document.querySelectorAll('.service-card, .gallery-item').forEach(el => {
+    el.style.willChange = 'transform';
+  });
+}
+
+// Initialiser les optimisations
+document.addEventListener('DOMContentLoaded', () => {
+  enhanceAccessibility();
+  optimizeRendering();
+});
+
+// === EXPOSER LES FONCTIONS GLOBALEMENT (POUR DEBUG) ===
+if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+  window.MSPlomberie = {
+    toggleTheme,
+    toggleMenu,
+    closeMenu,
+    showNotification,
+    trackEvent
+  };
+}
+  </script>
+</body>
+</html>
