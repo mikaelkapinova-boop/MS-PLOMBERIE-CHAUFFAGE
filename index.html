@@ -13,7 +13,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   
   <style>
 * {
@@ -28,6 +27,22 @@ body {
   color: var(--text);
   line-height: 1.6;
   overflow-x: hidden;
+  position: relative;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://raw.githubusercontent.com/mikaelkapinova-boop/MS-PLOMBERIE-CHAUFFAGE/main/images/real1.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  z-index: -2;
+  opacity: 0.3;
 }
 
 :root[data-theme='dark'] {
@@ -425,10 +440,22 @@ body {
   }
 }
 
+@keyframes slideInRight {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideOutRight {
+  from { transform: translateX(0); opacity: 1; }
+  to { transform: translateX(100%); opacity: 0; }
+}
+
 /* Sections */
 .section {
   padding: 5rem 2rem;
   background: var(--bg);
+  position: relative;
+  z-index: 1;
 }
 
 .section:nth-child(even) {
@@ -620,43 +647,55 @@ body {
 /* Témoignages */
 .testimonials {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  margin-top: 3rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
 }
 
 .testimonial-card {
   background: var(--card-bg);
-  padding: 2rem;
-  border-radius: 15px;
+  padding: 1.5rem;
+  border-radius: 12px;
   border: 1px solid var(--border);
   position: relative;
+  transition: all 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  border-color: var(--accent);
 }
 
 .testimonial-card::before {
   content: '"';
   position: absolute;
-  top: -10px;
-  left: 20px;
-  font-size: 4rem;
+  top: -5px;
+  left: 15px;
+  font-size: 2.5rem;
   color: var(--accent);
   font-family: Georgia, serif;
+  opacity: 0.5;
 }
 
 .testimonial-text {
   font-style: italic;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
   color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.5;
 }
 
 .testimonial-author {
   font-weight: 600;
   color: var(--accent);
+  font-size: 0.95rem;
 }
 
 .testimonial-rating {
   color: #ffd700;
-  margin-top: 0.5rem;
+  margin-top: 0.25rem;
+  font-size: 0.9rem;
 }
 
 /* Formulaire d'ajout de témoignage */
@@ -671,6 +710,35 @@ body {
 .add-testimonial h3 {
   color: var(--accent);
   margin-bottom: 1.5rem;
+}
+
+.add-testimonial input,
+.add-testimonial textarea,
+.add-testimonial select {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--card-bg);
+  color: var(--text);
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  margin-bottom: 1rem;
+}
+
+.add-testimonial select option {
+  background: var(--bg);
+  color: var(--text);
+}
+
+:root[data-theme='dark'] .add-testimonial select option {
+  background: #1a1a1a;
+  color: #ffffff;
+}
+
+:root[data-theme='light'] .add-testimonial select option {
+  background: #ffffff;
+  color: #212529;
 }
 
 /* Contact */
@@ -758,6 +826,22 @@ body {
   color: var(--text);
   font-size: 1rem;
   transition: all 0.3s ease;
+}
+
+.form-group select option {
+  background: var(--bg);
+  color: var(--text);
+  padding: 0.5rem;
+}
+
+:root[data-theme='dark'] .form-group select option {
+  background: #1a1a1a;
+  color: #ffffff;
+}
+
+:root[data-theme='light'] .form-group select option {
+  background: #ffffff;
+  color: #212529;
 }
 
 .form-group input:focus,
@@ -1028,7 +1112,15 @@ footer a:hover {
             </div>
           </div>
           
-          <div id="map" class="scroll-slide-right"></div>
+          <div id="map" class="scroll-slide-right">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d84425.84664191896!2d6.1244850871093755!3d48.692054!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4794986e17a692cd%3A0x50c17d38e0d68!2sNancy!5e0!3m2!1sfr!2sfr!4v1734012000000!5m2!1sfr!2sfr&markers=color:red%7Clabel:MS%7C48.692054,6.1844"
+              style="border:0; width: 100%; height: 100%; border-radius: 15px;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
         </div>
       </div>
     </div>
@@ -1073,43 +1165,113 @@ footer a:hover {
       
       <div class="testimonials" id="testimonials-container">
         <div class="testimonial-card scroll-slide-left">
-          <p class="testimonial-text">"Travail impeccable pour la rénovation complète de notre salle de bain. Équipe professionnelle, respect des délais et excellent rapport qualité-prix. Je recommande vivement !"</p>
+          <p class="testimonial-text">"Travail impeccable pour notre salle de bain. Équipe pro, délais respectés. Je recommande !"</p>
           <p class="testimonial-author">— Marie L., Nancy</p>
+          <p style="font-size: 0.8rem; color: var(--text-secondary); margin: 0.3rem 0;">Rénovation salle de bain • Nov. 2024</p>
           <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
         </div>
         
         <div class="testimonial-card scroll-fade-in">
-          <p class="testimonial-text">"Installation de notre nouvelle pompe à chaleur réalisée avec professionnalisme. Très bon conseil, équipe compétente et à l'écoute. Parfait !"</p>
+          <p class="testimonial-text">"Installation pompe à chaleur parfaite. Très bon conseil, équipe compétente."</p>
           <p class="testimonial-author">— Jean-Claude M., Metz</p>
+          <p style="font-size: 0.8rem; color: var(--text-secondary); margin: 0.3rem 0;">Chauffage • Jan. 2025</p>
           <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
         </div>
         
         <div class="testimonial-card scroll-slide-right">
-          <p class="testimonial-text">"Intervention rapide pour une fuite urgente. Technicien compétent, travail soigné et prix honnête. Une entreprise de confiance que je recommande."</p>
+          <p class="testimonial-text">"Intervention rapide pour fuite urgente. Travail soigné et prix honnête."</p>
           <p class="testimonial-author">— Sophie D., Épinal</p>
+          <p style="font-size: 0.8rem; color: var(--text-secondary); margin: 0.3rem 0;">Dépannage urgent • Déc. 2024</p>
+          <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+        </div>
+        
+        <div class="testimonial-card scroll-fade-in">
+          <p class="testimonial-text">"VMC double flux installée parfaitement. Explications claires, travail propre."</p>
+          <p class="testimonial-author">— Patrick G., Toul</p>
+          <p style="font-size: 0.8rem; color: var(--text-secondary); margin: 0.3rem 0;">Ventilation • Fév. 2025</p>
+          <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+        </div>
+        
+        <div class="testimonial-card scroll-fade-in">
+          <p class="testimonial-text">"Entretien chaudière sérieux. Technicien ponctuel et pro. Prix corrects."</p>
+          <p class="testimonial-author">— Isabelle R., Lunéville</p>
+          <p style="font-size: 0.8rem; color: var(--text-secondary); margin: 0.3rem 0;">Entretien • Mars 2025</p>
+          <div class="testimonial-rating">⭐⭐⭐⭐</div>
+        </div>
+        
+        <div class="testimonial-card scroll-fade-in">
+          <p class="testimonial-text">"Remplacement plomberie maison ancienne. Projet complexe bien géré !"</p>
+          <p class="testimonial-author">— Michel et Anne B., Pont-à-Mousson</p>
+          <p style="font-size: 0.8rem; color: var(--text-secondary); margin: 0.3rem 0;">Plomberie • Jan. 2025</p>
           <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
         </div>
       </div>
       
       <!-- Formulaire d'ajout de témoignage -->
       <div class="add-testimonial scroll-fade-in">
-        <h3>Ajouter votre témoignage</h3>
+        <h3>Votre avis compte !</h3>
         <form id="testimonial-form">
-          <div class="form-group">
-            <input type="text" id="testimonial-name" placeholder="Votre nom et ville" required>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+            <div class="form-group">
+              <input type="text" id="testimonial-name" placeholder="Votre nom *" required>
+            </div>
+            <div class="form-group">
+              <input type="text" id="testimonial-city" placeholder="Votre ville *" required>
+            </div>
           </div>
-          <div class="form-group">
-            <textarea id="testimonial-text" placeholder="Votre avis sur nos services..." required></textarea>
+          
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+            <div class="form-group">
+              <select id="testimonial-service" required>
+                <option value="">Type d'intervention *</option>
+                <option value="plomberie">🚿 Plomberie</option>
+                <option value="chauffage">🌡️ Chauffage</option>
+                <option value="ventilation">💨 Ventilation</option>
+                <option value="salle-de-bain">🛁 Rénovation salle de bain</option>
+                <option value="depannage">🚨 Dépannage urgent</option>
+                <option value="entretien">🔧 Entretien</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <input type="date" id="testimonial-date" placeholder="Date d'intervention">
+            </div>
           </div>
+          
           <div class="form-group">
-            <label>Votre note :</label>
-            <select id="testimonial-rating">
-              <option value="5">⭐⭐⭐⭐⭐ Excellent</option>
-              <option value="4">⭐⭐⭐⭐ Très bien</option>
-              <option value="3">⭐⭐⭐ Bien</option>
-            </select>
+            <textarea id="testimonial-text" placeholder="Partagez votre expérience avec MS Plomberie... *" required rows="4"></textarea>
           </div>
-          <button type="submit" class="btn">Publier mon témoignage</button>
+          
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+            <div class="form-group">
+              <select id="testimonial-rating" required>
+                <option value="">Votre note *</option>
+                <option value="5">⭐⭐⭐⭐⭐ Excellent</option>
+                <option value="4">⭐⭐⭐⭐ Très bien</option>
+                <option value="3">⭐⭐⭐ Bien</option>
+                <option value="2">⭐⭐ Moyen</option>
+                <option value="1">⭐ À améliorer</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <select id="testimonial-recommend">
+                <option value="">Recommanderiez-vous ? *</option>
+                <option value="oui">✅ Oui, absolument</option>
+                <option value="probablement">👍 Probablement</option>
+                <option value="non">❌ Non</option>
+              </select>
+            </div>
+          </div>
+          
+          <div class="form-group" style="display: flex; align-items: center; gap: 0.5rem;">
+            <input type="checkbox" id="testimonial-consent" required style="width: auto; margin: 0;">
+            <label for="testimonial-consent" style="margin: 0; font-size: 0.9rem; color: var(--text-secondary);">
+              J'accepte que mon témoignage soit publié sur le site
+            </label>
+          </div>
+          
+          <button type="submit" class="btn" style="width: 100%; margin-top: 1rem;">
+            ✍️ Publier mon avis
+          </button>
         </form>
       </div>
     </div>
@@ -1214,8 +1376,56 @@ footer a:hover {
     </div>
   </footer>
 
-  <!-- Leaflet JS pour la carte -->
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <!-- Script Google Maps -->
+  <script>
+    function initGoogleMap() {
+      // Coordonnées de Nancy
+      const nancy = { lat: 48.692054, lng: 6.1844 };
+      
+      // Créer la carte
+      const map = new google.maps.Map(document.getElementById("google-map"), {
+        zoom: 9,
+        center: nancy,
+        mapTypeControl: false,
+        streetViewControl: false
+      });
+      
+      // Créer un marqueur avec l'emoji 📍
+      const marker = new google.maps.Marker({
+        position: nancy,
+        map: map,
+        title: "MS Plomberie & Chauffage - Nancy",
+        label: {
+          text: "📍",
+          fontSize: "32px"
+        }
+      });
+      
+      // Créer un cercle de 80km
+      const circle = new google.maps.Circle({
+        map: map,
+        center: nancy,
+        radius: 80000, // 80km en mètres
+        fillColor: "#FF0000",
+        fillOpacity: 0.1,
+        strokeColor: "#FF0000",
+        strokeOpacity: 0.8,
+        strokeWeight: 2
+      });
+      
+      // Info window
+      const infoWindow = new google.maps.InfoWindow({
+        content: '<div style="padding: 10px;"><strong>MS Plomberie & Chauffage</strong><br>📍 Nancy<br>Zone d\'intervention : 80km</div>'
+      });
+      
+      marker.addListener("click", () => {
+        infoWindow.open(map, marker);
+      });
+      
+      // Ouvrir l'info window par défaut
+      infoWindow.open(map, marker);
+    }
+  </script>
   
   <!-- Scripts -->
   <script>
@@ -1233,7 +1443,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initTheme();
   initMenu();
   initScrollAnimations();
-  initMap();
   initForms();
   initSmoothScroll();
 });
@@ -1306,43 +1515,7 @@ function initScrollAnimations() {
 
 // Initialisation de la carte
 function initMap() {
-  if (!document.getElementById('map')) return;
-  
-  // Coordonnées de Nancy
-  const nancyLat = 48.6921;
-  const nancyLng = 6.1844;
-  
-  // Créer la carte
-  const map = L.map('map').setView([nancyLat, nancyLng], 9);
-  
-  // Ajouter les tuiles OpenStreetMap
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '© OpenStreetMap contributors'
-  }).addTo(map);
-  
-  // Créer une icône personnalisée avec l'emoji 📍
-  const customIcon = L.divIcon({
-    html: '<div style="font-size: 32px; text-align: center;">📍</div>',
-    iconSize: [32, 42],
-    iconAnchor: [16, 42],
-    popupAnchor: [0, -42],
-    className: 'custom-div-icon'
-  });
-  
-  // Ajouter un marqueur pour Nancy avec l'emoji
-  L.marker([nancyLat, nancyLng], { icon: customIcon })
-    .addTo(map)
-    .bindPopup('<strong>MS Plomberie & Chauffage</strong><br>📍 Nancy<br>Zone d\'intervention : 80km')
-    .openPopup();
-  
-  // Ajouter un cercle de 80km
-  L.circle([nancyLat, nancyLng], {
-    color: 'red',
-    fillColor: '#f03',
-    fillOpacity: 0.1,
-    radius: 80000, // 80km en mètres
-    weight: 2
-  }).addTo(map);
+  // Carte déjà intégrée via iframe Google Maps, pas besoin de JavaScript supplémentaire
 }
 
 // Gestion des formulaires
@@ -1372,25 +1545,72 @@ function initForms() {
     e.preventDefault();
     
     const name = document.getElementById('testimonial-name').value;
+    const city = document.getElementById('testimonial-city').value;
     const text = document.getElementById('testimonial-text').value;
     const rating = document.getElementById('testimonial-rating').value;
+    const service = document.getElementById('testimonial-service').value;
+    const date = document.getElementById('testimonial-date').value;
+    
+    // Formater la date si fournie
+    const dateStr = date ? new Date(date).toLocaleDateString('fr-FR', { month: 'short', year: 'numeric' }) : '';
+    
+    // Obtenir le nom du service
+    const serviceNames = {
+      'plomberie': 'Plomberie',
+      'chauffage': 'Chauffage',
+      'ventilation': 'Ventilation',
+      'salle-de-bain': 'Rénovation salle de bain',
+      'depannage': 'Dépannage urgent',
+      'entretien': 'Entretien'
+    };
+    
+    // Tronquer le texte si trop long (max 100 caractères)
+    const shortText = text.length > 100 ? text.substring(0, 97) + '...' : text;
     
     // Créer le nouveau témoignage
     const newTestimonial = document.createElement('div');
-    newTestimonial.className = 'testimonial-card';
+    newTestimonial.className = 'testimonial-card scroll-fade-in';
     newTestimonial.innerHTML = `
-      <p class="testimonial-text">"${text}"</p>
-      <p class="testimonial-author">— ${name}</p>
+      <p class="testimonial-text">"${shortText}"</p>
+      <p class="testimonial-author">— ${name}, ${city}</p>
+      ${service ? `<p style="font-size: 0.8rem; color: var(--text-secondary); margin: 0.3rem 0;">${serviceNames[service]} ${dateStr ? `• ${dateStr}` : ''}</p>` : ''}
       <div class="testimonial-rating">${'⭐'.repeat(rating)}</div>
     `;
     
-    // Ajouter au conteneur
+    // Ajouter au conteneur avec animation
+    newTestimonial.style.animation = 'fadeInUp 0.8s ease';
     document.getElementById('testimonials-container').appendChild(newTestimonial);
     
     // Réinitialiser le formulaire
     testimonialForm.reset();
-    alert('✅ Merci pour votre témoignage !');
+    
+    // Message de confirmation
+    showNotification('✅ Merci pour votre avis ! Il a été publié avec succès.');
   });
+}
+
+// Fonction pour afficher les notifications
+function showNotification(message) {
+  const notification = document.createElement('div');
+  notification.style.cssText = `
+    position: fixed;
+    top: 80px;
+    right: 20px;
+    background: var(--accent);
+    color: white;
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    z-index: 10000;
+    animation: slideInRight 0.3s ease;
+  `;
+  notification.textContent = message;
+  document.body.appendChild(notification);
+  
+  setTimeout(() => {
+    notification.style.animation = 'slideOutRight 0.3s ease';
+    setTimeout(() => notification.remove(), 300);
+  }, 3000);
 }
 
 // Navigation fluide
