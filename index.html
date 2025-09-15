@@ -701,29 +701,37 @@ body::before {
 /* Formulaire d'ajout de témoignage */
 .add-testimonial {
   background: var(--card-bg);
-  padding: 2rem;
-  border-radius: 15px;
+  padding: 1.5rem;
+  border-radius: 12px;
   border: 1px solid var(--border);
-  margin-top: 2rem;
+  margin-top: 1.5rem;
 }
 
 .add-testimonial h3 {
   color: var(--accent);
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
 }
 
 .add-testimonial input,
 .add-testimonial textarea,
 .add-testimonial select {
   width: 100%;
-  padding: 1rem;
   border: 1px solid var(--border);
-  border-radius: 10px;
+  border-radius: 8px;
   background: var(--card-bg);
   color: var(--text);
-  font-size: 1rem;
+  font-size: 0.9rem;
   transition: all 0.3s ease;
-  margin-bottom: 1rem;
+  font-family: inherit;
+}
+
+.add-testimonial input:focus,
+.add-testimonial textarea:focus,
+.add-testimonial select:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.1);
 }
 
 .add-testimonial select option {
@@ -1211,67 +1219,37 @@ footer a:hover {
       <div class="add-testimonial scroll-fade-in">
         <h3>Votre avis compte !</h3>
         <form id="testimonial-form">
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
-            <div class="form-group">
-              <input type="text" id="testimonial-name" placeholder="Votre nom *" required>
-            </div>
-            <div class="form-group">
-              <input type="text" id="testimonial-city" placeholder="Votre ville *" required>
-            </div>
+          <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.75rem;">
+            <input type="text" id="testimonial-name" placeholder="Nom *" required style="padding: 0.75rem;">
+            <input type="text" id="testimonial-city" placeholder="Ville *" required style="padding: 0.75rem;">
+            <select id="testimonial-service" required style="padding: 0.75rem;">
+              <option value="">Service *</option>
+              <option value="plomberie">🚿 Plomberie</option>
+              <option value="chauffage">🌡️ Chauffage</option>
+              <option value="ventilation">💨 Ventilation</option>
+              <option value="salle-de-bain">🛁 Salle de bain</option>
+              <option value="depannage">🚨 Dépannage</option>
+              <option value="entretien">🔧 Entretien</option>
+            </select>
           </div>
           
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
-            <div class="form-group">
-              <select id="testimonial-service" required>
-                <option value="">Type d'intervention *</option>
-                <option value="plomberie">🚿 Plomberie</option>
-                <option value="chauffage">🌡️ Chauffage</option>
-                <option value="ventilation">💨 Ventilation</option>
-                <option value="salle-de-bain">🛁 Rénovation salle de bain</option>
-                <option value="depannage">🚨 Dépannage urgent</option>
-                <option value="entretien">🔧 Entretien</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <input type="date" id="testimonial-date" placeholder="Date d'intervention">
-            </div>
+          <div style="margin: 0.75rem 0;">
+            <textarea id="testimonial-text" placeholder="Votre expérience avec MS Plomberie... *" required rows="3" style="width: 100%; padding: 0.75rem; border: 1px solid var(--border); border-radius: 10px; background: var(--card-bg); color: var(--text); resize: vertical;"></textarea>
           </div>
           
-          <div class="form-group">
-            <textarea id="testimonial-text" placeholder="Partagez votre expérience avec MS Plomberie... *" required rows="4"></textarea>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem;">
+            <select id="testimonial-rating" required style="padding: 0.75rem;">
+              <option value="">Note *</option>
+              <option value="5">⭐⭐⭐⭐⭐</option>
+              <option value="4">⭐⭐⭐⭐</option>
+              <option value="3">⭐⭐⭐</option>
+              <option value="2">⭐⭐</option>
+              <option value="1">⭐</option>
+            </select>
+            <button type="submit" class="btn" style="padding: 0.75rem;">
+              ✍️ Publier
+            </button>
           </div>
-          
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
-            <div class="form-group">
-              <select id="testimonial-rating" required>
-                <option value="">Votre note *</option>
-                <option value="5">⭐⭐⭐⭐⭐ Excellent</option>
-                <option value="4">⭐⭐⭐⭐ Très bien</option>
-                <option value="3">⭐⭐⭐ Bien</option>
-                <option value="2">⭐⭐ Moyen</option>
-                <option value="1">⭐ À améliorer</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <select id="testimonial-recommend">
-                <option value="">Recommanderiez-vous ? *</option>
-                <option value="oui">✅ Oui, absolument</option>
-                <option value="probablement">👍 Probablement</option>
-                <option value="non">❌ Non</option>
-              </select>
-            </div>
-          </div>
-          
-          <div class="form-group" style="display: flex; align-items: center; gap: 0.5rem;">
-            <input type="checkbox" id="testimonial-consent" required style="width: auto; margin: 0;">
-            <label for="testimonial-consent" style="margin: 0; font-size: 0.9rem; color: var(--text-secondary);">
-              J'accepte que mon témoignage soit publié sur le site
-            </label>
-          </div>
-          
-          <button type="submit" class="btn" style="width: 100%; margin-top: 1rem;">
-            ✍️ Publier mon avis
-          </button>
         </form>
       </div>
     </div>
@@ -1549,20 +1527,19 @@ function initForms() {
     const text = document.getElementById('testimonial-text').value;
     const rating = document.getElementById('testimonial-rating').value;
     const service = document.getElementById('testimonial-service').value;
-    const date = document.getElementById('testimonial-date').value;
-    
-    // Formater la date si fournie
-    const dateStr = date ? new Date(date).toLocaleDateString('fr-FR', { month: 'short', year: 'numeric' }) : '';
     
     // Obtenir le nom du service
     const serviceNames = {
       'plomberie': 'Plomberie',
       'chauffage': 'Chauffage',
       'ventilation': 'Ventilation',
-      'salle-de-bain': 'Rénovation salle de bain',
-      'depannage': 'Dépannage urgent',
+      'salle-de-bain': 'Salle de bain',
+      'depannage': 'Dépannage',
       'entretien': 'Entretien'
     };
+    
+    // Date actuelle
+    const currentDate = new Date().toLocaleDateString('fr-FR', { month: 'short', year: 'numeric' });
     
     // Tronquer le texte si trop long (max 100 caractères)
     const shortText = text.length > 100 ? text.substring(0, 97) + '...' : text;
@@ -1573,7 +1550,7 @@ function initForms() {
     newTestimonial.innerHTML = `
       <p class="testimonial-text">"${shortText}"</p>
       <p class="testimonial-author">— ${name}, ${city}</p>
-      ${service ? `<p style="font-size: 0.8rem; color: var(--text-secondary); margin: 0.3rem 0;">${serviceNames[service]} ${dateStr ? `• ${dateStr}` : ''}</p>` : ''}
+      <p style="font-size: 0.8rem; color: var(--text-secondary); margin: 0.3rem 0;">${serviceNames[service]} • ${currentDate}</p>
       <div class="testimonial-rating">${'⭐'.repeat(rating)}</div>
     `;
     
